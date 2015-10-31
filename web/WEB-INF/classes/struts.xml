@@ -4,7 +4,8 @@
 <struts>
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 	<constant name="struts.devMode" value="true" />
-	<constant name="struts.action.extension" value="cmd"/> 
+	<constant name="struts.action.extension" value="cmd"/>
+    <constant name="struts.multipart.maxSize" value="9000000"/>
 
 	<package name="default" namespace="/" extends="json-default">
 		<global-results>
@@ -43,8 +44,13 @@
 		<action name="obtainUsers" class="FwUserAction" method="obtainUsers" />
 		<action name="saveUser" class="FwUserAction" method="saveUser" />
 
-        <action name="obtainUserCompanys" class="UserCompanyAction" method="obtainUserCompanys" />
 
-		<action name="importTelephone" class="ImportAction" method="importTelephone" />
+        <action name="obtainUserCompanys" class="UserCompanyAction" method="obtainUserCompanys" />
+        <action name="obtainDzlists" class="DzListAction" method="obtainDzlists" />
+		<action name="importTelephone" class="ImportAction" method="importTelephone">
+
+        </action>
+        <action name="importDzlist" class="ImportAction" method="importDzlist" >
+        </action>
 	</package>
 </struts>

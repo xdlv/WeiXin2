@@ -1,5 +1,7 @@
 package com.xdlv.weixing.service.impl;
 
+import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import com.xdlv.weixing.bean.*;
@@ -11,6 +13,7 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	UserValidateMapper userValidateMapper;
 	UserdzMapper userdzMapper;
 	UserMapper userMapper;
+    DzlistMapper dzlistMapper;
 	@Override
 	public UserCompany[] getUserCompanyByPhone(String phone) {
 		return userCompanyMapper.getUserCompanyByPhone(phone);
@@ -41,7 +44,11 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 		this.userMapper = userMapper;
 	}
 
-	@Override
+    public void setDzlistMapper(DzlistMapper dzlistMapper) {
+        this.dzlistMapper = dzlistMapper;
+    }
+
+    @Override
 	public User userLogin(String name, String pwd) {
 		return userMapper.selecUserByNameAndPwd(name, pwd);
 	}
@@ -101,5 +108,15 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     @Override
     public Userdz getUserdzByPhone(String phone) {
         return userdzMapper.selectUserdzByKey(phone);
+    }
+
+    @Override
+    public int batchSaveDzlists(Collection<Dzlist> values) {
+        Date date = new Date();
+        for (Dzlist value : values){
+            value.setImpdate(date);
+            dzlistMapper.insert(value);
+        }
+        return values.size();
     }
 }

@@ -2,6 +2,7 @@ package com.xdlv.weixing.action;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.xdlv.fw.action.BaseAction;
+import com.xdlv.weixing.bean.Dzlist;
 import com.xdlv.weixing.bean.UserCompany;
 import com.xdlv.weixing.service.UserSerivce;
 import org.apache.commons.lang3.StringUtils;
@@ -20,12 +21,17 @@ import org.apache.struts2.ServletActionContext;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ImportAction extends BaseAction{
     File excel;
     String excelFileName;
     String excelContentType;
+
+    int year;
+    int month;
 
     UserSerivce userSerivce;
 
@@ -89,6 +95,76 @@ public class ImportAction extends BaseAction{
         return FINISH;
     }
 
+    public String importDzlist()throws Exception{
+        Workbook wb = parseFile(excel);
+        Map<String, Dzlist> dzlistMap = new HashMap<String, Dzlist>();
+        Sheet sheet = wb.getSheetAt(0);
+        Row row;
+        String code,userName,subject,dfScope;
+        Dzlist dzlist;
+        float all;
+        for (int i= 1; ; i++ ) {
+            row = sheet.getRow(i);
+            if (row == null) {
+                break;
+            }
+
+            code = getCellValue(row.getCell(1));
+            if (StringUtils.isBlank(code)){
+                continue;
+            }
+            userName = getCellValue(row.getCell(2));
+            if (StringUtils.isBlank(userName)){
+                continue;
+            }
+            subject = getCellValue(row.getCell(3));
+            all = (float)row.getCell(5).getNumericCellValue();
+            dfScope = getCellValue(row.getCell(6));
+
+            dzlist = dzlistMap.get(code + dfScope);
+            if (dzlist == null){
+                dzlist = new Dzlist();
+                dzlist.setYear(year);
+                dzlist.setMonth(month);
+                dzlistMap.put(code + dfScope,dzlist);
+            }
+            switch (Integer.parseInt(subject)){
+                case 1131020100:
+                    dzlist.setZdxsk1(all);
+                    break;
+                case 1131020200:
+                    dzlist.setZdfwk1(all);
+                    break;
+                case 1131020400:
+                    dzlist.setYsdsk1(all);
+                    break;
+                case 1131020601:
+                    dzlist.setJb1(all);
+                    break;
+                case 1131020602:
+                    dzlist.setFl1(all);
+                    break;
+                case 2131020100:
+                    dzlist.setZdxsk2(all);
+                    break;
+                case 2131020200:
+                    dzlist.setZdfwk2(all);
+                    break;
+                case 2131020401:
+                    dzlist.setJb2(all);
+                    break;
+                case 2131020402:
+                    dzlist.setFl2(all);
+                    break;
+                case 2131030000:
+                    dzlist.setQtyfdk2(all);
+                    break;
+            }
+        }
+        userSerivce.batchSaveDzlists(dzlistMap.values());
+        return FINISH;
+    }
+
     private String getCellValue(Cell cell){
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC){
             return String.valueOf(cell.getNumericCellValue());
@@ -97,7 +173,7 @@ public class ImportAction extends BaseAction{
         }
     }
 
-    private Workbook parseFile(File excelFile) throws Exception{
+    private static Workbook parseFile(File excelFile) throws Exception{
         Workbook book = null;
         FileInputStream inputStream = null;
         try {
@@ -138,5 +214,21 @@ public class ImportAction extends BaseAction{
 
     public void setUserSerivce(UserSerivce userSerivce) {
         this.userSerivce = userSerivce;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
     }
 }

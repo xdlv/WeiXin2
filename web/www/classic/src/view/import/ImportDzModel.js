@@ -2,35 +2,53 @@ Ext.define('TrackCar.view.import.ImportDzModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.import-importdz',
     data: {
-        fieldLabel: '请选择手机号码文件',
+        fieldLabel: '请选择对账文件',
         columnsA : [ {
-            text : '客商编号',
+            text : '客户',
             sortable : true,
-            dataIndex : 'code'
+            dataIndex : 'userid'
         }, {
-            text : 'SCM客商名称',
-            dataIndex : 'companyName'
+            text : '客户名称',
+            dataIndex : 'username'
         },{
-            text : '地方',
-            dataIndex : 'area'
+            text : '期末余额',
+            dataIndex : 'qmye'
         } ,{
-            text: '目前是否有业务往来',
-            dataIndex: 'business'
+            text: '应收-终端销售款',
+            dataIndex: 'zdxsk1'
         },{
-            text: '微信对账客户联系人',
-            dataIndex: 'wxContractName1'
+            text: '应收-应收代收款',
+            dataIndex: 'ysdsk1'
         },{
-            text: '微信对账客户手机号码',
-            dataIndex: 'wxContractPhone1'
+            text: '应收-终端服务款',
+            dataIndex: 'zdfwk1'
         },{
-            text: '业务经理（信息负责人）',
-            dataIndex : 'managerName'
+            text: '应收-价保',
+            dataIndex : 'jb1'
+        },{
+            text: '应收-返利',
+            dataIndex : 'fl1'
+        },{
+            text: '预收-终端销售款',
+            dataIndex : 'zdxsk2'
+        },{
+            text: '预收-价保',
+            dataIndex : 'jb2'
+        },{
+            text: '预收-返利',
+            dataIndex : 'fl2'
+        },{
+            text: '预收-终端服务款',
+            dataIndex : 'zdfwk2'
+        },{
+            text: '预收-其它应付抵款',
+            dataIndex : 'qtyfdk2'
         }]
     },
 
     stores: {
         store:{
-            model: 'UserCompany',
+            model: 'Dzlist',
             session : true,
             autoLoad: true
         }

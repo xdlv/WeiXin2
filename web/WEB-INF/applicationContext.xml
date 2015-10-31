@@ -84,6 +84,7 @@
 
     <bean name="UserCompanyAction" class="com.xdlv.weixing.action.UserCompanyAction" scope="prototype" autowire="byType"/>
 
+    <bean name="DzListAction" class="com.xdlv.weixing.action.DzlistAction" scope="prototype" autowire="byType"/>
 	<!-- Job list -->
 	<bean id="sendSmsMessage" class="com.xdlv.weixing.job.SendSmsMessage" 
 		  autowire="byType" />

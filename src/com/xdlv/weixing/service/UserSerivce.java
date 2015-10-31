@@ -1,11 +1,9 @@
 package com.xdlv.weixing.service;
 
+import java.util.Collection;
 import java.util.List;
 
-import com.xdlv.weixing.bean.User;
-import com.xdlv.weixing.bean.UserCompany;
-import com.xdlv.weixing.bean.UserValidate;
-import com.xdlv.weixing.bean.Userdz;
+import com.xdlv.weixing.bean.*;
 
 public interface UserSerivce extends BaseService{
 
@@ -38,4 +36,6 @@ public interface UserSerivce extends BaseService{
     void saveUserDz(Userdz userdz);
 
     Userdz getUserdzByPhone(String phone);
+
+    int batchSaveDzlists(Collection<Dzlist> values);
 }

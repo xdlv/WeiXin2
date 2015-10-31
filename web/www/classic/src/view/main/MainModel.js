@@ -41,6 +41,8 @@ Ext.define('TrackCar.view.main.MainModel', {
                     },{
                         text: '对账文件导入',
                         iconCls: 'x-fa fa-flag',
+                        view: 'import.ImportDz',
+                        routeId: 'import-ImportDz',
                         leaf: true
                     },{
                         text: '对账结果导出',
