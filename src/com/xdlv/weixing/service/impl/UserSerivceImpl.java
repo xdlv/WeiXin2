@@ -2,13 +2,7 @@ package com.xdlv.weixing.service.impl;
 
 import java.util.List;
 
-import com.xdlv.weixing.bean.User;
-import com.xdlv.weixing.bean.UserCompany;
-import com.xdlv.weixing.bean.UserCompanyMapper;
-import com.xdlv.weixing.bean.UserMapper;
-import com.xdlv.weixing.bean.UserValidate;
-import com.xdlv.weixing.bean.UserValidateMapper;
-import com.xdlv.weixing.bean.UserdzMapper;
+import com.xdlv.weixing.bean.*;
 import com.xdlv.weixing.service.UserSerivce;
 
 public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
@@ -18,7 +12,7 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	UserdzMapper userdzMapper;
 	UserMapper userMapper;
 	@Override
-	public UserCompany getUserCompanyByPhone(String phone) {
+	public UserCompany[] getUserCompanyByPhone(String phone) {
 		return userCompanyMapper.getUserCompanyByPhone(phone);
 	}
 	
@@ -82,5 +76,30 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     @Override
     public List<UserCompany> getAllUserCompanys(int start, int end){
         return userCompanyMapper.selectUserCompanys(start, end);
+    }
+
+	@Override
+	public void saveUserValidate(UserValidate userValidate) {
+		userValidateMapper.insert(userValidate);
+	}
+
+    @Override
+    public int deleteUserValidateForUnuse() {
+        return userValidateMapper.deleteUserValidateForUnuse();
+    }
+
+    @Override
+    public UserValidate getValidateCodeByPhone(String phone, String validateCode) {
+        return userValidateMapper.getValidateCodeByPhone(phone,validateCode);
+    }
+
+    @Override
+    public void saveUserDz(Userdz userdz) {
+        userdzMapper.insert(userdz);
+    }
+
+    @Override
+    public Userdz getUserdzByPhone(String phone) {
+        return userdzMapper.selectUserdzByKey(phone);
     }
 }

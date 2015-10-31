@@ -84,9 +84,9 @@ public class ImportAction extends BaseAction{
             }
         }
         userSerivce.batchSaveUserCompany(userCompanyList);
-        ServletActionContext.getRequest().setAttribute(
+        setRequestAttribute(
                 "msg",String.format("成功解析%d条数据",userCompanyList.size()));
-        return SUCCESS;
+        return FINISH;
     }
 
     private String getCellValue(Cell cell){

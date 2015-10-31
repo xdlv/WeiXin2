@@ -96,4 +96,14 @@ public class UserValidate {
 	public void setValidateTime(Date validateTime) {
 		this.validateTime = validateTime;
 	}
+
+	public static final String WAIT = "W", SENDED = "S", ERROR= "E";
+	public UserValidate(){}
+
+	public UserValidate(String phone, String validateCode) {
+		this.phone = phone;
+		this.validateCode = validateCode;
+		this.status = WAIT;
+		this.validateTime = new Date();
+	}
 }

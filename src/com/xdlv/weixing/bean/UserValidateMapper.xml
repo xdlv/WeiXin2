@@ -29,6 +29,18 @@
   <update id="updateStatusByPhone" parameterType="java.lang.String">
     update t_user_validate
     set status = #{status,jdbcType=VARCHAR}
-    where phone = #{phone,jdbcType=INTEGER}
+    where phone = #{phone,jdbcType=VARCHAR}
   </update>
+
+  <delete id="deleteUserValidateForUnuse">
+    delete from t_user_validate where validate_time + 300 &lt; now()
+  </delete>
+
+    <delete id="deleteUserValidateForUnuse" databaseId="oracle">
+        delete from t_user_validate where validate_time &lt; (sysdate - interval '5' MINUTE)
+    </delete>
+    <select id="getValidateCodeByPhone" parameterType="java.lang.String" resultMap="UserValidateResultMap">
+        select * from t_user_validate where phone = #{phone,jdbcType=VARCHAR}
+        and validate_code=#{validateCode,jdbcType=VARCHAR}
+    </select>
 </mapper>

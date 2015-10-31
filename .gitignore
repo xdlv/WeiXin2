@@ -1,3 +1,4 @@
 *.class
 web/WEB-INF/lib
 web/www/ext
+web/wwt/touch

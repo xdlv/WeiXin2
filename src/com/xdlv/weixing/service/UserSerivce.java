@@ -5,10 +5,11 @@ import java.util.List;
 import com.xdlv.weixing.bean.User;
 import com.xdlv.weixing.bean.UserCompany;
 import com.xdlv.weixing.bean.UserValidate;
+import com.xdlv.weixing.bean.Userdz;
 
 public interface UserSerivce extends BaseService{
 
-	UserCompany getUserCompanyByPhone(String phone);
+	UserCompany[] getUserCompanyByPhone(String phone);
 	
 	UserValidate[] getUserValidateForNotSend();
 	
@@ -27,4 +28,14 @@ public interface UserSerivce extends BaseService{
 	int getUserCompanysCount();
 
 	List<UserCompany> getAllUserCompanys(int start, int end);
+
+	void saveUserValidate(UserValidate userValidate);
+    
+    int deleteUserValidateForUnuse();
+
+    UserValidate getValidateCodeByPhone(String phone, String validateCode);
+
+    void saveUserDz(Userdz userdz);
+
+    Userdz getUserdzByPhone(String phone);
 }

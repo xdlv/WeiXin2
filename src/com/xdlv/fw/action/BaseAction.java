@@ -101,6 +101,10 @@ public abstract class BaseAction extends ActionSupport {
 		}
 		return msg;
 	}
+
+	protected void setRequestAttribute(String key, String value){
+        ServletActionContext.getRequest().setAttribute(key,value);
+    }
 	
 	public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {
 		ReceiveXmlEntity msg = new ReceiveXmlEntity();

@@ -12,12 +12,14 @@
 				<param name="ignoreHierarchy">false</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
-			<result name="error">result.jsp</result>
-			<result name="finish">result.jsp</result>
-			<result name="input">result.jsp</result>
-			<result name="login">index.html</result>
+			<result name="error" type="chain">resultAction</result>
+			<result name="finish" type="chain">resultAction</result>
+			<result name="input" type="chain">resultAction</result>
+
+            <result name="login">www/index.html</result>
 			<result name="xml">xml.jsp</result>
-			<result name="stream" type="stream">
+
+            <result name="stream" type="stream">
 				<param name="contentType">image/jpeg</param>
 				<param name="inputName">imageStream</param>
 				<param name="bufferSize">1024</param>
@@ -26,20 +28,22 @@
 		<global-exception-mappings>
 			<exception-mapping exception="java.lang.Exception" result="error"/>
 		</global-exception-mappings>
-        
+
+        <action name="resultAction" class="com.xdlv.fw.action.ResultAction" method="result"/>
+
 		<!-- User -->
 		<action name="entry" class="WeiXingAction" method="entry"/>
 		<action name="sendValidateCode" class="UserAction" method="sendValidateCode"/>
 		<action name="userBind" class="UserAction" method="userBind"/>
+		<action name="userBindIndex" class="UserAction" method="userBindIndex">
+			<result name="success">index.jsp</result>
+		</action>
 		
 		<action name="userLogin" class="FwUserAction" method="userLogin" />
-		<action name="obtainMod" class="FwUserAction" method="obtainMod" />
 		<action name="obtainUsers" class="FwUserAction" method="obtainUsers" />
 		<action name="saveUser" class="FwUserAction" method="saveUser" />
 
         <action name="obtainUserCompanys" class="UserCompanyAction" method="obtainUserCompanys" />
-
-
 
 		<action name="importTelephone" class="ImportAction" method="importTelephone" />
 	</package>

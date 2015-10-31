@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 
+import com.xdlv.fw.HttpClientTpl;
 import com.xdlv.fw.I18n;
 
 /**
@@ -23,9 +24,25 @@ public class HttpDemo {
 	//校验码
 	static String veryCode = I18n.getI18n("veryCode");;
 	
-	final static String HTTP_URL = "http://112.74.76.186:8030";
+	final static String HTTP_URL = I18n.getI18n("sms_url");
 	
-	
+	public static String sendTextSms2(String mobile, String content) throws Exception {
+        String address = "http://" + HTTP_URL + "/service/httpService/httpInterface.do";
+        /*method=&username=JSM40001&password=123456&veryCode=453245
+                &mobile=15951977097&content=@1@=李先生,@2@=您好,@3@=928371 &msgtype=2 &tempid= JSM4001-000&code=gbk*/
+        return HttpClientTpl.post(address, new String[][]{
+                {"method","sendMsg"},
+                {"username",account},
+                {"password",password},
+                {"veryCode",veryCode},
+                {"mobile",mobile},
+                {"content",content},
+                {"msgtype","2"},
+                {"tempid","JSM40395-0001"},
+                {"code","utf-8"}
+        });
+    }
+
 	
 	/**
 	 * 发送普通短信
@@ -35,8 +52,8 @@ public class HttpDemo {
 	 * @throws Exception
 	 */
 	public static String sendTextSms(String mobile,String content) throws Exception{
-		
-		String address = HTTP_URL + "/service/httpService/httpInterface.do?method=sendMsg";
+
+		String address = "http://" + HTTP_URL + "/service/httpService/httpInterface.do?method=sendMsg";
 		
 		StringBuilder params = new StringBuilder();
 		params.append("username=").append(account);

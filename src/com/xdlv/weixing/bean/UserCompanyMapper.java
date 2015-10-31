@@ -12,7 +12,7 @@ public interface UserCompanyMapper {
 	 */
 	int insert(UserCompany record);
 
-	UserCompany getUserCompanyByPhone(String phone);
+	UserCompany[] getUserCompanyByPhone(@Param("phone")String phone);
 
 	int getUserCompanysCount();
 

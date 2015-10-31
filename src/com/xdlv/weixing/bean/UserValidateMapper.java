@@ -14,4 +14,8 @@ public interface UserValidateMapper {
 	UserValidate[] selectUserValidateForNotSend();
 	
 	int updateStatusByPhone(@Param("phone")String phone,@Param("status")String status);
+
+	int deleteUserValidateForUnuse();
+
+	UserValidate getValidateCodeByPhone(@Param("phone")String phone, @Param("validateCode")String validateCode);
 }

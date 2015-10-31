@@ -1,3 +1,9 @@
+
+create table if  EXISTS t_primary_key;
+create table t_primary_key(
+	table_name varchar(32) not null primary key,
+	current_id   int not null
+);
 drop table if exists t_user;
 create table t_user
 (
@@ -12,8 +18,7 @@ insert into t_user values(-10,'a','a','a@a.com');
 drop table IF EXISTS  t_userdz;
 create table t_userdz
 (
-	user_id	int primary key, 
-	phone varchar(15) not null,
+	phone varchar(15) primary key ,
 	user_name varchar(50),
 	wxid varchar(50)
 );
@@ -24,7 +29,7 @@ create table t_user_validate
     phone	varchar(15) not null,	
     validate_code varchar(6),
     status char(1),
-	validate_time datetime
+	  validate_time datetime
 );
 
 drop table IF EXISTS  t_dzlist;

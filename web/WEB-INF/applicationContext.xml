@@ -23,10 +23,24 @@
 		<property name="validationQuery" value="select sysdate()"></property>
 		<property name="maxActive" value="20"></property>
 	</bean>
+	<bean id="vendorProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="SQL Server">sqlserver</prop>
+				<prop key="Oracle">oracle</prop>
+				<prop key="MySQL">mysql</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="databaseIdProvider" class="org.apache.ibatis.mapping.VendorDatabaseIdProvider">
+		<property name="properties" ref="vendorProperties"/>
+	</bean>
 
 	<!-- SqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="MyDataSource" />
+        <property name="databaseIdProvider" ref="databaseIdProvider" />
 	</bean>
 	<!-- ScanMapperFiles -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
