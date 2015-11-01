@@ -13,7 +13,7 @@ import java.io.FileInputStream;
 public class T {
     public static void main(String[] args){
         try {
-            parseFile(new File("C:\\Users\\xd\\Work\\WeiXing\\dz.xls"));
+            parseFile(new File("C:\\Users\\xd\\Work\\WeiXing\\dz2.xlsx"));
         } catch (Exception e) {
             e.printStackTrace();
         }

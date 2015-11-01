@@ -1,13 +1,12 @@
 Ext.define('TrackCar.Application', {
     extend: 'Ext.app.Application',
     requires: [
-        'TrackCar.view.user.*',
-        'TrackCar.view.import.*'
+
     ],
     name: 'TrackCar',
     
     controllers: ['Root@TrackCar.controller'],
-    models: ['User','UserCompany','Dzlist'],
+    models: ['User','UserCompany','Dzlist','ImportDzRecord'],
     stores: [
         // TODO: add global / shared stores here
     ],

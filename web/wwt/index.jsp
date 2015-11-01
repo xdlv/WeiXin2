@@ -1,8 +1,9 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE HTML>
 <html manifest="" lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title><%=request.getAttribute("openid")%></title>
+    <title>江苏移动终端公司</title>
     <style type="text/css">
          /**
          * Example of an initial loading indicator.
@@ -49,6 +50,20 @@
             }
         }
     </style>
+    <script language="javascript">
+        <%
+            String openId = request.getParameter("openId");
+            if (openId == null){
+                openId = (String)request.getAttribute("openId");
+            }
+            String viewId = request.getParameter("viewId");
+            if (viewId == null){
+                viewId = (String)request.getAttribute("viewId");
+            }
+        %>
+        var WX_OPEN_ID = '<%=openId%>';
+        var WX_VIEW_ID = '<%=viewId%>';
+    </script>
     <!-- The line below must be kept intact for Sencha Command to build your application -->
     <script id="microloader" type="text/javascript" src=".sencha/app/microloader/development.js"></script>
 </head>

@@ -9,7 +9,11 @@ Ext.application({
     extend: 'TrackCar.Application',
 
     requires: [
-        
+        'TrackCar.view.user.AddUser',
+        'TrackCar.view.import.ImportA',
+         /*'TrackCar.view.import.ImportTelphone',
+        'TrackCar.view.export.DzExport',*/
+        'TrackCar.view.login.Login'
     ]
 
     // The name of the initial view to create. With the classic toolkit this class

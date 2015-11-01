@@ -47,7 +47,7 @@
 
   <select id="selectUserCompanys" parameterType="java.lang.Integer" resultMap="UserCompanyResultMap"
           databaseId="oracle">
-    select * from ( select * from t_t_user where rowno &lt;= #{end,jdbcType=INTEGER})
+    select * from ( select * from t_user_company where rowno &lt;= #{end,jdbcType=INTEGER})
     where rownum &gt; #{start,jdbcType=INTEGER}
   </select>
 </mapper>

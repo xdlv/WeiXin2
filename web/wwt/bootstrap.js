@@ -764,6 +764,7 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
+  "WX.view.CurrentDz": [],
   "WX.view.HistoryQuery": [],
   "WX.view.Main": []
 });
@@ -1709,6 +1710,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
+  "WX.view.CurrentDz": [
+    "widget.currentQuery"
+  ],
   "WX.view.HistoryQuery": [
     "widget.hquery"
   ],

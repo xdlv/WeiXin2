@@ -1,6 +1,9 @@
 package com.xdlv.weixing.bean;
 
 import com.xdlv.weixing.bean.Userdz;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserdzMapper {
 
@@ -27,4 +30,6 @@ public interface UserdzMapper {
 	 * @mbggenerated
 	 */
 	int updateByPrimaryKey(Userdz record);
+
+	List<Userdz> getAllUserdzs(@Param("start")int start, @Param("end")int end);
 }

@@ -14,6 +14,7 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	UserdzMapper userdzMapper;
 	UserMapper userMapper;
     DzlistMapper dzlistMapper;
+    ImportDzRecordMapper importDzRecordMapper;
 	@Override
 	public UserCompany[] getUserCompanyByPhone(String phone) {
 		return userCompanyMapper.getUserCompanyByPhone(phone);
@@ -46,6 +47,10 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 
     public void setDzlistMapper(DzlistMapper dzlistMapper) {
         this.dzlistMapper = dzlistMapper;
+    }
+
+    public void setImportDzRecordMapper(ImportDzRecordMapper importDzRecordMapper) {
+        this.importDzRecordMapper = importDzRecordMapper;
     }
 
     @Override
@@ -118,5 +123,70 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
             dzlistMapper.insert(value);
         }
         return values.size();
+    }
+
+	@Override
+	public List<Dzlist> getAllDzlists(Dzlist dzlist,int start, int end) {
+        String userid = dzlist == null ? null : dzlist.getUserid();
+        String isok = dzlist == null ? null : dzlist.getIsok();
+		return dzlistMapper.selectDzlists(userid, isok, start, end);
+	}
+
+    @Override
+    public void saveImportDzRecord(ImportDzRecord importDzRecord) {
+        importDzRecordMapper.insert(importDzRecord);
+    }
+
+    @Override
+    public int getDzListCount(Dzlist dzlist) {
+        return dzlistMapper.getDzListCount(dzlist);
+    }
+
+    @Override
+    public List<ImportDzRecord> getAllImportDzRecords() {
+        return importDzRecordMapper.getAllImportDzRecords();
+    }
+
+    @Override
+    public ImportDzRecord getImportDzRecordByYearAndMonth(int year, int month) {
+        return importDzRecordMapper.getImportDzRecordByYearAndMonth(year,month);
+    }
+
+    @Override
+    public void updateImportDzRecordStatus(ImportDzRecord importDzRecord) {
+        importDzRecordMapper.updateImportDzRecordStatus(importDzRecord);
+    }
+
+    @Override
+    public List<ImportDzRecord> getImportDzRecordForSend() {
+        return importDzRecordMapper.selectDzRecordByStatus("Y");
+    }
+
+    @Override
+    public List<Userdz> getAllUserdzs(int start, int end) {
+        return userdzMapper.getAllUserdzs(start, end);
+    }
+
+    @Override
+    public ImportDzRecord getLastedNotifyImportDzRecord() {
+        List<ImportDzRecord> importDzRecords = importDzRecordMapper.getLastedNotifyImportDzRecord();
+        if (importDzRecords != null && importDzRecords.size() > 0){
+            return importDzRecords.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public Dzlist getDzlist(String wxid, int year, int month) {
+        List<Dzlist> dzlists = dzlistMapper.selectDzlistsByYearAndMonth(wxid, year, month);
+        if (dzlists != null && dzlists.size() > 0){
+            return dzlists.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public void upateDzlistStatus(Dzlist dzlist) {
+        dzlistMapper.updateDzlistStatus(dzlist);
     }
 }

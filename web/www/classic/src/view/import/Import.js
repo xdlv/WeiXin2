@@ -9,7 +9,7 @@ Ext.define("TrackCar.view.import.Import", {
         type : "import-import"
     },
 
-    margin: '10',
+    margin: '10 10 0 10',
     layout : {
         type: 'vbox',
         align: 'stretch'

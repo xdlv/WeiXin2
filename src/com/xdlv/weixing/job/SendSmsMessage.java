@@ -49,6 +49,10 @@ public class SendSmsMessage {
 			}
 		}
 	}
+
+	public void notifyMessage(){
+
+	}
 	public void setUserSerivce(UserSerivce userSerivce) {
 		this.userSerivce = userSerivce;
 	}

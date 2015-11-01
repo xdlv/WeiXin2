@@ -1,5 +1,5 @@
 Ext.define("TrackCar.view.import.ImportDz",{
-    extend: "TrackCar.view.import.Import",
+    extend: "TrackCar.view.import.ImportA",
 
     requires: [
         "TrackCar.view.import.ImportDzController",

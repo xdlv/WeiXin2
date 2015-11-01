@@ -1,5 +1,4 @@
-
-create table if  EXISTS t_primary_key;
+drop table if exists t_primary_key;
 create table t_primary_key(
 	table_name varchar(32) not null primary key,
 	current_id   int not null
@@ -68,3 +67,17 @@ create table t_user_company
 	manager_name varchar(20),
 	remark_content varchar(100)
 );
+
+drop table if exists t_import_dz_record;select * from t_import_dz_record where notification= 'Y' order by year + month desc;
+create table t_import_dz_record
+(
+	year SMALLINT not null,
+	month SMALLINT not null,
+	notification char(1),
+	import_date date
+);
+
+select c.* from t_userdz a JOIN t_user_company b
+    on (a.phone = b.wx_contract_phone1 or a.phone = b.wx_contract_phone2)
+  JOIN t_dzlist c on b.code = c.userid where a.wxid='openid123' and c.year=2015 and c.month=10
+

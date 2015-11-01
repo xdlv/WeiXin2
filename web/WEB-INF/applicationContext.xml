@@ -83,12 +83,40 @@
 	<bean name="ImportAction" class="com.xdlv.weixing.action.ImportAction" scope="prototype" autowire="byType" />
 
     <bean name="UserCompanyAction" class="com.xdlv.weixing.action.UserCompanyAction" scope="prototype" autowire="byType"/>
+	<bean name="ImportDzRecordAction" class="com.xdlv.weixing.action.ImportDzRecordAction" scope="prototype" autowire="byType"/>
 
     <bean name="DzListAction" class="com.xdlv.weixing.action.DzlistAction" scope="prototype" autowire="byType"/>
 	<!-- Job list -->
 	<bean id="sendSmsMessage" class="com.xdlv.weixing.job.SendSmsMessage" 
 		  autowire="byType" />
-		  
+    <bean id="notifyMessage" class="com.xdlv.weixing.job.NotifyMessage"
+          autowire="byType" />
+    <bean id="refreshAccessToken" class="com.xdlv.weixing.job.RefreshAccessToken"
+          autowire="byType" />
+
+    <bean id="refreshAccessTokenJobDetail"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="refreshAccessToken" />
+        </property>
+        <property name="targetMethod">
+            <value>execute</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="refreshAccessTokenDoTime"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="refreshAccessTokenJobDetail" />
+        </property>
+
+        <property name="cronExpression">
+            <value>0 0/110 * * * ?</value>
+        </property>
+    </bean>
+
 	<bean id="sendSmsMessageJobDetail"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject">
@@ -112,11 +140,38 @@
 			<value>0/5 * * * * ?</value>
 		</property>
 	</bean>
+
+	<bean id="notifyMessageJobDetail"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="notifyMessage" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+		<property name="concurrent">
+			<value>false</value>
+		</property>
+	</bean>
+
+    <bean id="notifyMessageDoTime"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail">
+            <ref bean="notifyMessageJobDetail" />
+        </property>
+
+        <property name="cronExpression">
+            <value>0/30 * * * * ?</value>
+        </property>
+    </bean>
+
 	<bean id="startQuertz" lazy-init="false" autowire="no"
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
 				<ref bean="sendSmsMessageDoTime" />
+                <ref bean="notifyMessageDoTime" />
+                <ref bean="refreshAccessTokenDoTime" />
 			</list>
 		</property>
 	</bean>

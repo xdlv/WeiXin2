@@ -38,4 +38,27 @@ public interface UserSerivce extends BaseService{
     Userdz getUserdzByPhone(String phone);
 
     int batchSaveDzlists(Collection<Dzlist> values);
+
+	int getDzListCount(Dzlist dzlist);
+
+    List<Dzlist> getAllDzlists(Dzlist dzlist, int start, int end);
+
+    void saveImportDzRecord(ImportDzRecord importDzRecord);
+
+    List<ImportDzRecord> getAllImportDzRecords();
+
+    ImportDzRecord getImportDzRecordByYearAndMonth(int year, int month);
+
+    void updateImportDzRecordStatus(ImportDzRecord importDzRecord);
+
+    List<ImportDzRecord> getImportDzRecordForSend();
+
+    List<Userdz> getAllUserdzs(int start, int end);
+
+    ImportDzRecord getLastedNotifyImportDzRecord();
+
+
+    Dzlist getDzlist(String wxid, int year, int month);
+
+    void upateDzlistStatus(Dzlist dzlist);
 }

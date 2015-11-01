@@ -13,7 +13,10 @@ public class DzlistAction extends BaseAction{
     List<Dzlist> dzlists;
     UserSerivce userSerivce;
 
+    Dzlist dzlist;
     public String obtainDzlists(){
+        total = userSerivce.getDzListCount(dzlist);
+        dzlists = userSerivce.getAllDzlists(dzlist,start, start + limit);
         return SUCCESS;
     }
 
@@ -27,5 +30,13 @@ public class DzlistAction extends BaseAction{
 
     public List<Dzlist> getDzlists() {
         return dzlists;
+    }
+
+    public Dzlist getDzlist() {
+        return dzlist;
+    }
+
+    public void setDzlist(Dzlist dzlist) {
+        this.dzlist = dzlist;
     }
 }

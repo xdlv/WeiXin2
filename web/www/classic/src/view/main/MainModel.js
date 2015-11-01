@@ -46,10 +46,12 @@ Ext.define('TrackCar.view.main.MainModel', {
                         leaf: true
                     },{
                         text: '对账结果导出',
+                        view: 'export.DzExport',
+                        routeId: 'export-DzExport',
                         iconCls: 'x-fa fa-signal',
                         leaf: true
                     }]
-                },{
+                }/*,{
                     text: '对账查询',
                     iconCls: 'x-fa fa-home',
                     children: [{
@@ -61,8 +63,10 @@ Ext.define('TrackCar.view.main.MainModel', {
                         iconCls: 'x-fa fa-database',
                         leaf: true
                     }]
-                },{
+                }*/,{
                     text: '消息通知',
+                    view: 'notify.Notification',
+                    routeId : 'notify-Notification',
                     iconCls: 'x-fa fa-music',
                     leaf: true
                 }]

@@ -52,12 +52,7 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
         
-        var href = window.location.href;
-        if (href.indexOf("userBind") != -1){
-        	Ext.Viewport.add(Ext.create('WX.view.Main'));
-        } else {
-        	Ext.Viewport.add(Ext.create('WX.view.HistoryQuery'));
-        }
+        Ext.Viewport.add(Ext.create('WX.view.' + WX_VIEW_ID));
     },
 
     onUpdated: function() {
