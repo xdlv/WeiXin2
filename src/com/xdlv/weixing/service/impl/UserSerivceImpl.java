@@ -189,4 +189,14 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     public void upateDzlistStatus(Dzlist dzlist) {
         dzlistMapper.updateDzlistStatus(dzlist);
     }
+
+    public Userdz getUserdzByOpenid(String openid)
+    {
+        return userdzMapper.selectUserdzByOpenid(openid);
+    }
+
+    @Override
+    public void deleteUserdzByOpenId(String fromUserName) {
+        userdzMapper.deleteUserdzByOpenid(fromUserName);
+    }
 }

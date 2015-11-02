@@ -1,3 +1,4 @@
+--CREATE DATABASE weixing DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 drop table if exists t_primary_key;
 create table t_primary_key(
 	table_name varchar(32) not null primary key,
@@ -56,19 +57,19 @@ create table t_dzlist
 drop table if exists t_user_company;
 create table t_user_company
 (
-	code varchar(10),
+	code varchar(20),
 	company_name varchar(200),
 	area varchar(15),
 	business char(1),
-	wx_contract_name1 varchar(10),
+	wx_contract_name1 varchar(20),
 	wx_contract_phone1 varchar(15),
-	wx_contract_name2 varchar(10),
+	wx_contract_name2 varchar(20),
 	wx_contract_phone2 varchar(15),
 	manager_name varchar(20),
 	remark_content varchar(100)
 );
 
-drop table if exists t_import_dz_record;select * from t_import_dz_record where notification= 'Y' order by year + month desc;
+drop table if exists t_import_dz_record;
 create table t_import_dz_record
 (
 	year SMALLINT not null,
@@ -76,8 +77,3 @@ create table t_import_dz_record
 	notification char(1),
 	import_date date
 );
-
-select c.* from t_userdz a JOIN t_user_company b
-    on (a.phone = b.wx_contract_phone1 or a.phone = b.wx_contract_phone2)
-  JOIN t_dzlist c on b.code = c.userid where a.wxid='openid123' and c.year=2015 and c.month=10
-

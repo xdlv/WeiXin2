@@ -73,7 +73,7 @@
 
   <select id="selectUsers" parameterType="java.lang.Integer" resultMap="UserResultMap"
           databaseId="oracle">
-    select * from ( select * from t_t_user where rowno &lt;= #{end,jdbcType=INTEGER})
+    select * from ( select * from t_user where rownum &lt;= #{end,jdbcType=INTEGER})
     where rownum &gt; #{start,jdbcType=INTEGER}
   </select>
   

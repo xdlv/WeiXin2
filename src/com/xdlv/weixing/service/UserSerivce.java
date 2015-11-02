@@ -61,4 +61,8 @@ public interface UserSerivce extends BaseService{
     Dzlist getDzlist(String wxid, int year, int month);
 
     void upateDzlistStatus(Dzlist dzlist);
+
+    Userdz getUserdzByOpenid(String openId);
+
+    void deleteUserdzByOpenId(String fromUserName);
 }

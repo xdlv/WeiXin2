@@ -22,7 +22,7 @@ public class SendSmsMessage {
 			logger.info("there is no validate sms to send.");
 			return;
 		}
-		logger.info("start to send sms :");
+
 		String status = null;
 		for (UserValidate userValidate : userValidates){
 			if (StringUtils.isEmpty(userValidate.getPhone())){
@@ -34,6 +34,7 @@ public class SendSmsMessage {
 				continue;
 			}
 			try {
+				logger.info("start to send sms :" + userValidate.getPhone());
 				String ret = HttpDemo.sendTextSms2(userValidate.getPhone()
 						, String.format("@1@=%s", userValidate.getValidateCode()));
 				if (ret == null || ret.indexOf("<status>0</status>") == -1){

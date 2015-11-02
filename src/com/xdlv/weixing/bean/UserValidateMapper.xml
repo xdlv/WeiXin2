@@ -32,11 +32,11 @@
     where phone = #{phone,jdbcType=VARCHAR}
   </update>
 
-  <delete id="deleteUserValidateForUnuse">
+  <delete id="deleteUserValidateForUnuse" parameterType="java.lang.String">
     delete from t_user_validate where validate_time + 300 &lt; now()
   </delete>
 
-    <delete id="deleteUserValidateForUnuse" databaseId="oracle">
+    <delete id="deleteUserValidateForUnuse"  parameterType="java.lang.String" databaseId="oracle">
         delete from t_user_validate where validate_time &lt; (sysdate - interval '5' MINUTE)
     </delete>
     <select id="getValidateCodeByPhone" parameterType="java.lang.String" resultMap="UserValidateResultMap">

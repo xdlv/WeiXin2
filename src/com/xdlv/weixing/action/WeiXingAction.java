@@ -9,6 +9,9 @@ import com.xdlv.weixing.bean.ReceiveXmlEntity;
 public class WeiXingAction extends BaseAction {
 
 	private String echostr;
+	private String nonce;
+	private String timestamp;
+    private String signature;
 
 	public String entry() {
 		if (StringUtils.isNotBlank(echostr)) {
@@ -62,4 +65,27 @@ public class WeiXingAction extends BaseAction {
 		return echostr;
 	}
 
+	public String getNonce() {
+		return nonce;
+	}
+
+	public void setNonce(String nonce) {
+		this.nonce = nonce;
+	}
+
+	public String getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
 }

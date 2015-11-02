@@ -1,18 +1,18 @@
 package com.xdlv.weixing.job;
 
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+
 import com.xdlv.fw.FwUtil;
 import com.xdlv.fw.HttpClientTpl;
 import com.xdlv.fw.I18n;
 import com.xdlv.weixing.bean.ImportDzRecord;
-import com.xdlv.weixing.bean.UserCompany;
 import com.xdlv.weixing.bean.Userdz;
 import com.xdlv.weixing.service.UserSerivce;
-import net.sf.json.JSONObject;
-import org.apache.commons.collections.ListUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 
-import java.util.List;
+import net.sf.json.JSONObject;
 
 
 /**
@@ -54,7 +54,7 @@ public class NotifyMessage {
             }
             logger.debug("start to notify:" + userdz.getPhone());
             jsonObject.put("touser",userdz.getWxid());
-            jsonObject.put("url",url + "?openId=" + userdz.getWxid() + "&viewId=CurrentDz");
+            jsonObject.put("url",url + "?openid=" + userdz.getWxid());
             retString = HttpClientTpl.postJson(String.format("https://api.weixin.qq.com/cgi-bin/message/template/send" +
                     "?access_token=%s", getAccessToken()), jsonObject.toString());
             logger.debug("end with ret:" + retString);

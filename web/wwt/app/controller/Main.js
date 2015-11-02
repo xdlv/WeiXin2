@@ -1,39 +1,41 @@
 Ext.define('WX.controller.Main', {
     extend: 'Ext.app.Controller',
-    
+
     config: {
         dzTpl: "<p>&nbsp&nbsp&nbsp&nbsp尊敬的{username}（{userid}）客户，我公司与贵公司截止到{year}年{month}月{day}日期末余额       {qmye}元，其中应收终端销售款{zdxsk1}元，应收代收款{ysdsk1}元，应收终端服务款{zdfwk1}元，应收价保{jb1}     元，应收返利{fl1}元，预收终端销售款{zdxsk2}元，预收价保{jb2}元，预收返利{f2}元，预收终端服务款{zdfwk2}    元，预收其他应付预收抵款{qtyfdk2}        元。</p><p>说明：期末余额为正数，表示我司应收贵司余额，余额为负数，表示我司预收贵司余额。</p><p style='background-color:yellow'>（开发需求备注：此条信息中其中后面部分项目取数为零，则部分项目不要显示。）</p>",
         refs: {
-        	hqContent: 'component[name=hqContent]',
-            confirmButton: 'button[text=确认对账]'
+            hqContent: 'component[name=hqContent]',
+            confirmButton: 'button[text=确认对账]',
+            validateButton: 'button[text=验证码]',
+            bindButton: 'button[text=绑定]'
         },
         control: {
-            'formpanel' : {
+            'formpanel': {
                 show: 'onReady'
             },
-        	'button[text=获取验证码]' : {
-				tap: 'getValidateCode'
-			},
-			'button[text=绑定]' : {
-				tap: 'bindUser'
-			},
-			'datepickerfield[name=queryDate]' : {
-				change : 'chooseDateForHistory'
-			},
-			'button[text=确认对账]' : {
-				tap: 'confirmDz'
-			}
+            'button[text=验证码]': {
+                tap: 'getValidateCode'
+            },
+            'button[text=绑定]': {
+                tap: 'bindUser'
+            },
+            'datepickerfield[name=queryDate]': {
+                change: 'chooseDateForHistory'
+            },
+            'button[text=确认对账]': {
+                tap: 'confirmDz'
+            }
         }
     },
 
-    loadDzRecord: function(success,year, month){
+    loadDzRecord: function (success, year, month) {
         var parms = {
-            openid: WX_OPEN_ID
+            openid: WX_PP.openId
         };
-        if (year){
-            parms['dzlist.year']=year;
+        if (year) {
+            parms['dzlist.year'] = year;
         }
-        if (month){
+        if (month) {
             parms['dzlist.month'] = month;
         }
         Ext.Ajax.request({
@@ -41,29 +43,36 @@ Ext.define('WX.controller.Main', {
             params: parms,
             scope: this,
             success: success,
-            failure: function(response){
+            failure: function (response) {
                 Ext.Msg.alert('错误', '操作失败，请稍后重试', Ext.emptyFn);
             }
         });
     },
 
-    onReady: function(view){
-      if (WX_VIEW_ID == 'CurrentDz'){
-          //load the lasted dz record
-          this.loadDzRecord(function(response){
-              var msg = Ext.JSON.decode(response.responseText,true);
-              if (msg.dzlist){
-                  this.getHqContent().setTpl(this.getDzTpl());
-                  this.getHqContent().setData(msg.dzlist);
-                  if (msg.dzlist.isok == 'Y'){
-                      this.getConfirmButton().setText('己确认');
-                      this.getConfirmButton().setDisabled(true);
-                  }
-              } else {
-                  Ext.Msg.alert('当前对账',msg.msg,Ext.emptyFn);
-              }
-          });
-      }
+    onReady: function (view) {
+        if (WX_PP.viewId == 'CurrentDz') {
+            //load the lasted dz record
+            this.loadDzRecord(function (response) {
+                var msg = Ext.JSON.decode(response.responseText, true);
+                if (msg.dzlist) {
+                    this.getHqContent().setTpl(this.getDzTpl());
+                    this.getHqContent().setData(msg.dzlist);
+                    this.getConfirmButton().setDisabled(false);
+                    if (msg.dzlist.isok == 'Y') {
+                        this.getConfirmButton().setText('己确认');
+                        this.getConfirmButton().setDisabled(true);
+                    }
+                } else {
+                    Ext.Msg.alert('当前对账', '当前没有记录', Ext.emptyFn);
+                }
+            });
+        }
+        if (WX_PP.viewId == 'Main' && WX_PP.phone){
+            Ext.Msg.alert('用户绑定','该帐号当前己绑定,无法再次绑定');
+            console.log(this.getValidateButton());
+            this.getValidateButton().setDisabled(true);
+            this.getBindButton().setDisabled(true);
+        }
     },
     getValidateCode : function(btn){
     	var phone = btn.up('container').down('textfield[name=phone]').getValue();
@@ -92,12 +101,10 @@ Ext.define('WX.controller.Main', {
 		});
     },
     waitValidateCode: function(btn, time){
-    	btn.setText(time + '秒后重发');
-		btn.ui = 'normal';
+    	btn.setText(time + '秒');
         btn.setDisabled(true);
     	if (time < 1){
-    		btn.setText('获取验证码');
-    		btn.ui = 'action-round';
+    		btn.setText('验证码');
             btn.setDisabled(false);
     	} else {
 			--time;
@@ -114,7 +121,7 @@ Ext.define('WX.controller.Main', {
             url : 'userBind.cmd',
             waitTitle:"请稍候",
             params: {
-                openid : WX_OPEN_ID
+                openid: WX_PP.openId
             },
             waitMsg:"正在进行用户绑定...",
             failure:function(form1,action){
@@ -157,6 +164,7 @@ Ext.define('WX.controller.Main', {
             return;
         }
         var value = picker.getValue();
+        console.log(value);
         this.clearHqcontent();
         this.loadDzRecord(function(response){
             var msg = Ext.JSON.decode(response.responseText,true);
@@ -166,7 +174,7 @@ Ext.define('WX.controller.Main', {
             } else {
                 Ext.Msg.alert('当前对账','没有对应的记录',Ext.emptyFn);
             }
-        },value.getUTCFullYear(), value.getMonth());
+        }, value.getUTCFullYear(), value.getMonth());
     },
     clearHqcontent: function(){
         this.getHqContent().setTpl('没有数据');

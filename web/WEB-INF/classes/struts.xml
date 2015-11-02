@@ -39,6 +39,14 @@
 		<action name="userBindIndex" class="UserAction" method="userBindIndex">
 			<result name="success">index.jsp</result>
 		</action>
+		<action name="historyQueryIndex" class="UserAction" method="historyQueryIndex">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="currentDzIndex" class="UserAction" method="currentDzIndex">
+			<result name="success">index.jsp</result>
+		</action>
+
+
 		<action name="loadDzRecord" class="UserAction" method="loadDzRecord"/>
         <action name="confirmDz" class="UserAction" method="confirmDz"/>
 

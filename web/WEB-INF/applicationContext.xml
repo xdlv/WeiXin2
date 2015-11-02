@@ -20,7 +20,7 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		<property name="validationQuery" value="select sysdate()"></property>
+		<property name="validationQuery" value="${jdbc.validate}"></property>
 		<property name="maxActive" value="20"></property>
 	</bean>
 	<bean id="vendorProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">

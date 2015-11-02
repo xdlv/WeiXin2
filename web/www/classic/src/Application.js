@@ -16,12 +16,8 @@ Ext.define('TrackCar.Application', {
     },
 
     onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
+        window.localStorage.clear();
+        window.applicationCache.update();
+        window.location.reload();
     }
 });

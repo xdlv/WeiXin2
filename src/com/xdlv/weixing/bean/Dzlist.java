@@ -234,7 +234,16 @@ public class Dzlist {
      * @mbggenerated
      */
     public Float getQmye() {
-        return qmye;
+        return zdxsk1 +
+                ysdsk1 +
+                zdfwk1 +
+                jb1 +
+                fl1 +
+                zdxsk2 +
+                jb2 +
+                fl2 +
+                zdfwk2 +
+                qtyfdk2;
     }
 
     /**

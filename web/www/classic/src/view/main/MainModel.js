@@ -36,18 +36,18 @@ Ext.define('TrackCar.view.main.MainModel', {
                         text: '手机号码导入',
                         iconCls: 'x-fa fa-share-alt',
                         leaf: true,
-                        view : 'import.ImportTelphone',
-                        routeId: 'import-ImportTelphone'
+                        view : 'importA.ImportTelphone',
+                        routeId: 'importA-ImportTelphone'
                     },{
                         text: '对账文件导入',
                         iconCls: 'x-fa fa-flag',
-                        view: 'import.ImportDz',
-                        routeId: 'import-ImportDz',
+                        view: 'importA.ImportDz',
+                        routeId: 'importA-ImportDz',
                         leaf: true
                     },{
                         text: '对账结果导出',
-                        view: 'export.DzExport',
-                        routeId: 'export-DzExport',
+                        view: 'exportA.DzExport',
+                        routeId: 'exportA-DzExport',
                         iconCls: 'x-fa fa-signal',
                         leaf: true
                     }]

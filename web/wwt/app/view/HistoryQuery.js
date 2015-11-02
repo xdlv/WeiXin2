@@ -27,7 +27,7 @@ Ext.define('WX.view.HistoryQuery', {
 				name : 'hqContent',
 				padding: '30',
 				height: 350,
-				tpl : '<p>Name: {name}</p><p>Title: {title}</p>',
+				tpl : '<p>Name: {name}</p><p>Title: {title}</p>'
 			}]
 		}]
 	}

@@ -56,7 +56,14 @@
     where phone = #{phone,jdbcType=VARCHAR}
   </update>
 
-  <select id="getAllUserdzs" resultType="java.lang.Integer" resultMap="UserdzResultMap">
+  <select id="getAllUserdzs" parameterType="java.lang.Integer" resultMap="UserdzResultMap">
     select * from t_userdz
   </select>
+    <select id="selectUserdzByOpenid" parameterType="java.lang.String" resultMap="UserdzResultMap">
+        select * from t_userdz where wxid=#{openid,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteUserdzByOpenid" parameterType="java.lang.String">
+         delete from t_userdz where wxid=#{openid,jdbcType=VARCHAR}
+    </delete>
 </mapper>

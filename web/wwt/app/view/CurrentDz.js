@@ -17,13 +17,14 @@ Ext.define('WX.view.CurrentDz', {
                 xtype : 'component',
                 name : 'hqContent',
                 padding: '30',
-                height: 400,
+                height: 400
             },{
                 xtype: 'button',
                 ui : 'confirm',
                 margin: '10',
                 text: '确认对账',
-                name: 'confirmDz'
+                name: 'confirmDz',
+                disabled : true
             }]
         }]
     }

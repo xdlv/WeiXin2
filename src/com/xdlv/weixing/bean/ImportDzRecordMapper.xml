@@ -40,7 +40,7 @@
         select * from t_import_dz_record where notification=#{notification,jdbcType=VARCHAR}
     </select>
 
-  <select id="getLastedNotifyImportDzRecord" resultMap="ImportDzRecordResultMap">
+  <select id="getLastedNotifyImportDzRecord" parameterType="java.lang.String" resultMap="ImportDzRecordResultMap">
     select * from t_import_dz_record where notification= 'E' order by year + month desc
   </select>
 

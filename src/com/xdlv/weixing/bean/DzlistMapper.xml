@@ -43,23 +43,22 @@
 
     <select id="getDzListCount" parameterType="com.xdlv.weixing.bean.Dzlist" resultType="java.lang.Integer">
     select count(*) from t_dzlist where 1=1 <if test="userid != null"> and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>;
+        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>
   </select>
 
-    <select id="selectDzlists" resultMap="DzlistResultMap">
+    <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap">
     select * from t_dzlist where 1=1 <if test="userid != null"> and userid=#{userid,jdbcType=VARCHAR}</if>
         <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if> limit #{start,jdbcType=INTEGER} , #{end,jdbcType=INTEGER}
   </select>
 
-    <select id="selectDzlists" resultMap="DzlistResultMap"
-            databaseId="oracle">
-    select * from ( select * from t_dzlist where rowno &lt;= #{end,jdbcType=INTEGER}
+    <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
+    select * from ( select * from t_dzlist where rownum &lt;= #{end,jdbcType=INTEGER}
     <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
         <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>)
     where rownum &gt; #{start,jdbcType=INTEGER}
   </select>
 
-    <select id="selectDzlistsByYearAndMonth" resultMap="DzlistResultMap">
+    <select id="selectDzlistsByYearAndMonth" parameterType="java.lang.String" resultMap="DzlistResultMap">
     select c.* from t_userdz a JOIN t_user_company b
     on (a.phone = b.wx_contract_phone1 or a.phone = b.wx_contract_phone2)
   JOIN t_dzlist c on b.code = c.userid where a.wxid=#{wxid, jdbcType=VARCHAR}

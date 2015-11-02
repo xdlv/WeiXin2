@@ -3,11 +3,18 @@ create table t_primary_key(
     table_name varchar2(32) not null primary key,
     current_id number(8) not null
 ); 
+create table t_user
+(
+	id     int primary key, 
+	name varchar(15) not null,
+	pwd varchar(10),
+	mail varchar(20)
+);
+insert into t_user values(-10,'a','a','a@a.com');
 
 drop table t_userdz;
 create table t_userdz
 (
-	user_id	number(8) primary key,
 	phone	varchar2(15) not null,
 	user_name	varchar2(50),
 	wxid	varchar2(50)
@@ -29,7 +36,7 @@ create table t_dzlist
 	month number(2),
 	impdate date,
 	userid Varchar2(15),
-	Username Varchar2(50),
+	Username Varchar2(200),
 	Isok Char(1),
 	Qmye Number(12,3),
 	zdxsk1 Number(12,3),
@@ -47,15 +54,23 @@ create table t_dzlist
 drop table t_user_company;
 create table t_user_company
 (
-	code varchar2(10),
+	code varchar2(40),
 	company_name varchar2(200),
 	area varchar2(15),
 	business char(1),
-	wx_contract_name1 varchar2(10),
+	wx_contract_name1 varchar2(20),
 	wx_contract_phone1 varchar2(15),
-	wx_contract_name2 varchar2(10),
+	wx_contract_name2 varchar2(20),
 	wx_contract_phone2 varchar2(15),
 	manager_name varchar2(20),
 	remark_content varchar2(100)
 );
 
+drop table t_import_dz_record;
+create table t_import_dz_record
+(
+	year SMALLINT not null,
+	month SMALLINT not null,
+	notification char(1),
+	import_date date
+);

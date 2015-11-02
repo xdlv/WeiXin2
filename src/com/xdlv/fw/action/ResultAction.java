@@ -2,12 +2,14 @@ package com.xdlv.fw.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.xdlv.fw.FwException;
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class ResultAction extends ActionSupport{
 
+    static Logger logger = Logger.getLogger(ResultAction.class);
     String msg = "操作成功";
     boolean success = true;
     public String result(){
@@ -22,7 +24,9 @@ public class ResultAction extends ActionSupport{
             msg = temp.getMessage();
             success = false;
             if (!(exception instanceof FwException)){
-                exception.printStackTrace();
+                logger.warn("business exception", exception);
+            } else {
+                logger.info("bussiness:" + exception.getMessage());
             }
         } else {
             String msgSpecialized = (String)request.getAttribute("msg");

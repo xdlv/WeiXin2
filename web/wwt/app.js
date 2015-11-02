@@ -15,7 +15,9 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox',
-        'WX.view.*',
+        'WX.view.Main',
+        'WX.view.HistoryQuery',
+        'WX.view.CurrentDz',
         'Ext.TitleBar',
         'Ext.form.FieldSet',
         'Ext.field.DatePicker'
@@ -52,18 +54,12 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
         
-        Ext.Viewport.add(Ext.create('WX.view.' + WX_VIEW_ID));
+        Ext.Viewport.add(Ext.create('WX.view.' + WX_PP.viewId));
     },
 
     onUpdated: function() {
-        Ext.Msg.confirm(
-            "Application Update",
-            "This application has just successfully been updated to the latest version. Reload now?",
-            function(buttonId) {
-                if (buttonId === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
+        window.localStorage.clear();
+        window.applicationCache.update();
+        window.location.reload();
     }
 });
