@@ -470,4 +470,14 @@ public class Dzlist {
         zdfwk2 = 0f;
         qtyfdk2 = 0f;
     }
+
+    //phone of user company for query
+    private String phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 }

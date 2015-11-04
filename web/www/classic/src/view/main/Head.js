@@ -22,7 +22,7 @@ Ext.define('TrackCar.view.main.Head', {
         {
             xtype: 'tbspacer',
             flex: 1
-        },
+        }/*,
         {
             cls: 'delete-focus-bg',
             iconCls:'x-fa fa-search',
@@ -47,7 +47,7 @@ Ext.define('TrackCar.view.main.Head', {
             href: '#profile',
             hrefTarget: '_self',
             tooltip: 'See your profile'
-        },
+        }*/,
         {
             xtype: 'tbtext',
             bind: {text: '{currentUser.name}'},

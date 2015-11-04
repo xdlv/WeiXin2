@@ -33,20 +33,20 @@ Ext.define("TrackCar.view.user.ModUser", {
 	},
 	
 	tbar: {
-		xtype: 'toolbar',
+        margin: '0 0 10 10',
+		xtype: 'container',
+		layout: 'hbox',
         items: [{
+			xtype: 'button',
             text: '增加用户',
             handler: 'addUser'
-        }, '-', {
-            text: '修改用户',
-            tooltip: 'Set options',
-            iconCls: 'framing-buttons-option'
-        },'-',{
+        },{
+            margin: '0 0 0 10',
             reference: 'removeButton',
             text: '删除用户',
-            tooltip: 'Remove the selected item',
-            iconCls:'framing-buttons-remove',
-            disabled: true
+            xtype: 'button',
+            disabled: true,
+            handler: 'delUser'
         }]
 	}
 });

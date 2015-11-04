@@ -52,4 +52,5 @@ public class PrimaryKey {
 		this.tableName = tableName;
 		this.currentId = currentId;
 	}
+	public PrimaryKey(){}
 }

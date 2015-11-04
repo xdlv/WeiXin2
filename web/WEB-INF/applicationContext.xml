@@ -76,6 +76,7 @@
 
 	
 	<bean class="com.xdlv.weixing.service.impl.UserSerivceImpl" autowire="byType" />
+	<bean class="com.xdlv.weixing.service.impl.FwServiceImpl" autowire="byType" />
 	<bean name="UserAction" class="com.xdlv.weixing.action.UserAction" scope="prototype" autowire="byType" />
 	<bean name="FwUserAction" class="com.xdlv.weixing.action.FwUserAction" scope="prototype" autowire="byType" />
 	<bean name="WeiXingAction" class="com.xdlv.weixing.action.WeiXingAction" scope="prototype" autowire="byType" />

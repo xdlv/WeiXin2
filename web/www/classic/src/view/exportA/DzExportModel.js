@@ -50,11 +50,6 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
             model: 'Dzlist',
             session : true,
             autoLoad: true
-        },
-        comboxStore: {
-            type: 'array',
-            fields: ['name','value'],
-            data: [[1,'A'],[2,'B']]
         }
     }
 });

@@ -42,19 +42,32 @@
     </insert>
 
     <select id="getDzListCount" parameterType="com.xdlv.weixing.bean.Dzlist" resultType="java.lang.Integer">
-    select count(*) from t_dzlist where 1=1 <if test="userid != null"> and userid=#{userid,jdbcType=VARCHAR}</if>
+        SELECT count(*) FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE 1 =1
+        <if test="phone != null">
+            and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
+        <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
         <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>
+        <if test="username != null">and username like '%${username}%' </if>
   </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap">
-    select * from t_dzlist where 1=1 <if test="userid != null"> and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if> limit #{start,jdbcType=INTEGER} , #{end,jdbcType=INTEGER}
+        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE 1 =1
+        <if test="phone != null">
+            and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
+        <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
+        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>
+        <if test="username != null">and username like '%${username}%' </if>
+        limit #{start,jdbcType=INTEGER} , #{end,jdbcType=INTEGER}
   </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
-    select * from ( select * from t_dzlist where rownum &lt;= #{end,jdbcType=INTEGER}
-    <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>)
+        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE
+        rownum &lt;= #{end,jdbcType=INTEGER}
+        <if test="phone != null">
+          and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
+        <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
+        <if test="isok != null">and isok=#{isok, jdbcType=CHAR}</if>
+        <if test="username != null">and username like '%${username}%' </if>))
     where rownum &gt; #{start,jdbcType=INTEGER}
   </select>
 

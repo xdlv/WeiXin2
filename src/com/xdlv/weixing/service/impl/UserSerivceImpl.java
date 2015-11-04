@@ -12,7 +12,6 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	UserCompanyMapper userCompanyMapper;
 	UserValidateMapper userValidateMapper;
 	UserdzMapper userdzMapper;
-	UserMapper userMapper;
     DzlistMapper dzlistMapper;
     ImportDzRecordMapper importDzRecordMapper;
 	@Override
@@ -41,9 +40,6 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	public void setUserValidateMapper(UserValidateMapper userValidateMapper) {
 		this.userValidateMapper = userValidateMapper;
 	}
-	public void setUserMapper(UserMapper userMapper) {
-		this.userMapper = userMapper;
-	}
 
     public void setDzlistMapper(DzlistMapper dzlistMapper) {
         this.dzlistMapper = dzlistMapper;
@@ -52,25 +48,6 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     public void setImportDzRecordMapper(ImportDzRecordMapper importDzRecordMapper) {
         this.importDzRecordMapper = importDzRecordMapper;
     }
-
-    @Override
-	public User userLogin(String name, String pwd) {
-		return userMapper.selecUserByNameAndPwd(name, pwd);
-	}
-	@Override
-	public void saveUser(User user) {
-		user.setId(getPrimaryKey("t_user"));
-		userMapper.insert(user);
-	}
-
-	@Override
-	public List<User> getUsers(int start, int end) {
-		return userMapper.selectUsers(start, end);
-	}
-	@Override
-	public int getUsersCount() {
-		return userMapper.selectUserCount();
-	}
 
 	@Override
 	public int batchSaveUserCompany(List<UserCompany> userCompanyList) {
@@ -129,7 +106,9 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	public List<Dzlist> getAllDzlists(Dzlist dzlist,int start, int end) {
         String userid = dzlist == null ? null : dzlist.getUserid();
         String isok = dzlist == null ? null : dzlist.getIsok();
-		return dzlistMapper.selectDzlists(userid, isok, start, end);
+        String username = dzlist == null ? null : dzlist.getUsername();
+        String phone = dzlist == null ? null : dzlist.getPhone();
+		return dzlistMapper.selectDzlists(userid, isok,phone,username, start, end);
 	}
 
     @Override

@@ -13,14 +13,6 @@ public interface UserSerivce extends BaseService{
 	
 	int updateUserValidateStatus(String phone,String status);
 
-	User userLogin(String name, String pwd);
-
-	List<User> getUsers(int start, int end);
-
-	int getUsersCount();
-
-	void saveUser(User user);
-
 	int batchSaveUserCompany(List<UserCompany> userCompanyList);
 
 	int getUserCompanysCount();

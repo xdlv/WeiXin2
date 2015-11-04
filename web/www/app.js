@@ -9,12 +9,7 @@ Ext.application({
     extend: 'TrackCar.Application',
 
     requires: [
-        /*'TrackCar.view.user.*',
-        'TrackCar.view.importA.*',
-        'TrackCar.view.exportA.DzExport',
-        'TrackCar.view.login.Login',
-        'TrackCar.view.n',
-        'TrackCar.view.main'*/
+        'TrackCar.Util',
         'TrackCar.view.*'
     ]
 
