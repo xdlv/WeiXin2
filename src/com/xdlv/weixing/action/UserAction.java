@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserAction extends BaseAction {
 
     static Logger logger = Logger.getLogger(UserAction.class);
+    public static final String RET_KEY = "RET_FOR_TOUCH";
 
     String phone;
     String validateCode;
@@ -39,38 +40,33 @@ public class UserAction extends BaseAction {
         setRetAttribute("viewId", "Main");
         return SUCCESS;
     }
-
-    public String currentDzIndex() throws Exception {
+    public String currentDzIndex()throws Exception{
         return checkBindAndView("CurrentDz");
     }
 
-    public String historyQueryIndex()
-            throws Exception {
+    public String historyQueryIndex()throws Exception{
         return checkBindAndView("HistoryQuery");
     }
-
-    private String checkBindAndView(String viewId)
-            throws Exception {
+    private String checkBindAndView(String viewId) throws Exception{
         Userdz userdz = getUserDzFromWeixing();
-        setRetAttribute("openId", userdz.getWxid());
-        if (userdz == null) {
+        setRetAttribute("openId",userdz.getWxid());
+        if (userdz == null){
             setRetAttribute("viewId", "Main");
         } else {
             setRetAttribute("viewId", viewId);
         }
         return SUCCESS;
     }
-
-    private Userdz getUserDzFromWeixing()
-            throws Exception {
-        String openId = this.openid;
+    private Userdz getUserDzFromWeixing()throws Exception{
         Userdz userdz;
-        if (openId != null) {
-            userdz = this.userSerivce.getUserdzByOpenid(openId);
+        String openId = openid;
+        if (openId != null){
+            //this is test for ui
+            userdz = userSerivce.getUserdzByOpenid(openId);
         } else {
-            String url = String.format("https://api.weixin.qq.com/sns/oauth2/access_token" +
-                    "?appid=%s&secret=%s&code=%s&grant_type=authorization_code", appID, appsecret, code);
-
+            // wei xing
+            String url = String.format("https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s" +
+                    "&secret=%s&code=%s&grant_type=authorization_code", appID,appsecret,code);
             String retJson = HttpClientTpl.get(url);
             logger.info("ret openid :" + retJson);
             JSONObject json = JSONObject.fromObject(retJson);
@@ -78,7 +74,7 @@ public class UserAction extends BaseAction {
             if (openId == null) {
                 throw new FwException("无法获取用户信息:openid");
             }
-            userdz = this.userSerivce.getUserdzByOpenid(openId);
+            userdz = userSerivce.getUserdzByOpenid(openId);
         }
         if (userdz == null) {
             userdz = new Userdz();
@@ -86,34 +82,32 @@ public class UserAction extends BaseAction {
         }
         return userdz;
     }
-
-    private void setRetAttribute(String key, String value) {
+    private void setRetAttribute(String key, String value){
         HttpServletRequest request = ServletActionContext.getRequest();
-        JSONObject jsonObject = (JSONObject) request.getAttribute("RET_FOR_TOUCH");
-        if (jsonObject == null) {
+        JSONObject jsonObject = (JSONObject)request.getAttribute(RET_KEY);
+        if (jsonObject == null){
             jsonObject = new JSONObject();
-            request.setAttribute("RET_FOR_TOUCH", jsonObject);
+            request.setAttribute(RET_KEY, jsonObject);
         }
         jsonObject.put(key, value);
     }
-
-    public String userBind() {
+	public String userBind(){
         UserValidate userValidate = userSerivce.getValidateCodeByPhone(phone, validateCode);
-        if (userValidate == null) {
+        if (userValidate == null){
             throw new FwException("验证码无效，请重新获取");
         }
         Userdz userdz = new Userdz(phone, openid);
         userSerivce.saveUserDz(userdz);
-        return FINISH;
-    }
-
-    public String sendValidateCode() {
-        //首先要判断是否为合法用户
-        UserCompany[] userCompanys = userSerivce.getUserCompanyByPhone(phone);
-        if (userCompanys == null || userCompanys.length < 1) {
-            throw new FwException("不是合法客商用户");
-        }
-        if (userSerivce.getUserdzByPhone(phone) != null) {
+		return FINISH;
+	}
+	
+	public String sendValidateCode(){
+		//首先要判断是否为合法用户
+		UserCompany[] userCompanys = userSerivce.getUserCompanyByPhone(phone);
+		if (userCompanys == null || userCompanys.length < 1){
+			throw new FwException("不是合法客商用户");
+		}
+        if (userSerivce.getUserdzByPhone(phone) != null){
             throw new FwException("该用户手机号己经绑定");
         }
         UserValidate userValidate = new UserValidate(phone, FwUtil.getValidateCode());

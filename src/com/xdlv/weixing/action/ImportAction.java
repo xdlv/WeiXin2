@@ -171,10 +171,13 @@ public class ImportAction extends BaseAction {
     }
 
     private String getCellValue(Cell cell) {
+        if (cell == null){
+            return null;
+        }
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-            return String.valueOf(cell.getNumericCellValue());
+            return String.valueOf(cell.getNumericCellValue()).trim();
         } else {
-            return cell.getStringCellValue();
+            return cell.getStringCellValue().trim();
         }
     }
 
