@@ -6,7 +6,6 @@ import java.util.List;
 import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.User;
 import com.xdlv.weixing.service.FwService;
-import com.xdlv.weixing.service.UserSerivce;
 
 public class FwUserAction extends BaseAction {
 
@@ -32,12 +31,12 @@ public class FwUserAction extends BaseAction {
 
     public String obtainUsers() {
         total = fwService.getUsersCount();
-        users = fwService.getUsers(start, start + limit);
+        users = fwService.getUsers(start, limit);
         return SUCCESS;
     }
 
     public String saveUser() {
-        fwService.saveUser(user);
+        fwService.saveOrUpdateUser(user);
         return FINISH;
     }
 

@@ -19,13 +19,13 @@ Ext.define("TrackCar.view.notify.Notification",{
             columns : '{columnsA}',
             store : '{store}'
         },
-        selModel : {
+        /*selModel : {
             type : 'checkboxmodel',
             mode: 'SINGLE',
             listeners : {
                 selectionchange : 'onSelectionChange'
             }
-        },
+        },*/
         bbar : {
             xtype : "pagingtoolbar",
             displayInfo : true,
@@ -40,8 +40,7 @@ Ext.define("TrackCar.view.notify.Notification",{
                 xtype: 'button',
                 text: '下发通知',
                 handler: 'notifyMessage',
-                reference: 'notifyButton',
-                disabled: 'true'
+                reference: 'notifyButton'
             }]
         }
     }]

@@ -33,7 +33,7 @@ public class DzlistAction extends BaseAction{
             dzlist.setUsername(URLDecoder.decode(dzlist.getUsername(), FwUtil.UTF8));
         }
         total = userSerivce.getDzListCount(dzlist);
-        dzlists = userSerivce.getAllDzlists(dzlist,start, start + limit);
+        dzlists = userSerivce.getAllDzlists(dzlist,start, limit);
         return SUCCESS;
     }
 

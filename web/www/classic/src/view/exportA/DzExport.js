@@ -1,6 +1,6 @@
 Ext.define("TrackCar.view.exportA.DzExport", {
     extend: "Ext.container.Container",
-
+    xtype: 'exportA-DzExport',
     requires: [
         "TrackCar.view.exportA.DzExportController",
         "TrackCar.view.exportA.DzExportModel",
@@ -72,20 +72,29 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                 flex: 1,
                 items:[{
                     xtype: 'container',
+                    bind : {hidden: '{hiddenStatus}'},
                     layout: {
                         type: 'hbox',
                         align: 'stretch'
                     },
                     items: [{
                         xtype: 'checkbox',
-                        boxLabel: '己确认',
+                        boxLabel: '无异议',
                         name: 'confirm',
+                        bind: { hidden: '{!showStatus}'},
                         inputValue: 'Y'
                     }, {
                         xtype: 'checkbox',
-                        boxLabel: '未确认',
+                        boxLabel: '未回复',
                         name: 'unconfirm',
-                        inputValue: 'N'
+                        bind: { hidden: '{!showStatus}'},
+                        inputValue: 'N',
+                    },, {
+                        xtype: 'checkbox',
+                        boxLabel: '有异议',
+                        name: 'reject',
+                        bind: { hidden: '{!showStatus}'},
+                        inputValue: 'E',
                     }]
                 },{
                     xtype: 'container',
@@ -103,6 +112,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                         margin: '0 0 0 5',
                         xtype: 'button',
                         text: '导出',
+                        bind : {hidden: '{hiddenStatus}'},
                         handler: 'exportDzlist',
                         flex: 1
                     }]

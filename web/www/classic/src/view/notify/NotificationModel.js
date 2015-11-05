@@ -13,6 +13,18 @@ Ext.define('TrackCar.view.notify.NotificationModel', {
             text : '导入日期',
             type: 'date',
             dataIndex : 'importDate'
+        },{
+            text: '状态',
+            dataIndex: 'notification',
+            renderer: function(value){
+                if (value == 'N'){
+                    return '未下发';
+                }
+                if (value == 'E'){
+                    return '己下发';
+                }
+                return '正在下发';
+            }
         } ]
     },
 

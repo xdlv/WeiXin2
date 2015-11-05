@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import com.xdlv.fw.FwUtil;
 import com.xdlv.weixing.bean.*;
 import com.xdlv.weixing.service.UserSerivce;
 
@@ -52,19 +53,20 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	@Override
 	public int batchSaveUserCompany(List<UserCompany> userCompanyList) {
 		for (UserCompany userCompany : userCompanyList){
+            userCompanyMapper.deleteForImport(userCompany);
 			userCompanyMapper.insert(userCompany);
 		}
 		return userCompanyList.size();
 	}
 
     @Override
-    public int getUserCompanysCount(){
-        return userCompanyMapper.getUserCompanysCount();
+    public int getUserCompanysCount(UserCompany userCompany){
+        return userCompanyMapper.getUserCompanysCount(userCompany);
     }
 
     @Override
-    public List<UserCompany> getAllUserCompanys(int start, int end){
-        return userCompanyMapper.selectUserCompanys(start, end);
+    public List<UserCompany> getAllUserCompanys(UserCompany userCompany, int start, int limit){
+        return userCompanyMapper.selectUserCompanys(userCompany,start, limit);
     }
 
 	@Override
@@ -97,18 +99,20 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
         Date date = new Date();
         for (Dzlist value : values){
             value.setImpdate(date);
+            dzlistMapper.deleteDzlistForImport(value);
             dzlistMapper.insert(value);
         }
         return values.size();
     }
 
 	@Override
-	public List<Dzlist> getAllDzlists(Dzlist dzlist,int start, int end) {
-		return dzlistMapper.selectDzlists(dzlist, start, end);
+	public List<Dzlist> getAllDzlists(Dzlist dzlist,int start, int limit) {
+		return dzlistMapper.selectDzlists(dzlist, start, limit);
 	}
 
     @Override
-    public void saveImportDzRecord(ImportDzRecord importDzRecord) {
+    public void saveOrUpdateImportDzRecord(ImportDzRecord importDzRecord) {
+        importDzRecordMapper.deleteImportDzRecordByYearAndMonth(importDzRecord.getYear(),importDzRecord.getMonth());
         importDzRecordMapper.insert(importDzRecord);
     }
 
@@ -138,17 +142,16 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     }
 
     @Override
-    public List<Userdz> getAllUserdzs(int start, int end) {
-        return userdzMapper.getAllUserdzs(start, end);
+    public List<Userdz> getAllUserdzs(int start, int limit) {
+        return userdzMapper.getAllUserdzs(start, limit);
     }
 
     @Override
     public ImportDzRecord getLastedNotifyImportDzRecord() {
-        List<ImportDzRecord> importDzRecords = importDzRecordMapper.getLastedNotifyImportDzRecord();
-        if (importDzRecords != null && importDzRecords.size() > 0){
-            return importDzRecords.get(0);
-        }
-        return null;
+        int[] yearAndLastMonth = FwUtil.getLastMonth();
+        return importDzRecordMapper.getImportDzRecordByYearAndMonth(
+                yearAndLastMonth[0], yearAndLastMonth[1]
+        );
     }
 
     @Override

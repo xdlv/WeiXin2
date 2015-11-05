@@ -13,7 +13,7 @@ public interface DzlistMapper {
 	 */
 	int insert(Dzlist record);
 
-	List<Dzlist> selectDzlists(@Param("dzlist")Dzlist dzlist,@Param("start")int start, @Param("end")int end);
+	List<Dzlist> selectDzlists(@Param("dzlist")Dzlist dzlist,@Param("start")int start, @Param("limit")int limit);
 
 	int getDzListCount(Dzlist dzlist);
 
@@ -21,4 +21,6 @@ public interface DzlistMapper {
 			, @Param("year")int year, @Param("month")int month);
 
     void updateDzlistStatus(Dzlist dzlist);
+
+	void deleteDzlistForImport(Dzlist dzlist);
 }

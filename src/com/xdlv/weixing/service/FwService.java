@@ -11,11 +11,11 @@ public interface FwService extends BaseService{
 
     User userLogin(String name, String pwd);
 
-    List<User> getUsers(int start, int end);
+    List<User> getUsers(int start, int limit);
 
     int getUsersCount();
 
-    void saveUser(User user);
+    void saveOrUpdateUser(User user);
 
     void deleteUserById(Integer id);
 }

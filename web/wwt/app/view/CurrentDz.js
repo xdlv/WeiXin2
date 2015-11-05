@@ -19,12 +19,25 @@ Ext.define('WX.view.CurrentDz', {
                 padding: '30',
                 height: 400
             },{
-                xtype: 'button',
-                ui : 'confirm',
+                xtype:'container',
+                layout: 'hbox',
                 margin: '10',
-                text: '确认对账',
-                name: 'confirmDz',
-                disabled : true
+                items:[{
+                    xtype: 'button',
+                    ui : 'confirm',
+                    text: '无异议',
+                    name: 'confirmDz',
+                    disabled : true,
+                    flex: 1,
+                },{
+                    margin: '0 0 0 10',
+                    xtype: 'button',
+                    ui : 'confirm',
+                    text: '有异议',
+                    name: 'reject',
+                    disabled : false,
+                    flex: 1
+                }]
             }]
         }]
     }

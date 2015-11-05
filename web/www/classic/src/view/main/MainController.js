@@ -1,12 +1,12 @@
 Ext.define('TrackCar.view.main.MainController', {
-	extend : 'Ext.app.ViewController',
+    extend: 'Ext.app.ViewController',
 
-	alias : 'controller.main-main',
-	
-	listen : {
-        controller : {
-            '#' : {
-                unmatchedroute : 'onRouteChange'
+    alias: 'controller.main-main',
+
+    listen: {
+        controller: {
+            '#': {
+                unmatchedroute: 'onRouteChange'
             }
         }
     },
@@ -15,7 +15,7 @@ Ext.define('TrackCar.view.main.MainController', {
         ':node': 'onRouteChange'
     },
 
-    setCurrentView: function(hashTag) {
+    setCurrentView: function (hashTag) {
         hashTag = (hashTag || '').toLowerCase();
 
         var me = this,
@@ -41,9 +41,14 @@ Ext.define('TrackCar.view.main.MainController', {
 
         if (!existingItem) {
             newView = Ext.create('TrackCar.view.' + (view || 'pages.Error404Window'), {
-                    hideMode: 'offsets',
-                    routeId: hashTag
-                });
+                hideMode: 'offsets',
+                routeId: hashTag,
+                viewModel: {
+                    data : {
+                        currentUser: this.getViewModel().getData().currentUser
+                    }
+                }
+            });
         }
 
         if (!newView || !newView.isWindow) {
@@ -76,7 +81,7 @@ Ext.define('TrackCar.view.main.MainController', {
 
     onNavigationTreeSelectionChange: function (tree, node) {
         if (node && node.get('view')) {
-            this.redirectTo( node.get("routeId"));
+            this.redirectTo(node.get("routeId"));
         }
     },
 
@@ -132,21 +137,31 @@ Ext.define('TrackCar.view.main.MainController', {
         }
     },
 
-   /* onMainViewRender:function() {
-        if (!window.location.hash) {
-            this.redirectTo("dashboard");
-        }
-    },*/
+    /* onMainViewRender:function() {
+     if (!window.location.hash) {
+     this.redirectTo("dashboard");
+     }
+     },*/
 
-    onRouteChange:function(id){
+    onRouteChange: function (id) {
         this.setCurrentView(id);
+    },
+    modUser: function (btn) {
+        Ext.create('TrackCar.view.user.AddUser', {
+            viewModel: {
+                data: {
+                    user: this.getViewModel().getData().currentUser,
+                    superUser : this.getViewModel().getData().currentUser.get('userRole') == 0
+                }
+            }
+        }).show();
     }
 
     /*onSearchRouteChange: function () {
-        this.setCurrentView('search');
-    },
+     this.setCurrentView('search');
+     },
 
-    onEmailRouteChange: function () {
-        this.setCurrentView('email');
-    }*/
+     onEmailRouteChange: function () {
+     this.setCurrentView('email');
+     }*/
 });

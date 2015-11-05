@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'TrackCar' );
-$image-search-path: 'C:/Work/Java/Intelli-WP/TrackCar/web/www/build/production/TrackCar/classic/resources';
+$image-search-path: 'C:/Users/xd/Work/Java/SSI/TrackCar/web/www/build/production/TrackCar/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
@@ -914,6 +914,7 @@ $include-trackcar-view-importa-importmodel: dynamic(true);;
 $include-trackcar-view-importa-importtelphone: dynamic(true);;
 $include-trackcar-view-importa-importtelphonecontroller: dynamic(true);;
 $include-trackcar-view-importa-importtelphonemodel: dynamic(true);;
+$include-trackcar-view-importa-importtelphonequery: dynamic(true);;
 $include-trackcar-view-login-login: dynamic(true);;
 $include-trackcar-view-login-logincontroller: dynamic(true);;
 $include-trackcar-view-login-loginmodel: dynamic(true);;

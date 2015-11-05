@@ -15,9 +15,9 @@ public interface UserSerivce extends BaseService{
 
 	int batchSaveUserCompany(List<UserCompany> userCompanyList);
 
-	int getUserCompanysCount();
+	int getUserCompanysCount(UserCompany userCompany);
 
-	List<UserCompany> getAllUserCompanys(int start, int end);
+	List<UserCompany> getAllUserCompanys(UserCompany userCompany, int start, int limit);
 
 	void saveUserValidate(UserValidate userValidate);
     
@@ -33,9 +33,9 @@ public interface UserSerivce extends BaseService{
 
 	int getDzListCount(Dzlist dzlist);
 
-    List<Dzlist> getAllDzlists(Dzlist dzlist, int start, int end);
+    List<Dzlist> getAllDzlists(Dzlist dzlist, int start, int limit);
 
-    void saveImportDzRecord(ImportDzRecord importDzRecord);
+    void saveOrUpdateImportDzRecord(ImportDzRecord importDzRecord);
 
     List<ImportDzRecord> getAllImportDzRecords();
 
@@ -45,10 +45,9 @@ public interface UserSerivce extends BaseService{
 
     List<ImportDzRecord> getImportDzRecordForSend();
 
-    List<Userdz> getAllUserdzs(int start, int end);
+    List<Userdz> getAllUserdzs(int start, int limit);
 
     ImportDzRecord getLastedNotifyImportDzRecord();
-
 
     Dzlist getDzlist(String wxid, int year, int month);
 

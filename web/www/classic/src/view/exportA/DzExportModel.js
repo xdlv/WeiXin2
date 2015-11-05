@@ -2,6 +2,7 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.export-dzexport',
     data: {
+        hiddenStatus: false,
         columnsA : [ {
             text : '客户',
             sortable : true,
@@ -10,8 +11,17 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
             text : '客户名称',
             dataIndex : 'username'
         },{
-            text : '确认',
-            dataIndex : 'isok'
+            text : '对账结果',
+            dataIndex : 'isok',
+            renderer: function(value){
+                if (value == 'N'){
+                    return '未回复';
+                }
+                if (value == 'Y'){
+                    return '己回复';
+                }
+                return '有异议';
+            }
         },{
             text : '期末余额',
             dataIndex : 'qmye'
@@ -52,7 +62,8 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
         store:{
             model: 'Dzlist',
             session : true,
-            autoLoad: true
+            autoLoad: true,
+            pageSize: 12
         }
     }
 });

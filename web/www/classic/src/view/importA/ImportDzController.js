@@ -1,9 +1,10 @@
 Ext.define('TrackCar.view.importA.ImportDzController', {
-    extend: 'Ext.app.ViewController',
+    extend: 'TrackCar.view.exportA.DzExportController',
     alias: 'controller.import-importdz',
     requires: [
         'Ext.window.Window',
-        'Ext.picker.Date'
+        'Ext.picker.Date',
+        'TrackCar.view.exportA.DzExportController'
     ],
 
     importClick: function (btn) {
@@ -12,34 +13,16 @@ Ext.define('TrackCar.view.importA.ImportDzController', {
             return;
         }
         var me = this;
-        var win = Ext.create('Ext.window.Window',{
-            title: '请选择所属期',
-            width: 300,
-            heigh:180,
-            layout: 'fit',
-            items: [{
-                xtype: 'form',
-                margin: '10',
-                items: [{
-                    xtype: 'datepicker',
-                    value: new Date(new Date().getFullYear()
-                        , new Date().getMonth() - 1, new Date().getDay())
-                }],
-                buttons: [{
-                    text: '确认',
-                    handler: function (button) {
-                        var value = this.up('form').down('datepicker').getValue();
-                        me.uploadFile(btn, value.getUTCFullYear(),value.getMonth());
-                        win.close();
-                    }
-                },{
-                    text: '取消',
-                    handler: function(button){
-                        this.up('window').close();
-                    }
-                }]
-            }]
-        }).show();
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth();
+        var message = Ext.util.Format.format('您正导入{0}年{1}月的对账信息，是否继续?',year,month);
+        Ext.MessageBox.confirm("提示",message ,function(v){
+                if (v == 'no'){
+                    return;
+                }
+                this.uploadFile(btn,year,month);
+        },this);
     },
 
     uploadFile : function(btn, year, month){
@@ -53,13 +36,12 @@ Ext.define('TrackCar.view.importA.ImportDzController', {
             waitMsg:"正在导入文件，请稍候。。。。。。",
             failure:function(form1,action){
                 Ext.MessageBox.hide();
-                Ext.MessageBox.alert('Error',action.result.msg);
+                Ext.MessageBox.alert('失败',action.result.msg);
             },
             success: function(form1,action){
                 Ext.MessageBox.hide();
-                Ext.MessageBox.alert('Success',action.result.msg);
+                Ext.MessageBox.alert('成功',action.result.msg);
             }
         });
     }
-    
 });

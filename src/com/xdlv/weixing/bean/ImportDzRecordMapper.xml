@@ -23,11 +23,12 @@
   </insert>
 
   <select id="getAllImportDzRecords" resultMap="ImportDzRecordResultMap">
-    select * from t_import_dz_record where notification = 'N'
+    select * from t_import_dz_record order by importDate desc
   </select>
 
     <select id="getImportDzRecordByYearAndMonth" parameterType="java.lang.Integer" resultMap="ImportDzRecordResultMap">
-        select * from t_import_dz_record where year = #{year,jdbcType=INTEGER} and month=#{month,jdbcType=INTEGER}
+        select * from t_import_dz_record where year = #{year,jdbcType=INTEGER}
+        and month=#{month,jdbcType=INTEGER}
     </select>
 
     <update id="updateImportDzRecordStatus" parameterType="com.xdlv.weixing.bean.ImportDzRecord" >
@@ -43,5 +44,10 @@
   <select id="getLastedNotifyImportDzRecord" parameterType="java.lang.String" resultMap="ImportDzRecordResultMap">
     select * from t_import_dz_record where notification= 'E' order by year + month desc
   </select>
+
+  <delete id="deleteImportDzRecordByYearAndMonth" parameterType="java.lang.Integer">
+     delete from t_import_dz_record where year = #{year,jdbcType=INTEGER}
+        and month=#{month,jdbcType=INTEGER}
+  </delete>
 
 </mapper>

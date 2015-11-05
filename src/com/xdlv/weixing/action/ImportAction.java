@@ -2,10 +2,7 @@ package com.xdlv.weixing.action;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -46,7 +43,7 @@ public class ImportAction extends BaseAction {
             }
             UserCompany userCompany = new UserCompany();
             userCompanyList.add(userCompany);
-            for (int j = 1; j < 11; j++) {
+            for (int j = 1; j < 12; j++) {
                 cell = row.getCell(j);
                 value = getCellValue(cell);
                 if (StringUtils.isEmpty(value)) {
@@ -69,19 +66,22 @@ public class ImportAction extends BaseAction {
                         userCompany.setWxContractName1(value);
                         break;
                     case 6:
-                        userCompany.setWxContractPhone1(value);
+                        userCompany.setWxContractPhone1(getPhoneValue(cell));
                         break;
                     case 7:
                         userCompany.setWxContractName2(value);
                         break;
                     case 8:
-                        userCompany.setWxContractPhone2(value);
+                        userCompany.setWxContractPhone2(getPhoneValue(cell));
                         break;
                     case 9:
                         userCompany.setManagerName(value);
                         break;
                     case 10:
                         userCompany.setRemarkContent(value);
+                        break;
+                    case 11:
+                        userCompany.setCreditScope(value);
                         break;
                 }
             }
@@ -94,8 +94,8 @@ public class ImportAction extends BaseAction {
 
     public String importDzlist() throws Exception {
         ImportDzRecord importDzRecord = userSerivce.getImportDzRecordByYearAndMonth(year, month);
-        if (importDzRecord != null) {
-            throw new FwException(String.format("%d年%d月的记录己存在，无法再次导入。", year, month));
+        if (importDzRecord != null && !"N".equals(importDzRecord.getNotification())) {
+            throw new FwException(String.format("%d年%d月的记录己存在且己经下发，无法再次导入。", year, month));
         }
         Workbook wb = parseFile(excel);
         Map<String, Dzlist> dzlistMap = new HashMap<String, Dzlist>();
@@ -129,6 +129,7 @@ public class ImportAction extends BaseAction {
                 dzlist.setMonth(month);
                 dzlist.setUserid(code);
                 dzlist.setUsername(userName);
+                dzlist.setCreditScope(dfScope);
                 dzlistMap.put(code + dfScope, dzlist);
             }
             switch (Integer.parseInt(subject)) {
@@ -164,21 +165,43 @@ public class ImportAction extends BaseAction {
                     break;
             }
         }
-
-        userSerivce.batchSaveDzlists(dzlistMap.values());
-        userSerivce.saveImportDzRecord(new ImportDzRecord(year, month));
+        Collection<Dzlist> saveDzLists = dzlistMap.values();
+        userSerivce.batchSaveDzlists(saveDzLists);
+        userSerivce.saveOrUpdateImportDzRecord(new ImportDzRecord(year, month));
+        setRequestAttribute(
+                "msg", String.format("成功解析%d条数据", saveDzLists.size()));
         return FINISH;
     }
 
+    private String getPhoneValue(Cell cell) {
+        String value = getCellValue(cell);
+        try {
+            return String.format("%d",
+                    (long) Double.parseDouble(value));
+        }catch (Exception e){
+             return null;
+        }
+    }
+
     private String getCellValue(Cell cell) {
-        if (cell == null){
+        if (cell == null) {
             return null;
         }
-        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-            return String.valueOf(cell.getNumericCellValue()).trim();
-        } else {
-            return cell.getStringCellValue().trim();
+        String value = null;
+        try{
+            value = String.valueOf(cell.getStringCellValue());
+        } catch(IllegalStateException e){
+            try{
+                value = String.valueOf(cell.getNumericCellValue());
+            } catch(IllegalStateException e1){
+                try{
+                    value = String.valueOf(cell.getBooleanCellValue());
+                } catch(IllegalStateException e2){
+                    value = null;
+                }
+            }
         }
+        return value == null || "无".equals(value) ? null : value.trim();
     }
 
     private static Workbook parseFile(File excelFile) throws Exception {
@@ -240,4 +263,5 @@ public class ImportAction extends BaseAction {
     public void setMonth(int month) {
         this.month = month;
     }
+
 }

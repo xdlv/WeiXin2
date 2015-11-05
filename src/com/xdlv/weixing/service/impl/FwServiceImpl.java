@@ -17,14 +17,18 @@ public class FwServiceImpl extends BaseServiceImpl implements FwService {
     }
 
     @Override
-    public void saveUser(User user) {
-        user.setId(getPrimaryKey("t_user"));
-        userMapper.insert(user);
+    public void saveOrUpdateUser(User user) {
+        if (user.getId() != null){
+            userMapper.updateByPrimaryKey(user);
+        } else {
+            user.setId(getPrimaryKey("t_user"));
+            userMapper.insert(user);
+        }
     }
 
     @Override
-    public List<User> getUsers(int start, int end) {
-        return userMapper.selectUsers(start, end);
+    public List<User> getUsers(int start, int limit) {
+        return userMapper.selectUsers(start, limit);
     }
 
     @Override

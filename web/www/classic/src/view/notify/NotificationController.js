@@ -3,14 +3,32 @@ Ext.define('TrackCar.view.notify.NotificationController', {
     alias: 'controller.notify-notification',
 
     notifyMessage: function(btn){
-        var grid = btn.up('grid');
-        var record = grid.getSelection()[0];
-        Ext.Ajax.request({
+        //您当前下发的是2015年10月份对账通知，下发后对账数据将不可以再次更改，是否确定下发
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth();
+        var message = Ext.util.Format.format('您当前下发的是{0}年{1}月份对账通知，' +
+            '下发后对账数据将不可以再次更改，是否确定下发?',year,month);
+        Ext.MessageBox.confirm("提示",message ,function(v){
+            if (v == 'no'){
+                return;
+            }
+            TrackCar.Util.ajax({
+                url : 'notifyMessage.cmd',
+                success: function(obj) {
+                    Ext.MessageBox.alert('下发通知',obj.msg);
+                    grid.getStore().reload();
+                }
+            });
+        },this);
+        /*var grid = btn.up('grid');
+        var record = grid.getSelection()[0];*/
+        /*Ext.Ajax.request({
             url : 'notifyMessage.cmd',
-            params: {
+            /!*params: {
                 'importDzRecord.year' : record.get('year'),
                 'importDzRecord.month' : record.get('month')
-            },
+            },*!/
             success: function(response, opts) {
                 var obj = Ext.decode(response.responseText);
                 Ext.MessageBox.alert('成功',obj.msg);
@@ -20,8 +38,8 @@ Ext.define('TrackCar.view.notify.NotificationController', {
                 var obj = Ext.decode(response.responseText);
                 Ext.MessageBox.alert('失败',obj.msg);
             }
-        });
-    },
+        });*/
+    }/*,
 
     onSelectionChange : function(selModel, selectedRecs){
         var button = this.lookupReference('notifyButton');
@@ -30,6 +48,6 @@ Ext.define('TrackCar.view.notify.NotificationController', {
             return;
         }
         button.setDisabled(false);
-    }
+    }*/
     
 });

@@ -1,4 +1,4 @@
-Ext.define("TrackCar.view.importA.ImportDz",{
+Ext.define("TrackCar.view.importA.ImportDz", {
     extend: "TrackCar.view.importA.Import",
 
     requires: [
@@ -11,5 +11,39 @@ Ext.define("TrackCar.view.importA.ImportDz",{
         type: "import-importdz"
     },
 
-    html: "Hello, World!!"
+    items: [{
+        xtype: 'form',
+        items: [{
+            xtype: 'fieldset',
+            layout: {
+                type: 'hbox',
+                align: 'stretch'
+            },
+            items: [{
+                xtype: 'filefield',
+                name: 'excel',
+                labelWidth: 150,
+                required: 'true',
+                bind: {
+                    fieldLabel: '{fieldLabel}'
+                },
+                buttonText: '选择文件',
+                flex: 1
+            }, {
+                margin: '0 0 0 10',
+                xtype: 'button',
+                text: '导入',
+                handler: 'importClick'
+            }]
+        }]
+    }, {
+        margin:'0',
+        xtype: 'exportA-DzExport',
+        viewModel: {
+          data: {
+              hiddenStatus: true
+          }
+        },
+        flex: 1
+    }]
 });

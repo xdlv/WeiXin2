@@ -54,9 +54,15 @@ Ext.define('TrackCar.view.main.Head', {
             
             cls: 'top-user-name'
         },{
+            cls: 'delete-focus-bg',
+            iconCls:'x-fa fa-th-large',
+            text: '账户信息',
+            handler: 'modUser'
+        },{
             width: 50,
             text : '退出',
-            handler: function(){window.open('index.html','_self');}
+            href: 'index.html',
+            hrefTarget: '_self'
         }/*,
         {
             xtype: 'image',

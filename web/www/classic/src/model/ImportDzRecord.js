@@ -7,7 +7,7 @@ Ext.define('TrackCar.model.ImportDzRecord', {
         {
             name: 'importDate', type: 'date'
             , convert: function (value) { return value.substring(0,10); }
-        }
+        },'notification'
     ],
     proxy: {
         url: 'obtainImportDzRecord.cmd',

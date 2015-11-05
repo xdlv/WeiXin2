@@ -1,8 +1,10 @@
 package com.xdlv.fw;
 
+import org.aspectj.weaver.ast.Call;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.Calendar;
 import java.util.Random;
 
 public class FwUtil {
@@ -21,6 +23,12 @@ public class FwUtil {
 
     public static int getLastDayInMonth(int month){
         return months[month];
+    }
+
+    public static int[] getLastMonth(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, -1);
+        return new int[]{calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1};
     }
     public static void main(String[] args){
         for (int i=0;i<100;i++)

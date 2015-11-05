@@ -31,7 +31,7 @@ public interface UserdzMapper {
 	 */
 	int updateByPrimaryKey(Userdz record);
 
-	List<Userdz> getAllUserdzs(@Param("start")int start, @Param("end")int end);
+	List<Userdz> getAllUserdzs(@Param("start")int start, @Param("limit")int limit);
 
 	Userdz selectUserdzByOpenid(@Param("openid")String openid);
 

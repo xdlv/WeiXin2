@@ -14,7 +14,9 @@ public interface UserCompanyMapper {
 
 	UserCompany[] getUserCompanyByPhone(@Param("phone")String phone);
 
-	int getUserCompanysCount();
+	int getUserCompanysCount(@Param("userCompany")UserCompany userCompany);
 
-    List<UserCompany> selectUserCompanys(@Param("start")int start, @Param("end")int end);
+    List<UserCompany> selectUserCompanys(@Param("userCompany")UserCompany userCompany, @Param("start") int start, @Param("limit") int limit);
+
+	void deleteForImport(UserCompany userCompany);
 }

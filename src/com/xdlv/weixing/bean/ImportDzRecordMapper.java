@@ -18,6 +18,8 @@ public interface ImportDzRecordMapper {
 
     ImportDzRecord getImportDzRecordByYearAndMonth(@Param("year")int year
             , @Param("month")int month);
+    void deleteImportDzRecordByYearAndMonth(@Param("year")int year
+            , @Param("month")int month);
 
     void updateImportDzRecordStatus(ImportDzRecord importDzRecord);
 

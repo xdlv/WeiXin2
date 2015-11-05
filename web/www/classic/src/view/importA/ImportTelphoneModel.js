@@ -9,22 +9,38 @@ Ext.define('TrackCar.view.importA.ImportTelphoneModel', {
             dataIndex : 'code'
         }, {
             text : 'SCM客商名称',
-            dataIndex : 'companyName'
+            dataIndex : 'companyName',
+            flex: 3,
         },{
             text : '地方',
             dataIndex : 'area'
         } ,{
             text: '目前是否有业务往来',
-            dataIndex: 'business'
+            dataIndex: 'business',
+            flex: 1,
+            renderer: function(value){
+                if ('Y' == value){
+                    return '是';
+                } else {
+                    return '否';
+                }
+            }
         },{
             text: '微信对账客户联系人',
-            dataIndex: 'wxContractName1'
+            dataIndex: 'wxName',
+            flex: 1
         },{
             text: '微信对账客户手机号码',
-            dataIndex: 'wxContractPhone1'
+            dataIndex: 'wxPhone',
+            flex: 1
         },{
             text: '业务经理（信息负责人）',
-            dataIndex : 'managerName'
+            dataIndex : 'managerName',
+            flex: 1
+        },{
+            text: '贷方范围',
+            dataIndex:'creditScope',
+            flex: 1
         }]
     },
 
@@ -32,7 +48,8 @@ Ext.define('TrackCar.view.importA.ImportTelphoneModel', {
         store:{
             model: 'UserCompany',
             session : true,
-            autoLoad: true
+            autoLoad: true,
+            pageSize: 12
         }
     }
 

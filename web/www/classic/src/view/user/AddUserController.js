@@ -10,14 +10,12 @@ Ext.define('TrackCar.view.user.AddUserController', {
     		method: 'POST',
     		params: params,
     		success: function(response){
-    			Ext.Msg.alert('增加用户','操作成功');
+    			Ext.Msg.alert('用户信息','操作成功');
     			win.close();
     		},
     		failure: function(response){
-    			Ext.Msg.alert('增加用户'
-    					,'错误' + Ext.JSON.decode(response.responseText,true).msg);
+    			Ext.Msg.alert('用户信息' ,'操作错误');
     		}
     	});
     }
-    
 });

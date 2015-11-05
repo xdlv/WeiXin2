@@ -41,6 +41,13 @@ Ext.define("TrackCar.view.user.ModUser", {
             text: '增加用户',
             handler: 'addUser'
         },{
+			margin: '0 0 0 10',
+			reference: 'modButton',
+			text: '修改用户',
+			xtype: 'button',
+			disabled: true,
+			handler: 'modUser'
+		},{
             margin: '0 0 0 10',
             reference: 'removeButton',
             text: '删除用户',

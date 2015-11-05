@@ -69,7 +69,6 @@ Ext.define('WX.controller.Main', {
         }
         if (WX_PP.viewId == 'Main' && WX_PP.phone){
             Ext.Msg.alert('用户绑定','该帐号当前己绑定,无法再次绑定');
-            console.log(this.getValidateButton());
             this.getValidateButton().setDisabled(true);
             this.getBindButton().setDisabled(true);
         }
@@ -164,7 +163,6 @@ Ext.define('WX.controller.Main', {
             return;
         }
         var value = picker.getValue();
-        console.log(value);
         this.clearHqcontent();
         this.loadDzRecord(function(response){
             var msg = Ext.JSON.decode(response.responseText,true);
@@ -174,7 +172,7 @@ Ext.define('WX.controller.Main', {
             } else {
                 Ext.Msg.alert('当前对账','没有对应的记录',Ext.emptyFn);
             }
-        }, value.getUTCFullYear(), value.getMonth());
+        }, value.getFullYear(), value.getMonth() + 1);
     },
     clearHqcontent: function(){
         this.getHqContent().setTpl('没有数据');

@@ -1,4 +1,4 @@
---CREATE DATABASE weixing DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+-- CREATE DATABASE weixing DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 drop table if exists t_primary_key;
 create table t_primary_key(
 	table_name varchar(32) not null primary key,
@@ -10,9 +10,11 @@ create table t_user
 	id     int primary key, 
 	name varchar(15) not null,
 	pwd varchar(10),
-	mail varchar(20)
+	mail varchar(20),
+	user_role int
 );
-insert into t_user values(-10,'a','a','a@a.com');
+insert into t_user values(-10,'a','a','a@a.com',0);
+insert into t_user values(-9,'b','b','b@b.com',1);
 
 -- 用户绑定表
 drop table IF EXISTS  t_userdz;
@@ -51,7 +53,8 @@ create table t_dzlist
 	jb2 float,
 	fl2 float,
 	zdfwk2 float,
-	qtyfdk2 float
+	qtyfdk2 float,
+	credit_scope varchar(10)
 );
 
 drop table if exists t_user_company;
@@ -66,7 +69,8 @@ create table t_user_company
 	wx_contract_name2 varchar(20),
 	wx_contract_phone2 varchar(15),
 	manager_name varchar(20),
-	remark_content varchar(100)
+	remark_content varchar(100),
+	credit_scope varchar(10)
 );
 
 drop table if exists t_import_dz_record;

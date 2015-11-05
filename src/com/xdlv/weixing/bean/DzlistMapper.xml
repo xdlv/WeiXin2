@@ -23,6 +23,7 @@
         <result column="fl2" jdbcType="REAL" property="fl2"/>
         <result column="zdfwk2" jdbcType="REAL" property="zdfwk2"/>
         <result column="qtyfdk2" jdbcType="REAL" property="qtyfdk2"/>
+        <result column="credit_scope" jdbcType="VARCHAR" property="creditScope"/>
     </resultMap>
     <insert id="insert" parameterType="com.xdlv.weixing.bean.Dzlist">
         <!--
@@ -33,49 +34,57 @@
         userid, Username, Isok,
         Qmye, zdxsk1, ysdsk1, zdfwk1,
         jb1, fl1, zdxsk2, jb2,
-        fl2, zdfwk2, qtyfdk2)
+        fl2, zdfwk2, qtyfdk2, credit_scope
+        )
         values (#{year,jdbcType=INTEGER}, #{month,jdbcType=INTEGER}, #{impdate,jdbcType=DATE},
         #{userid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{isok,jdbcType=CHAR},
         #{qmye,jdbcType=REAL}, #{zdxsk1,jdbcType=REAL}, #{ysdsk1,jdbcType=REAL}, #{zdfwk1,jdbcType=REAL},
         #{jb1,jdbcType=REAL}, #{fl1,jdbcType=REAL}, #{zdxsk2,jdbcType=REAL}, #{jb2,jdbcType=REAL},
-        #{fl2,jdbcType=REAL}, #{zdfwk2,jdbcType=REAL}, #{qtyfdk2,jdbcType=REAL})
+        #{fl2,jdbcType=REAL}, #{zdfwk2,jdbcType=REAL}, #{qtyfdk2,jdbcType=REAL}, #{creditScope,jdbcType=VARCHAR}
+        )
     </insert>
 
+
     <select id="getDzListCount" parameterType="com.xdlv.weixing.bean.Dzlist" resultType="java.lang.Integer">
-        SELECT count(*) FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE 1 =1
+        SELECT count(*) FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code WHERE 1 =1
         <if test="phone != null">
-            and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
+            and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})
+        </if>
         <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isOkQuery != null">and isok=#{isOkQuery, jdbcType=CHAR} </if>
-        <if test="username != null">and username like '%${username}%' </if>
-        <if test="year != null">and year =#{year,jdbcType=INTEGER} </if>
-        <if test="month != null">and month =#{month,jdbcType=INTEGER} </if>
-  </select>
+        <if test="isOkQuery != null">and isok=#{isOkQuery, jdbcType=CHAR}</if>
+        <if test="username != null">and username like '%${username}%'</if>
+        <if test="year != null">and year =#{year,jdbcType=INTEGER}</if>
+        <if test="month != null">and month =#{month,jdbcType=INTEGER}</if>
+    </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap">
-        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE 1 =1
+        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code WHERE 1 =1
         <if test="dzlist.phone != null">
-            and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{dzlist.phone,jdbcType=VARCHAR})</if>
-        <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
-        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR} </if>
-        <if test="dzlist.username != null">and username like '%${dzlist.username}%' </if>
-        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER} </if>
-        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER} </if>
-        limit #{start,jdbcType=INTEGER} , #{end,jdbcType=INTEGER}
-  </select>
-
-    <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
-        SELECT * from (SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE
-        rownum &lt;= #{end,jdbcType=INTEGER}
-        <if test="dzlist.phone != null">
-          and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{dzlist.phone,jdbcType=VARCHAR})</if>
+            and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2
+            =#{dzlist.phone,jdbcType=VARCHAR})
+        </if>
         <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
         <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR}</if>
-        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER} </if>
-        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER} </if>
-        <if test="dzlist.username != null">and username like '%${dzlist.username}%' </if>)
-    where rownum &gt; #{start,jdbcType=INTEGER}
-  </select>
+        <if test="dzlist.username != null">and username like '%${dzlist.username}%'</if>
+        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER}</if>
+        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER}</if>
+        limit #{start,jdbcType=INTEGER} , #{limit,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
+        SELECT * from (SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code WHERE
+        rownum &lt;= ${start} + ${limit}
+        <if test="dzlist.phone != null">
+            and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2
+            =#{dzlist.phone,jdbcType=VARCHAR})
+        </if>
+        <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
+        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR}</if>
+        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER}</if>
+        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER}</if>
+        <if test="dzlist.username != null">and username like '%${dzlist.username}%'</if>)
+        where rownum &gt; ${start} + ${limit}
+    </select>
 
     <select id="selectDzlistsByYearAndMonth" parameterType="java.lang.String" resultMap="DzlistResultMap">
     select c.* from t_userdz a JOIN t_user_company b
@@ -88,5 +97,11 @@
         update t_dzlist set isok=#{isok,jdbcType=CHAR} where year=#{year,jdbcType=INTEGER}
         and month=#{month,jdbcType=INTEGER} and userid=#{userid,jdbcType=VARCHAR}
     </update>
+
+    <delete id="deleteDzlistForImport" parameterType="com.xdlv.weixing.bean.Dzlist">
+    delete from t_dzlist where year=#{year,jdbcType=INTEGER}
+    and month=#{month,jdbcType=INTEGER} and userid=#{userid,jdbcType=VARCHAR}
+    and credit_scope = #{creditScope,jdbcType=VARCHAR}
+  </delete>
 
 </mapper>
