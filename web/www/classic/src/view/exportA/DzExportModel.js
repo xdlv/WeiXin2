@@ -10,6 +10,9 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
             text : '客户名称',
             dataIndex : 'username'
         },{
+            text : '确认',
+            dataIndex : 'isok'
+        },{
             text : '期末余额',
             dataIndex : 'qmye'
         } ,{

@@ -13,8 +13,7 @@ public interface DzlistMapper {
 	 */
 	int insert(Dzlist record);
 
-	List<Dzlist> selectDzlists(@Param("userid")String userid,@Param("isok")String isok
-			, @Param("phone")String phone,@Param("username")String username, @Param("start")int start, @Param("end")int end);
+	List<Dzlist> selectDzlists(@Param("dzlist")Dzlist dzlist,@Param("start")int start, @Param("end")int end);
 
 	int getDzListCount(Dzlist dzlist);
 

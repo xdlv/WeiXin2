@@ -473,11 +473,20 @@ public class Dzlist {
 
     //phone of user company for query
     private String phone;
+    private String isOkQuery;
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
     public String getPhone() {
         return phone;
+    }
+
+    public void setIsOkQuery(String isOkQuery) {
+        this.isOkQuery = isOkQuery;
+    }
+
+    public String getIsOkQuery() {
+        return isOkQuery;
     }
 }

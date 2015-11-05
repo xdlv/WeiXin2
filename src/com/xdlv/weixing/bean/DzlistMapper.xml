@@ -46,28 +46,34 @@
         <if test="phone != null">
             and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
         <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>
+        <if test="isOkQuery != null">and isok=#{isOkQuery, jdbcType=CHAR} </if>
         <if test="username != null">and username like '%${username}%' </if>
+        <if test="year != null">and year =#{year,jdbcType=INTEGER} </if>
+        <if test="month != null">and month =#{month,jdbcType=INTEGER} </if>
   </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap">
         SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE 1 =1
-        <if test="phone != null">
-            and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
-        <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR} </if>
-        <if test="username != null">and username like '%${username}%' </if>
+        <if test="dzlist.phone != null">
+            and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{dzlist.phone,jdbcType=VARCHAR})</if>
+        <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
+        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR} </if>
+        <if test="dzlist.username != null">and username like '%${dzlist.username}%' </if>
+        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER} </if>
+        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER} </if>
         limit #{start,jdbcType=INTEGER} , #{end,jdbcType=INTEGER}
   </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
-        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE
+        SELECT * from (SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code  WHERE
         rownum &lt;= #{end,jdbcType=INTEGER}
-        <if test="phone != null">
-          and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})</if>
-        <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isok != null">and isok=#{isok, jdbcType=CHAR}</if>
-        <if test="username != null">and username like '%${username}%' </if>))
+        <if test="dzlist.phone != null">
+          and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{dzlist.phone,jdbcType=VARCHAR})</if>
+        <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
+        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR}</if>
+        <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER} </if>
+        <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER} </if>
+        <if test="dzlist.username != null">and username like '%${dzlist.username}%' </if>)
     where rownum &gt; #{start,jdbcType=INTEGER}
   </select>
 

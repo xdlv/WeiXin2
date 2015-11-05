@@ -104,11 +104,7 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 
 	@Override
 	public List<Dzlist> getAllDzlists(Dzlist dzlist,int start, int end) {
-        String userid = dzlist == null ? null : dzlist.getUserid();
-        String isok = dzlist == null ? null : dzlist.getIsok();
-        String username = dzlist == null ? null : dzlist.getUsername();
-        String phone = dzlist == null ? null : dzlist.getPhone();
-		return dzlistMapper.selectDzlists(userid, isok,phone,username, start, end);
+		return dzlistMapper.selectDzlists(dzlist, start, end);
 	}
 
     @Override

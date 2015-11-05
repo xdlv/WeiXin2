@@ -3,32 +3,53 @@ Ext.define('TrackCar.view.exportA.DzExportController', {
     alias: 'controller.export-dzexport',
 
     queryDzlist: function (btn) {
-        var form = btn.up('form');
-        var userid = form.down('textfield[name=userid]').getValue();
-        var phone = form.down('textfield[name=phone]').getValue();
-        var username = form.down('textfield[name=username]').getValue();
-        var confirm = form.down('checkbox[name=confirm]').checked;
-        var unconfirm = form.down('checkbox[name=unconfirm]').checked;
-        var parms = {};
-        if (!Ext.isEmpty(userid)){
-            parms['dzlist.userid'] = userid;
-        }
-        if (!Ext.isEmpty(phone)){
-            parms['dzlist.phone'] = phone;
-        }
-        if (!Ext.isEmpty(username)){
-            parms['dzlist.username'] = encodeURIComponent(username);
-        }
-        if (confirm != unconfirm){
-            parms['dzlist.isok'] = confirm ? 'Y' : 'N';
-        }
         this.getStore('store').reload({
-            params: parms
+            params: this.prepareParams(btn)
         });
     },
 
     exportDzlist: function (btn) {
+        var params = this.prepareParams(btn);
+        params.limit = 200000;
+        var url = 'downLoadDzlists.cmd?';
+        for (var v in params){
+            url += '&';
+            url+= v + '=' + params[v]
+        }
+        console.log(url);
+        window.open(url,'_self');
+       /* btn.up('form').getForm().submit({
+            url : 'downLoadDzlists.cmd',
+            params: params
+        });*/
+    },
 
+    prepareParams: function(btn){
+        var form = btn.up('form');
+        var confirm = form.down('checkbox[name=confirm]').checked;
+        var unconfirm = form.down('checkbox[name=unconfirm]').checked;
+        var yearMonth = form.down('datefield').getValue();
+        var parms = form.getValues();
+        delete parms.yearMonth;
+        if (Ext.isEmpty(parms['dzlist.userid'])){
+            delete parms['dzlist.userid'];
+        }
+        if (Ext.isEmpty(parms['dzlist.username'])){
+            delete parms['dzlist.username'];
+        } else {
+            parms['dzlist.username'] = encodeURIComponent(parms['dzlist.username']);
+        }
+        if (Ext.isEmpty(parms['dzlist.phone'])){
+            delete parms['dzlist.phone'];
+        }
+        if (confirm != unconfirm){
+            parms['dzlist.isOkQuery'] = confirm ? 'Y' : 'N';
+        }
+        if (yearMonth){
+            parms['dzlist.year'] = yearMonth.getUTCFullYear();
+            parms['dzlist.month'] = yearMonth.getMonth();
+        }
+        return parms;
     }
 
 });

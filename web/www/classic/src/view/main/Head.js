@@ -53,7 +53,11 @@ Ext.define('TrackCar.view.main.Head', {
             bind: {text: '{currentUser.name}'},
             
             cls: 'top-user-name'
-        },
+        },{
+            width: 50,
+            text : '退出',
+            handler: function(){window.open('index.html','_self');}
+        }/*,
         {
             xtype: 'image',
             cls: 'header-right-profile-image',
@@ -61,6 +65,6 @@ Ext.define('TrackCar.view.main.Head', {
             width: 35,
             alt:'current user image',
             src: 'resources/images/2.png'
-        }
+        }*/
     ]
 });

@@ -61,8 +61,8 @@
         <action name="obtainDzlists" class="DzListAction" method="obtainDzlists" />
 		<action name="downLoadDzlists" class="DzListAction" method="downLoadDzlists">
 			<result name="success" type="stream">
-				<param name="contentType">application/vnd.ms-excel,charset=UTF-8</param>
-				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="contentType"> application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename=records.xls</param>
 				<param name="bufferSize">4096</param>
 				<param name="inputName">excelFile</param>
 			</result>
