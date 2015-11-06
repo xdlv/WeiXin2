@@ -12,21 +12,21 @@ Ext.define('TrackCar.view.importA.ImportTelphoneQuery', {
             fieldLabel: '客商名称',
             name: 'userCompany.companyName',
             labelWidth: 60,
-            flex: 3,
+            flex: 3
         },{
             xtype:'textfield',
             name: 'userCompany.code',
             labelAlign:'right',
             fieldLabel: '客商编号',
             labelWidth: 60,
-            flex: 2,
+            flex: 2
         },{
             xtype: 'textfield',
             fieldLabel: '电话号码',
             name: 'userCompany.phone',
             labelAlign:'right',
             labelWidth: 60,
-            flex: 2,
+            flex: 2
         },{
             margin: '0 0 0 5',
             xtype: 'button',

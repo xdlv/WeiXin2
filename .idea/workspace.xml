@@ -2,52 +2,396 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7bb2e70-5637-4ca5-82ab-2c7ecdc76ea5" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\0433c80eb478d6b061310cf5038447f0789cf304\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\05d31dec7253d46d26b314e64c8b5d5c0935c3ee\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\05d31dec7253d46d26b314e64c8b5d5c0935c3ee\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\065161f9a7ca7f2f9d582aaff779c54ea8499304\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\06765e4711e82a9a992f306e1559bf544733ac7e\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\07a32fa9c0c9a0b2c46e1d5cf66955c025b0b570\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\0ea3c5ea49eefe80cc119b885914ddd59909aadb\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\0f40f291c420dc1437fe02dc9e1143dc463c5b6f\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\0f40f291c420dc1437fe02dc9e1143dc463c5b6f\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\112aa7490c4cb5b70ff4f66d3fd6d01f3e968b11\_DataView.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\112aa7490c4cb5b70ff4f66d3fd6d01f3e968b11\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\112aa7490c4cb5b70ff4f66d3fd6d01f3e968b11\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\121f565a2b056fa919ae8e5d451272c27f93fcd7\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\121f565a2b056fa919ae8e5d451272c27f93fcd7\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\121f565a2b056fa919ae8e5d451272c27f93fcd7\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\121f565a2b056fa919ae8e5d451272c27f93fcd7\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\121f565a2b056fa919ae8e5d451272c27f93fcd7\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1a612d245bc592514788b38ecfd69142d9710564\_AbstractChart.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1ad489cc42cdb724347ed22f16ea85b8fcf8f0f1\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1aec80a28b60578e2d09d129fd685315fbd1c559\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\1f7170950fca8f958ba4e1715916ac516ca171b2\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_blueprint-grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_carbon-fiber.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_checkerboard.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_cicada.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_gradients.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_houndstooth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_lined-paper.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_madras.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_noise.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_polka-dot.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_radial-overlay.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_striped.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_stripes.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_tablecloth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\22d9a6e4bd9425d7dccdf7c4e5c4b2a008376a21\_tartan.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\232fbd02a9924ccec586491a78a8a839b3e9e5be\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\248784a1bbae627aa2ece63b10a9756a5cab49cd\_Default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\26941f28fe2830b767c7140a031b5fe74c0e6568\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\26941f28fe2830b767c7140a031b5fe74c0e6568\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\26941f28fe2830b767c7140a031b5fe74c0e6568\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\26941f28fe2830b767c7140a031b5fe74c0e6568\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\26941f28fe2830b767c7140a031b5fe74c0e6568\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\2c576a9a5827972dad41be0aeca0bb944ed7f874\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\2e88a6de87ed5e52ec0018f968645f799000a088\_AbstractChart.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\34fb6551ea45e36622cc8c35da1eb9fac8033dcd\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\35992c3d8d1497b28e81815c8a4db8ec3590174d\_AbstractChart.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\37fd04aeb18baebe6c8c588bf4d3fd1a85c1e9a8\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\385e4b889e23942f6c108394358a46a52cb68507\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\391825bb70795ee690897c367d340f22ed0413e5\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\3aaf795eaf684fb98d5df84e55eb932da7050ea2\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\3ce94fb76224465600bb4898df234060de90aa1b\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\3cfacf160249550e5ce2060b596e8c7a84fe78df\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Checkbox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Radio.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Search.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Select.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4351ff3c87664ad763a88f994d0803319aaeda82\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\453d23008c12fb08e7e924f4bbd418ccdce83fa3\_float.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\453d23008c12fb08e7e924f4bbd418ccdce83fa3\_hacks.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\48e19f91f7f39571b966701b4a2e1edace562373\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\499827c17835a243c6e2e5e4934a3ab7ed1193f4\_css3.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\499827c17835a243c6e2e5e4934a3ab7ed1193f4\_support.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4b3b6c7dd8759ee064dfccadb854b8f7cc2629f5\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4b3b6c7dd8759ee064dfccadb854b8f7cc2629f5\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Checkbox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Radio.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Search.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Select.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4c71dc5e5d672110a5f7f255382c81142196774c\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\4d16aebfae41a7a3329dc14c194a1a9f5acccb7c\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\51182ff9af412bcdbca999aa05602559e6379843\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5149483baaa46ab831d03f46352b47a50e23a881\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\569c885a880170d6e166ab2db7eb841412600a25\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5726f1605f07138008d6337a8aa2bf1d61bcc7b4\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5726f1605f07138008d6337a8aa2bf1d61bcc7b4\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5737ab5f4ffa943071781ccf5d3d4e619fcc4ce2\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5850ad54f0129045c6d649998f357824baf1266f\_PaintMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5850ad54f0129045c6d649998f357824baf1266f\_SizeMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5850ad54f0129045c6d649998f357824baf1266f\_Translatable.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5b4167d48c2ff082ddc08f8538aab3e71b757b7c\_link-colors.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5e6bd4f773720e4c55e719945b02851702b254f1\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_blueprint-grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_carbon-fiber.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_checkerboard.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_cicada.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_gradients.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_houndstooth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_lined-paper.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_madras.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_noise.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_polka-dot.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_radial-overlay.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_striped.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_stripes.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_tablecloth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f1f2ffa89145acd2d4f4fddf6e941b9ed8f8e27\_tartan.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\5f2559c52f27b7a51b9bdc7a46ee272fa34827d3\_Scroller.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\60adba24eecf782484a99d8a44aeca18b54d68ad\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6326c6693f5c92ff4f9580b356f4c1007cc463a2\app.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\633c16babb2f11d31d86a2b6e161a39bcb1c7d6c\_base.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\633c16babb2f11d31d86a2b6e161a39bcb1c7d6c\_default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\64708c017b06688558725728a5b6e2d32be9b03d\_background.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\64708c017b06688558725728a5b6e2d32be9b03d\_color.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6530d3400b805fc0ff75d15af1007fc282f1a717\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\685f73195b5fe1f58309bef7a84bf2a07c1a29ac\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\695d326c479a454c80172377a770b43534652671\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\695d326c479a454c80172377a770b43534652671\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6b49f9c47b7f5792f080a73a1a34d9963454e974\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6ce0f26083458680df6b5beb824ad955b0f37afd\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6ce0f26083458680df6b5beb824ad955b0f37afd\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6ce0f26083458680df6b5beb824ad955b0f37afd\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6ce0f26083458680df6b5beb824ad955b0f37afd\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6ce0f26083458680df6b5beb824ad955b0f37afd\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\6e93d6ae2993255a0082c1340611819b39493528\_Table.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\70e019ccdfb37accc29e852c357ab438e8227dc0\_background.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\70e019ccdfb37accc29e852c357ab438e8227dc0\_color.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\71b80a79506eda4b299e528a2c0f6607a39a69bf\_Scroller.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75ba65fa652d257c5029bcfa15f06192fc5ad4f4\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75ba65fa652d257c5029bcfa15f06192fc5ad4f4\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75ba65fa652d257c5029bcfa15f06192fc5ad4f4\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75ba65fa652d257c5029bcfa15f06192fc5ad4f4\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75ba65fa652d257c5029bcfa15f06192fc5ad4f4\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Abstract.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Box.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Card.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Dock.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Fit.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\75cfbeb769476c0d86d264a5d1ba8d07e3c9a45c\_Float.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7881db3652967d93d5ba1a93ba30dd85b6d1a7f2\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\78bb52b3692cabab1451b8a7f2e4fe30ab9e1d67\_colors.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\78bb52b3692cabab1451b8a7f2e4fe30ab9e1d67\_typography.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7b05448cbd09ebf3bd6d6cb39480c2606d1dac67\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7bc2ce43870bca9f6eca369c59a70969ad2172cc\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Img.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Map.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Mask.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Media.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_ProgressIndicator.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7c6bee40b639bcba3a699d43c85592e33d082873\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7f0ea552b18448907f71b38bbfdfb89bb42b6491\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\7f50e22a782a711d41ab27a0a263cf8b7b600646\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8059fa52d0622f3c8b7320f895ef6898b4bdcb5e\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\80d9f0f8cb8bed2f43ab115a146c0e6a8d80f8b0\_background.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\80d9f0f8cb8bed2f43ab115a146c0e6a8d80f8b0\_color.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8341420a3af09f5f8b0ecb7d7f3ed2a667da4bf2\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8341420a3af09f5f8b0ecb7d7f3ed2a667da4bf2\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\84b17f75caa093b7f25f5d236846dda31d36e088\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\85863d924102fa7b0a345edada2a825eb17f4e3d\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\85863d924102fa7b0a345edada2a825eb17f4e3d\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\880a2390100e957137dc0facd2e67c39022f9e7c\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\89031254e82a111d4b574043d2fd6843b20e5b10\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\895b783f1efb9bdffee4118d9f2203c236bb1462\_Table.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\89e82ce1e1fa832e16b6e4e5876b516f1c47d2aa\_DataView.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\89e82ce1e1fa832e16b6e4e5876b516f1c47d2aa\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\89e82ce1e1fa832e16b6e4e5876b516f1c47d2aa\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8a728dac695b34642cf248022ad712b1918324b0\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8a7440e2a2fe69f70dd4c4246b09dfc6c72cd72d\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8a7440e2a2fe69f70dd4c4246b09dfc6c72cd72d\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8ac8994003863fdc98c3172b39988a59f91dc336\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Checkbox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Radio.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Search.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Select.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8b8ea87432fdda07b4bfdc6f0b2652939080c651\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8de96074be1bd43083a0de288a13864dba4963d0\_DataView.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8de96074be1bd43083a0de288a13864dba4963d0\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8de96074be1bd43083a0de288a13864dba4963d0\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\8ed380805be434151643c76736f10429cd930aef\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\91b7522c84f125cb83a3a9fad432b3f9b6f74a93\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92ad0d8b81bdd9b732aae1e88d4defda6c931262\_Default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Abstract.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Box.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Card.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Dock.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Fit.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\92fba693d1fd9985b7a779ede2bba56b0aaadb3d\_Float.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\94754801b1fc6ffd57c699a14e8e5ca6fbf2805c\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\94754801b1fc6ffd57c699a14e8e5ca6fbf2805c\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\971c23d49fe2e51ac16e7ae5ca10ddf5566e5e6c\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9765c9f009bca1cb21c87e36583690d52cf7296e\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_appearance.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_background-clip.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_background-origin.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_background-size.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_border-radius.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_box-shadow.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_box-sizing.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_box.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_columns.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_filter.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_font-face.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_hyphenation.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_images.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_inline-block.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_opacity.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_regions.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_shared.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_text-shadow.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_transform.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9794034047ec35764d3d57c13c51c8a54ded9b27\_transition.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\97d6a7c461b29a57dd3ac2ca5820630eb01ba557\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Img.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Map.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Mask.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Media.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_ProgressIndicator.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\98e23c08c727355973d67454100d870e8ff1fb67\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9a01f905d36a66055914245f2cc09292ad921a54\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9dbb8def53e4ee71e5103bca6d9337a577b8dd76\_Table.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9e156421b8f28d1ecf9586a14200fbad4d1cc897\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9e156421b8f28d1ecf9586a14200fbad4d1cc897\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9f6192105cf6b954a938502bb0c307734bf8c0fa\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9f6192105cf6b954a938502bb0c307734bf8c0fa\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9fa9b7a2df395a927b30ac37eb4bf1af0e6b71cf\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\9fa9b7a2df395a927b30ac37eb4bf1af0e6b71cf\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\a36ded9a4c3fea3019b5d24883b27cd8ef767fd1\_base.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\a36ded9a4c3fea3019b5d24883b27cd8ef767fd1\_default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\a7a9da7b13c7635ae16b067b7f74d5903142e692\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\a7d11ae4dd8d97fb071b5e56e1d8100b3a278877\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\a7d11ae4dd8d97fb071b5e56e1d8100b3a278877\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\abcd7dea0183c2153ac61cf365c5e0654dfe0752\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\abcd7dea0183c2153ac61cf365c5e0654dfe0752\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\abcd7dea0183c2153ac61cf365c5e0654dfe0752\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\abcd7dea0183c2153ac61cf365c5e0654dfe0752\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\abcd7dea0183c2153ac61cf365c5e0654dfe0752\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\af51dcf7d7bdfc1aabe83cde3b4080c7ef230363\_Field.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\af51dcf7d7bdfc1aabe83cde3b4080c7ef230363\_Slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\af51dcf7d7bdfc1aabe83cde3b4080c7ef230363\_Spinner.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\af51dcf7d7bdfc1aabe83cde3b4080c7ef230363\_TextArea.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\af51dcf7d7bdfc1aabe83cde3b4080c7ef230363\_Toggle.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\b5110c5e62bca97b05c775b270a7b6d43262e84f\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\b5d1d52f7228dcd9eabafea1e24f1ce31c82e9a3\_Scroller.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\b90ab3e6ee52d803a8f59898ebca56429d250f2d\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\c39bc45c38c4796afa86e39a6c1aafe0b239f0d1\_PaintMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\c39bc45c38c4796afa86e39a6c1aafe0b239f0d1\_SizeMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\c39bc45c38c4796afa86e39a6c1aafe0b239f0d1\_Translatable.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cc483b8732c9484396b726f1e9292eb21c2587b9\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cc483b8732c9484396b726f1e9292eb21c2587b9\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ce1a205165a30e5e4acc7897e2d1924164fa93ff\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cf382c0f14a9e863c33206a0394fd10345646edd\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cf382c0f14a9e863c33206a0394fd10345646edd\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cf544e1969f6260713e2c993c59d283d3bcdb191\app.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\cfe27a348f5bf27ee17e44e57adc89f59660ee8a\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\d6131f52515eaaff75ac23482486fcdf3927ecd4\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\d983c15231e92d9ca1d95d3726f0b02f345a206b\_Picker.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\db12499ab7ba02d3b2d1f6550f0ca47a20ccf8e0\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\db657bb30a9afe54b0dfc876ce32c10716cdf459\_base.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\db657bb30a9afe54b0dfc876ce32c10716cdf459\_default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9695d7e8c55d2039ed5445d774711b8b23b7194\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9695d7e8c55d2039ed5445d774711b8b23b7194\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e97df28482c76c2304f67a133e74836c5ffcda4e\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e97df28482c76c2304f67a133e74836c5ffcda4e\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Button.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Class.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Img.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Map.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Mask.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Media.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Menu.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_MessageBox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_ProgressIndicator.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Sheet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_Toolbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\e9ed82165a0c8fc8964adb76a1a269ecbe963fcb\_all.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ebc5da2bcf59eabacd379ceccecf8ce125a91e3c\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ecdd89ebf6e2e6984f5c51dfc95e5d01f5187465\_Default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ed056cf6669286cfae0cc4030cb476e8d7ac9e76\_ListPaging.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ed056cf6669286cfae0cc4030cb476e8d7ac9e76\_PullRefresh.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ed9152e9cc6e84c7244798617df4075efc1ceb8d\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ed9152e9cc6e84c7244798617df4075efc1ceb8d\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Abstract.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Box.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Card.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Dock.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Fit.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\eebdf32aff3de3c32e4b5ea95f7e52771bed0ade\_Float.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ef4e788999cf0cd42abb2d8861b04854778eb088\_Carousel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f163d9af484f8aaf9b676544c333bbd4af3e9486\_Grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f1a95098a015a26a1651498edbefab7e28ac1d4b\_FieldSet.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f1a95098a015a26a1651498edbefab7e28ac1d4b\_Panel.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_blueprint-grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_carbon-fiber.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_checkerboard.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_cicada.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_gradients.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_houndstooth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_lined-paper.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_madras.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_noise.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_polka-dot.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_radial-overlay.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_striped.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_stripes.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_tablecloth.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f4e5d8d94558b006b53295c68a0e5b1c587ba16a\_tartan.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\f97a6da109cecd80728c2804a54ecd875a1690eb\app.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\fe043e7461f22373ac8c28eebfec3724bd8da99b\_IndexBar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\fe043e7461f22373ac8c28eebfec3724bd8da99b\_List.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\fee6a8a2cd20fcbce0ef268ce83204508f0cdc83\_PaintMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\fee6a8a2cd20fcbce0ef268ce83204508f0cdc83\_SizeMonitor.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\fee6a8a2cd20fcbce0ef268ce83204508f0cdc83\_Translatable.scssc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Work\Java\Intelli-WP\TrackCar\web\wwt\resources\sass\.sass-cache\ff5914790a1578cfba625f720b62833f500e7c91\_Panel.scssc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/theme-capture.png" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/theme-capture.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/user/AddUser.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/user/AddUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/user/AddUserModel.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/user/AddUserModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/Application.js" afterPath="$PROJECT_DIR$/web/www/classic/src/Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/app/view/CurrentDz.js" afterPath="$PROJECT_DIR$/web/wwt/app/view/CurrentDz.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportController.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/Dzlist.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/Dzlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.xml" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/main/Head.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/main/Head.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportDzController.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportDzController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/user/ModUser.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/user/ModUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/user/ModUserController.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/user/ModUserController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/PrimaryKey.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/PrimaryKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/ImportDzRecordMapper.xml" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/bean/ImportDzRecordMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneModel.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneQuery.js" afterPath="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneQuery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/app/controller/Main.js" afterPath="$PROJECT_DIR$/web/wwt/app/controller/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic/src/controller/Root.js" afterPath="$PROJECT_DIR$/web/www/classic/src/controller/Root.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/TrackCar-all.scss.tmp" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/TrackCar-all.scss.tmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/TrackCar-all.scss" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/TrackCar-all.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/resources/TrackCar-all_1.css" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/resources/TrackCar-all_1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/resources/TrackCar-all_2.css" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/resources/TrackCar-all_2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.css" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.scss.tmp" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.scss.tmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.scss" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/TrackCar-example.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TrackCar.iml" afterPath="$PROJECT_DIR$/TrackCar.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/service/UserSerivce.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/service/UserSerivce.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/UserSerivceImpl.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/UserSerivceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/app.js" afterPath="$PROJECT_DIR$/web/www/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java" afterPath="$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/build/production/WX/resources/css/app.css" afterPath="$PROJECT_DIR$/web/wwt/build/production/WX/resources/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/resources/css/app.css" afterPath="$PROJECT_DIR$/web/wwt/resources/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/build/production/WX/app.js" afterPath="$PROJECT_DIR$/web/wwt/build/production/WX/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/app.js" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/app.json" afterPath="$PROJECT_DIR$/web/wwt/app.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/app.json" afterPath="$PROJECT_DIR$/web/www/app.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/bootstrap.css" afterPath="$PROJECT_DIR$/web/www/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/bootstrap.js" afterPath="$PROJECT_DIR$/web/www/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/sass/example/bootstrap.js" afterPath="$PROJECT_DIR$/web/www/sass/example/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/bootstrap.js" afterPath="$PROJECT_DIR$/web/wwt/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/sass/example/bootstrap.js" afterPath="$PROJECT_DIR$/web/wwt/sass/example/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/bootstrap.json" afterPath="$PROJECT_DIR$/web/wwt/bootstrap.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/sass/example/bootstrap.json" afterPath="$PROJECT_DIR$/web/www/sass/example/bootstrap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/cache.appcache" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/cache.appcache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/build/production/WX/cache.appcache" afterPath="$PROJECT_DIR$/web/wwt/build/production/WX/cache.appcache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/classic.json" afterPath="$PROJECT_DIR$/web/www/classic.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic.json" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/classic.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/config.rb" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sass/config.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/sass/example/example.css" afterPath="$PROJECT_DIR$/web/www/sass/example/example.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/wwt/build/temp/production/WX/sencha-compiler/app/full-page-master-bundle.js" afterPath="$PROJECT_DIR$/web/wwt/build/temp/production/WX/sencha-compiler/app/full-page-master-bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sencha-compiler/app/full-page-master-bundle.js" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/sencha-compiler/app/full-page-master-bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/index.html" afterPath="$PROJECT_DIR$/web/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/production/TrackCar/index.html" afterPath="$PROJECT_DIR$/web/www/build/production/TrackCar/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/theme-capture.json" afterPath="$PROJECT_DIR$/web/www/build/temp/production/TrackCar/slicer-temp/theme-capture.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TrackCar.iws" />
@@ -71,128 +415,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DzExport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js">
+      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+              <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DzExportController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportController.js">
+      <file leaf-file-name="FwUserAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DzExportModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DzlistAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="33" />
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="FwService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/FwService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86817324">
-              <caret line="61" column="37" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserSerivce.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/UserSerivce.java">
+      <file leaf-file-name="FwServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/FwServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+              <folding>
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserdzMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserdzMapper.xml">
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
               <folding>
-                <marker date="1446601301544" expanded="true" signature="1039:1145" placeholder="select from ..t_userdz..." />
-                <marker date="1446601301544" expanded="true" signature="1359:1423" placeholder="delete from ..." />
-                <marker date="1446601301544" expanded="true" signature="1638:1792" placeholder="insert into ..." />
-                <marker date="1446601301544" expanded="true" signature="2019:2166" placeholder="update t_use..." />
-                <marker date="1446601301544" expanded="true" signature="2276:2298" placeholder="select * fro..t_userdz..." />
-                <marker date="1446601301544" expanded="true" signature="2419:2479" placeholder="select * fro..t_userdz..." />
-                <marker date="1446601301544" expanded="true" signature="2576:2634" placeholder="delete from ..." />
+                <marker date="1446773370747" expanded="true" signature="1162:1258" placeholder="select from ..t_user..." />
+                <marker date="1446773370747" expanded="true" signature="1472:1528" placeholder="delete from ..." />
+                <marker date="1446773370747" expanded="true" signature="1742:1950" placeholder="insert into ..." />
+                <marker date="1446773370747" expanded="true" signature="2176:2391" placeholder="update t_use..." />
+                <marker date="1446773370747" expanded="true" signature="2508:2642" placeholder="select from ..t_user..." />
+                <marker date="1446773370747" expanded="true" signature="2750:2866" placeholder="select from ..t_user..." />
+                <marker date="1446773370747" expanded="true" signature="3002:3130" placeholder="select * fro..*..." />
+                <marker date="1446773370747" expanded="true" signature="3018:3081" placeholder="select * fro..t_user..." />
+                <marker date="1446773370747" expanded="true" signature="3213:3241" placeholder="select count..t_user..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DzlistMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.xml">
+      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-              <folding>
-                <marker date="1446623721249" expanded="true" signature="1801:2445" placeholder="insert into ..." />
-                <marker date="1446623721249" expanded="true" signature="2578:3042" placeholder="select count..t_dzlist..." />
-                <marker date="1446623721249" expanded="true" signature="3163:3694" placeholder="select * fro..t_dzlist..." />
-                <marker date="1446623721249" expanded="true" signature="3829:4381" placeholder="select * fro..*..." />
-                <marker date="1446623721249" expanded="true" signature="4109:4250" placeholder="select * fro..t_dzlist..." />
-                <marker date="1446623721249" expanded="true" signature="4506:4783" placeholder="select c.* f..t_userdz..." />
-                <marker date="1446623721249" expanded="true" signature="4887:5051" placeholder="update t_dzl..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DzlistMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111">
-              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.23041475">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserSerivceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/UserSerivceImpl.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-              <folding>
-                <element signature="e#3523#3524#0" expanded="true" />
-                <element signature="e#3581#3582#0" expanded="true" />
-              </folding>
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,18 +532,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserCompanyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserCompanyMapper.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserdzMapper.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserdzMapper.xml" />
-        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/fw/action/BaseAction.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/log4j.properties" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/ImportAction.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/db-mysql.sql" />
         <option value="$PROJECT_DIR$/web/WEB-INF/db-oracle.sql" />
-        <option value="$PROJECT_DIR$/web/wwt/app/controller/Main.js" />
         <option value="$PROJECT_DIR$/web/wwt/app.json" />
         <option value="$PROJECT_DIR$/web/wwt/index.jsp" />
         <option value="$PROJECT_DIR$/web/wwt/app.js" />
@@ -245,7 +554,6 @@
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/service/FwService.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/FwServiceImpl.java" />
         <option value="$PROJECT_DIR$/web/www/classic/src/view/user/ModUser.js" />
-        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/PrimaryKey.java" />
         <option value="$PROJECT_DIR$/web/www/app/Util.js" />
         <option value="$PROJECT_DIR$/web/www/classic/src/view/user/ModUserController.js" />
@@ -253,7 +561,6 @@
         <option value="$PROJECT_DIR$/web/www/app.json" />
         <option value="$PROJECT_DIR$/web/www/classic/src/view/main/Head.js" />
         <option value="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportDzController.js" />
-        <option value="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/Dzlist.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.java" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/UserSerivceImpl.java" />
@@ -261,8 +568,21 @@
         <option value="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportController.js" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/struts.xml" />
-        <option value="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js" />
         <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java" />
+        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/bean/ImportDzRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java" />
+        <option value="$PROJECT_DIR$/web/wwt/app/controller/Main.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneQuery.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneModel.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/user/AddUser.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/view/user/AddUserModel.js" />
+        <option value="$PROJECT_DIR$/web/wwt/app/view/CurrentDz.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/controller/Root.js" />
+        <option value="$PROJECT_DIR$/web/www/classic/src/Application.js" />
+        <option value="$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -302,6 +622,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,90 +632,6 @@
               <option name="myItemId" value="TrackCar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -450,15 +689,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="wwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,19 +707,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="wwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="classic" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="startup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,45 +733,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="wwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="classic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exportA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classic" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,133 +781,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xdlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xdlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xdlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xdlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrackCar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xdlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -747,6 +815,23 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51780" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -949,6 +1034,14 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="RemoteFlashRunConfigurationType" factoryName="Flash Remote Debug">
+      <option name="BCName" value="" />
+      <option name="debugTransport" value="USB" />
+      <option name="moduleName" value="" />
+      <option name="remoteDebugTarget" value="Computer" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -981,6 +1074,9 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -1089,12 +1185,13 @@
       <workItem from="1446519265121" duration="14027000" />
       <workItem from="1446537890395" duration="3442000" />
       <workItem from="1446602337467" duration="10250000" />
-      <workItem from="1446617814362" duration="9513000" />
+      <workItem from="1446617814362" duration="9865000" />
+      <workItem from="1446773434400" duration="14873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37232000" />
+    <option name="totallyTimeSpent" value="52457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1102,25 +1199,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.4975" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.234375" sideWeight="0.525625" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5025" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.4975" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.4975" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260625" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260625" sideWeight="0.49186993" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26799485" sideWeight="0.5081301" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.234375" sideWeight="0.474375" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3984375" sideWeight="0.73625" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1142,10 +1239,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-defaults>
         <breakpoint suspend="THREAD" type="java-line" />
       </breakpoints-defaults>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1154,236 +1259,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5420#5421#0" expanded="false" />
-            <element signature="e#5447#5448#0" expanded="false" />
-            <element signature="e#5487#5488#0" expanded="false" />
-            <element signature="e#5519#5520#0" expanded="false" />
-            <element signature="e#5552#5553#0" expanded="false" />
-            <element signature="e#5581#5582#0" expanded="false" />
-            <element signature="e#5625#5626#0" expanded="false" />
-            <element signature="e#5661#5662#0" expanded="false" />
-            <element signature="e#5694#5695#0" expanded="false" />
-            <element signature="e#5723#5724#0" expanded="false" />
-            <element signature="e#5767#5768#0" expanded="false" />
-            <element signature="e#5803#5804#0" expanded="false" />
-            <element signature="e#5835#5836#0" expanded="false" />
-            <element signature="e#5863#5864#0" expanded="false" />
-            <element signature="e#5905#5906#0" expanded="false" />
-            <element signature="e#5939#5940#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/build/production/WX/resources/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/build/production/WX/cache.appcache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/build/production/WX/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.035063114">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/wwt/build/production/WX/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24787535">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7352941">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/notify/Notification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/db-oracle.sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8865979">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/notify/NotificationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="13" selection-start-column="12" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/FwService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/user/ModUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-aop-4.0.0.M2.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43133804">
-          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/PrimaryKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.666667">
-          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/FwServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#981#982#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/modern/src/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/user/AddUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/user/AddUserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/www/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6900212">
           <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1399,15 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.00990099">
           <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,7 +1284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,7 +1291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1431,7 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1439,7 +1305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1447,7 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,7 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="88" selection-start-line="95" selection-start-column="84" selection-end-line="95" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1463,20 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/Dzlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9158249">
-          <caret line="480" column="8" selection-start-line="480" selection-start-column="8" selection-end-line="480" selection-end-column="21" />
-          <folding>
-            <element signature="e#13435#13436#0" expanded="false" />
-            <element signature="e#13469#13470#0" expanded="false" />
-            <element signature="e#13501#13502#0" expanded="false" />
-            <element signature="e#13529#13530#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1484,14 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27696794">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1508,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5043732">
           <caret line="395" column="52" selection-start-line="395" selection-start-column="52" selection-end-line="395" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1516,96 +1356,324 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73783785">
           <caret line="122" column="55" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserdzMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-2.1089287">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1446601301544" expanded="true" signature="1039:1145" placeholder="select from ..t_userdz..." />
-            <marker date="1446601301544" expanded="true" signature="1359:1423" placeholder="delete from ..." />
-            <marker date="1446601301544" expanded="true" signature="1638:1792" placeholder="insert into ..." />
-            <marker date="1446601301544" expanded="true" signature="2019:2166" placeholder="update t_use..." />
-            <marker date="1446601301544" expanded="true" signature="2276:2298" placeholder="select * fro..t_userdz..." />
-            <marker date="1446601301544" expanded="true" signature="2419:2479" placeholder="select * fro..t_userdz..." />
-            <marker date="1446601301544" expanded="true" signature="2576:2634" placeholder="delete from ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/UserSerivce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.35357141">
           <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/UserSerivceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.425">
           <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="e#3523#3524#0" expanded="true" />
-            <element signature="e#3581#3582#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111">
+        <state vertical-scroll-proportion="0.5628518">
           <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/DzlistMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.35714287">
           <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44444445">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5285714">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/db-mysql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71657753">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/fw/action/ResultAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/ImportDzRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding>
-            <marker date="1446623721249" expanded="true" signature="1801:2445" placeholder="insert into ..." />
-            <marker date="1446623721249" expanded="true" signature="2578:3042" placeholder="select count..t_dzlist..." />
-            <marker date="1446623721249" expanded="true" signature="3163:3694" placeholder="select * fro..t_dzlist..." />
-            <marker date="1446623721249" expanded="true" signature="3829:4381" placeholder="select * fro..*..." />
-            <marker date="1446623721249" expanded="true" signature="4109:4250" placeholder="select * fro..t_dzlist..." />
-            <marker date="1446623721249" expanded="true" signature="4506:4783" placeholder="select c.* f..t_userdz..." />
-            <marker date="1446623721249" expanded="true" signature="4887:5051" placeholder="update t_dzl..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="select * fro..t_import_dz_record..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="select * fro..t_import_dz_record..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="update t_imp..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="select * fro..t_import_dz_record..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="select * fro..t_import_dz_record..." />
+            <marker date="1446774234112" expanded="true" signature="-1:-1" placeholder="delete from ..." />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/Dzlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53125">
+          <caret line="482" column="12" selection-start-line="482" selection-start-column="8" selection-end-line="482" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/wwt/app/view/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/wwt/app/controller/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="41" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/importA/ImportDzModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExportModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73541665">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/db-oracle.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.464286">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/exportA/DzExport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/DzlistAction.java">
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="33" />
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/importA/ImportTelphoneModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/user/AddUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/user/AddUserModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/wwt/app/view/CurrentDz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5306122">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/login/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/view/login/LoginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="11" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/controller/Root.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/www/classic/src/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/action/FwUserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/FwService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/service/impl/FwServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding>
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xdlv/weixing/bean/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding>
+            <marker date="1446773370747" expanded="true" signature="1162:1258" placeholder="select from ..t_user..." />
+            <marker date="1446773370747" expanded="true" signature="1472:1528" placeholder="delete from ..." />
+            <marker date="1446773370747" expanded="true" signature="1742:1950" placeholder="insert into ..." />
+            <marker date="1446773370747" expanded="true" signature="2176:2391" placeholder="update t_use..." />
+            <marker date="1446773370747" expanded="true" signature="2508:2642" placeholder="select from ..t_user..." />
+            <marker date="1446773370747" expanded="true" signature="2750:2866" placeholder="select from ..t_user..." />
+            <marker date="1446773370747" expanded="true" signature="3002:3130" placeholder="select * fro..*..." />
+            <marker date="1446773370747" expanded="true" signature="3018:3081" placeholder="select * fro..t_user..." />
+            <marker date="1446773370747" expanded="true" signature="3213:3241" placeholder="select count..t_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/wwt/resources/startup/1496x2048.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/wwt/resources/startup/320x460.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86817324">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.23041475">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1664,7 +1732,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Struts 22|Web2|TrackCar</last-edited>
+          <last-edited>TrackCar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

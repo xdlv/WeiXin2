@@ -2,12 +2,14 @@ Ext.define('WX.controller.Main', {
     extend: 'Ext.app.Controller',
 
     config: {
-        dzTpl: "<p>&nbsp&nbsp&nbsp&nbsp尊敬的{username}（{userid}）客户，我公司与贵公司截止到{year}年{month}月{day}日期末余额       {qmye}元，其中应收终端销售款{zdxsk1}元，应收代收款{ysdsk1}元，应收终端服务款{zdfwk1}元，应收价保{jb1}     元，应收返利{fl1}元，预收终端销售款{zdxsk2}元，预收价保{jb2}元，预收返利{f2}元，预收终端服务款{zdfwk2}    元，预收其他应付预收抵款{qtyfdk2}        元。</p><p>说明：期末余额为正数，表示我司应收贵司余额，余额为负数，表示我司预收贵司余额。</p><p style='background-color:yellow'>（开发需求备注：此条信息中其中后面部分项目取数为零，则部分项目不要显示。）</p>",
+        dzTpl: "<p>&nbsp&nbsp&nbsp&nbsp尊敬的{username}（{userid}）客户，我公司与贵公司截止到{year}年{month}月{day}日期末余额       {qmye}元，其中应收终端销售款{zdxsk1}元，应收代收款{ysdsk1}元，应收终端服务款{zdfwk1}元，应收价保{jb1}     元，应收返利{fl1}元，预收终端销售款{zdxsk2}元，预收价保{jb2}元，预收返利{f2}元，预收终端服务款{zdfwk2}    元，预收其他应付预收抵款{qtyfdk2}        元。</p><p>说明：期末余额为正数，表示我司应收贵司余额，余额为负数，表示我司预收贵司余额。",
         refs: {
             hqContent: 'component[name=hqContent]',
-            confirmButton: 'button[text=确认对账]',
+            confirmButton: 'button[name=confirmDz]',
+            rejectButton: 'button[name=reject]',
             validateButton: 'button[text=验证码]',
-            bindButton: 'button[text=绑定]'
+            bindButton: 'button[text=绑定]',
+            dzResult : 'textfield[name=dzResult]'
         },
         control: {
             'formpanel': {
@@ -22,7 +24,10 @@ Ext.define('WX.controller.Main', {
             'datepickerfield[name=queryDate]': {
                 change: 'chooseDateForHistory'
             },
-            'button[text=确认对账]': {
+            'button[name=confirmDz]': {
+                tap: 'confirmDz'
+            },
+            'button[name=reject]': {
                 tap: 'confirmDz'
             }
         }
@@ -54,13 +59,16 @@ Ext.define('WX.controller.Main', {
             //load the lasted dz record
             this.loadDzRecord(function (response) {
                 var msg = Ext.JSON.decode(response.responseText, true);
+                console.log(msg.dzlist);
                 if (msg.dzlist) {
                     this.getHqContent().setTpl(this.getDzTpl());
                     this.getHqContent().setData(msg.dzlist);
-                    this.getConfirmButton().setDisabled(false);
-                    if (msg.dzlist.isok == 'Y') {
-                        this.getConfirmButton().setText('己确认');
+                    this.getDzResult().setValue(msg.dzlist.isOk );
+                    this.getDzResult().setValue('未回复');
+                    if (msg.dzlist.isok != 'N') {
                         this.getConfirmButton().setDisabled(true);
+                        this.getRejectButton().setDisabled(true);
+                        this.getDzResult().setValue(msg.dzlist.isOk == 'Y' ? '无异议': '有异议');
                     }
                 } else {
                     Ext.Msg.alert('当前对账', '当前没有记录', Ext.emptyFn);
@@ -137,18 +145,22 @@ Ext.define('WX.controller.Main', {
         if (!dzList){
             return;
         }
+        var isOk = btn.name == 'confirmDz'? 'Y' : 'E';
         Ext.Ajax.request({
             url : 'confirmDz.cmd',
             params: {
                 'dzlist.year': dzList.year,
                 'dzlist.month': dzList.month,
-                'dzlist.userid': dzList.userid
+                'dzlist.userid': dzList.userid,
+                'dzlist.isok': isOk
             },
+            scope: this,
             success: function(response){
                 var msg = Ext.JSON.decode(response.responseText,true);
                 if (msg.success){
+                    this.getConfirmButton().setDisabled(true);
+                    this.getRejectButton().setDisabled(true);
                     Ext.Msg.alert('确认对账', '对账己确认，谢谢使用', Ext.emptyFn);
-                    btn.setDisabled(true);
                 } else {
                     Ext.Msg.alert('确认对账', '确认失败，请稍后重试', Ext.emptyFn);
                 }

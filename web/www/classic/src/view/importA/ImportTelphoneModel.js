@@ -10,7 +10,7 @@ Ext.define('TrackCar.view.importA.ImportTelphoneModel', {
         }, {
             text : 'SCM客商名称',
             dataIndex : 'companyName',
-            flex: 3,
+            flex: 3
         },{
             text : '地方',
             dataIndex : 'area'

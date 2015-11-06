@@ -137,7 +137,6 @@ public class UserAction extends BaseAction {
     }
 
     public String confirmDz() {
-        dzlist.setIsok("Y");
         userSerivce.upateDzlistStatus(dzlist);
         return FINISH;
     }

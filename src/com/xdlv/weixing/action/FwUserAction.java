@@ -3,6 +3,7 @@ package com.xdlv.weixing.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.xdlv.fw.FwException;
 import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.User;
 import com.xdlv.weixing.service.FwService;
@@ -18,6 +19,8 @@ public class FwUserAction extends BaseAction {
         if (userRecord != null) {
             users = new ArrayList<User>();
             users.add(userRecord);
+        } else {
+            throw new FwException("用户名或密码不正确");
         }
         return SUCCESS;
     }

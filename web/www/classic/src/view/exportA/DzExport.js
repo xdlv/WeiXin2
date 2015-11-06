@@ -55,12 +55,12 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     fieldLabel: '所属账期',
                     labelAlign: 'right',
                     name: 'yearMonth',
-                    format: 'Y年m月',
+                    format: 'Y年m月'
                 },{
                     xtype: 'textfield',
                     labelAlign: 'right',
                     fieldLabel: '电话号码',
-                    name: 'dzlist.phone',
+                    name: 'dzlist.phone'
                 }]
             },{
                 xtype:'container',
@@ -88,13 +88,13 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                         boxLabel: '未回复',
                         name: 'unconfirm',
                         bind: { hidden: '{!showStatus}'},
-                        inputValue: 'N',
+                        inputValue: 'N'
                     },, {
                         xtype: 'checkbox',
                         boxLabel: '有异议',
                         name: 'reject',
                         bind: { hidden: '{!showStatus}'},
-                        inputValue: 'E',
+                        inputValue: 'E'
                     }]
                 },{
                     xtype: 'container',

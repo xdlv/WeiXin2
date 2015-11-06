@@ -1,5 +1,6 @@
 Ext.define('TrackCar.controller.Root', {
     extend: 'Ext.app.Controller',
+    requires: ['Ext.data.TreeStore'],
     
     onLaunch : function(){
     	//create session for application scope

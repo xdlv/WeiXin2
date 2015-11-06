@@ -18,7 +18,7 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
                     return '未回复';
                 }
                 if (value == 'Y'){
-                    return '己回复';
+                    return '无异议';
                 }
                 return '有异议';
             }

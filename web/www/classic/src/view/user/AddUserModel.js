@@ -15,7 +15,7 @@ Ext.define('TrackCar.view.user.AddUserModel', {
             fields: ['name', 'value'],
             data : [
                 {"value":"0", "name":"超级用户"},
-                {"value":"1", "name":"普通用户"},
+                {"value":"1", "name":"普通用户"}
             ]
         }
     }

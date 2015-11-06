@@ -23,7 +23,7 @@
   </insert>
 
   <select id="getAllImportDzRecords" resultMap="ImportDzRecordResultMap">
-    select * from t_import_dz_record order by importDate desc
+    select * from t_import_dz_record order by import_date desc
   </select>
 
     <select id="getImportDzRecordByYearAndMonth" parameterType="java.lang.Integer" resultMap="ImportDzRecordResultMap">

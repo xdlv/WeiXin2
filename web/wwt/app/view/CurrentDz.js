@@ -14,6 +14,11 @@ Ext.define('WX.view.CurrentDz', {
                 type: 'vbox'
             },
             items : [{
+                xtype: 'textfield',
+                disabled: 'true',
+                name: 'dzResult',
+                label: '对账结果'
+            },{
                 xtype : 'component',
                 name : 'hqContent',
                 padding: '30',
@@ -27,12 +32,12 @@ Ext.define('WX.view.CurrentDz', {
                     ui : 'confirm',
                     text: '无异议',
                     name: 'confirmDz',
-                    disabled : true,
-                    flex: 1,
+                    disabled : false,
+                    flex: 1
                 },{
                     margin: '0 0 0 10',
                     xtype: 'button',
-                    ui : 'confirm',
+                    ui : 'normal',
                     text: '有异议',
                     name: 'reject',
                     disabled : false,

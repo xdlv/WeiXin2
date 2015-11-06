@@ -17,7 +17,7 @@ Ext.define('TrackCar.Application', {
 
     onAppUpdate: function () {
         window.localStorage.clear();
-        window.applicationCache.update();
+        try {window.applicationCache.update();}catch(e){}
         window.location.reload();
     }
 });
