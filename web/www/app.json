@@ -570,7 +570,7 @@
         "modern": {
             "toolkit": "modern",
             
-            "theme": "theme-triton",
+            "theme": "theme-cupertino",
             
             "sass": {
                 // "save": "modern/sass/save.scss"

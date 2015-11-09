@@ -81,7 +81,7 @@ public class DzlistAction extends BaseAction{
         output.flush();
         output.close();
         wb.close();
-        fileName = "对账记录";
+        this.fileName = new String("对账结果导出.xls".getBytes("UTF-8"),"ISO-8859-1");
         return SUCCESS;
     }
 

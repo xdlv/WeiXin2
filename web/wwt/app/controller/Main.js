@@ -22,8 +22,8 @@ Ext.define('WX.controller.Main', {
         }
         if (WX_PP.phone) {
             Ext.Msg.alert('用户绑定', '该帐号当前己绑定,无法再次绑定');
-            this.getValidateButton().setDisabled(true);
-            this.getBindButton().setDisabled(true);
+            this.getValidateButton().up('formpanel').destroy();
+            this.showBindInfo(WX_PP.phone);
         }
     },
     getValidateCode: function (btn) {
@@ -69,6 +69,8 @@ Ext.define('WX.controller.Main', {
 
     bindUser: function (btn) {
         var main = btn.up('main');
+        var phone = main.getValues().phone;
+        var me = this;
         main.submit({
             url: 'userBind.cmd',
             waitTitle: "请稍候",
@@ -82,7 +84,16 @@ Ext.define('WX.controller.Main', {
             success: function (form1, action) {
                 Ext.Msg.alert('绑定成功', '请返回微信界面', Ext.emptyFn);
                 main.destroy();
+                me.showBindInfo(phone);
             }
+        });
+    },
+    showBindInfo: function(phone){
+        var bindInfo = Ext.create('WX.view.BindInfo');
+        Ext.Viewport.add(bindInfo);
+        bindInfo.down('fieldset').setData({
+            phone: phone,
+            openid: WX_PP.openId
         });
     }
 });
