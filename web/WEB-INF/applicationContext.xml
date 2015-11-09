@@ -87,6 +87,11 @@
 	<bean name="ImportDzRecordAction" class="com.xdlv.weixing.action.ImportDzRecordAction" scope="prototype" autowire="byType"/>
 
     <bean name="DzListAction" class="com.xdlv.weixing.action.DzlistAction" scope="prototype" autowire="byType"/>
+
+	<!-- Handler list -->
+	<bean name="subscribeHandler" class="com.xdlv.weixing.action.handler.SubscribeHandler" autowire="byType"/>
+	<bean name="unSubscribeHandler" class="com.xdlv.weixing.action.handler.UnSubscribeHandler" autowire="byType"/>
+
 	<!-- Job list -->
 	<bean id="sendSmsMessage" class="com.xdlv.weixing.job.SendSmsMessage" 
 		  autowire="byType" />
@@ -94,6 +99,7 @@
           autowire="byType" />
     <bean id="refreshAccessToken" class="com.xdlv.weixing.job.RefreshAccessToken"
           autowire="byType" />
+
 
     <bean id="refreshAccessTokenJobDetail"
           class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
@@ -170,9 +176,9 @@
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-				<!--<ref bean="sendSmsMessageDoTime" />
+				<ref bean="sendSmsMessageDoTime" />
                 <ref bean="notifyMessageDoTime" />
-                <ref bean="refreshAccessTokenDoTime" />-->
+                <ref bean="refreshAccessTokenDoTime" />
 			</list>
 		</property>
 	</bean>
