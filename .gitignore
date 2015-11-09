@@ -3,13 +3,14 @@ web/WEB-INF/lib
 
 web/www/ext
 web/www/build
-web/www/resource
-!web/www/resource/images
+web/www/resources
+
+!web/www/resources/images
 
 web/wwt/touch
 web/wwt/build
 web/wwt/resources
-!web/wwt/resources/images
+.idea/workspace.xml
 
 
 out

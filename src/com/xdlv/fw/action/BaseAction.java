@@ -93,11 +93,17 @@ public abstract class BaseAction extends ActionSupport {
 			Element child;
 			for (Object obj : root.getChildren()) {
 				child = (Element) obj;
-				ReceiveXmlEntity.class.getMethod("set" + child.getName()
-				, String.class).invoke(msg, child.getText());
+				try{
+					ReceiveXmlEntity.class.getMethod("set" + child.getName()
+							, String.class).invoke(msg, child.getText());
+				}catch (Exception e){
+					log.error("can not invoke:set" + child.getName(),e);
+					continue;
+				}
+
 			}
 		} catch (Exception e) {
-			throw new IllegalArgumentException("exception occurs at error xml:", e);
+			log.error("exception occurs at error xml:", e);
 		}
 		return msg;
 	}
