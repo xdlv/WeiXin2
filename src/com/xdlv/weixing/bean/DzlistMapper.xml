@@ -51,20 +51,31 @@
             and (b.wx_contract_phone1 =#{phone,jdbcType=VARCHAR} OR b.wx_contract_phone2 =#{phone,jdbcType=VARCHAR})
         </if>
         <if test="userid != null">and userid=#{userid,jdbcType=VARCHAR}</if>
-        <if test="isOkQuery != null">and isok=#{isOkQuery, jdbcType=CHAR}</if>
+        <if test="isQueryOk != null">
+            and isok in
+            <foreach item="item" index="index" collection="isQueryOk" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
         <if test="username != null">and username like '%${username}%'</if>
         <if test="year != null">and year =#{year,jdbcType=INTEGER}</if>
         <if test="month != null">and month =#{month,jdbcType=INTEGER}</if>
     </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap">
-        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code WHERE 1 =1
+
+        SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON (a.userid = b.code and a.credit_scope=b.credit_scope) WHERE 1 =1
         <if test="dzlist.phone != null">
             and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2
             =#{dzlist.phone,jdbcType=VARCHAR})
         </if>
         <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
-        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR}</if>
+        <if test="dzlist.isQueryOk != null">
+            and isok in
+            <foreach item="item" index="index" collection="dzlist.isQueryOk" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
         <if test="dzlist.username != null">and username like '%${dzlist.username}%'</if>
         <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER}</if>
         <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER}</if>
@@ -72,30 +83,36 @@
     </select>
 
     <select id="selectDzlists" parameterType="java.lang.String" resultMap="DzlistResultMap" databaseId="oracle">
-        SELECT * from (SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid = b.code WHERE
-        rownum &lt;= ${start} + ${limit}
+        SELECT * FROM (SELECT A.*, ROWNUM RN FROM (SELECT a.* FROM t_dzlist a LEFT JOIN t_user_company b
+        ON (a.userid = b.code and a.credit_scope=b.credit_scope) WHERE 1=1
         <if test="dzlist.phone != null">
             and (b.wx_contract_phone1 =#{dzlist.phone,jdbcType=VARCHAR} OR b.wx_contract_phone2
             =#{dzlist.phone,jdbcType=VARCHAR})
         </if>
         <if test="dzlist.userid != null">and userid=#{dzlist.userid,jdbcType=VARCHAR}</if>
-        <if test="dzlist.isOkQuery != null">and isok=#{dzlist.isOkQuery, jdbcType=CHAR}</if>
+        <if test="dzlist.isQueryOk != null">
+            and isok in
+            <foreach item="item" index="index" collection="dzlist.isQueryOk" open="(" separator="," close=")">
+            #{item}
+            </foreach>
+        </if>
         <if test="dzlist.year != null">and year =#{dzlist.year,jdbcType=INTEGER}</if>
         <if test="dzlist.month != null">and month =#{dzlist.month,jdbcType=INTEGER}</if>
         <if test="dzlist.username != null">and username like '%${dzlist.username}%'</if>)
-        where rownum &gt; ${start} + ${limit}
+        A WHERE ROWNUM &lt;= ${start} + ${limit} ) WHERE RN &gt; #{start,jdbcType=INTEGER}
     </select>
 
     <select id="selectDzlistsByYearAndMonth" parameterType="java.lang.String" resultMap="DzlistResultMap">
     select c.* from t_userdz a JOIN t_user_company b
     on (a.phone = b.wx_contract_phone1 or a.phone = b.wx_contract_phone2)
-  JOIN t_dzlist c on b.code = c.userid where a.wxid=#{wxid, jdbcType=VARCHAR}
+  JOIN t_dzlist c on (b.code = c.userid and b.credit_scope=c.credit_scope) where a.wxid=#{wxid, jdbcType=VARCHAR}
    and c.year=#{year,jdbcType=INTEGER} and c.month=#{month,jdbcType=INTEGER}
   </select>
 
     <update id="updateDzlistStatus" parameterType="com.xdlv.weixing.bean.Dzlist">
         update t_dzlist set isok=#{isok,jdbcType=CHAR} where year=#{year,jdbcType=INTEGER}
         and month=#{month,jdbcType=INTEGER} and userid=#{userid,jdbcType=VARCHAR}
+        and credit_scope=#{creditScope,jdbcType=VARCHAR}
     </update>
 
     <delete id="deleteDzlistForImport" parameterType="com.xdlv.weixing.bean.Dzlist">

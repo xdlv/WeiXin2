@@ -170,9 +170,9 @@
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-				<ref bean="sendSmsMessageDoTime" />
+				<!--<ref bean="sendSmsMessageDoTime" />
                 <ref bean="notifyMessageDoTime" />
-                <ref bean="refreshAccessTokenDoTime" />
+                <ref bean="refreshAccessTokenDoTime" />-->
 			</list>
 		</property>
 	</bean>

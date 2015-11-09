@@ -56,12 +56,12 @@
 
   <select id="selectUserCompanys" parameterType="java.lang.Integer" resultMap="UserCompanyResultMap"
           databaseId="oracle">
-    select * from ( select * from t_user_company where rownum &lt;= #{end,jdbcType=INTEGER}
+    SELECT * FROM (SELECT A.*, ROWNUM RN FROM (SELECT * FROM t_user_company WHERE 1=1
     <if test="userCompany.code != null"> and code=#{userCompany.code,jdbcType=VARCHAR}</if>
     <if test="userCompany.companyName != null"> and company_name like '%${userCompany.companyName}%'</if>
     <if test="userCompany.phone != null"> and (wx_contract_phone1=#{userCompany.phone,jdbcType=VARCHAR}
-      or wx_contract_phone2=#{userCompany.phone,jdbcType=VARCHAR})</if>
-    where rownum &gt; ${start} + ${limit}
+      or wx_contract_phone2=#{userCompany.phone,jdbcType=VARCHAR})</if>) A WHERE
+    ROWNUM &lt;= ${start} + ${limit})WHERE RN &gt; #{start,jdbcType=INTEGER}
   </select>
 
   <delete id="deleteForImport" parameterType="com.xdlv.weixing.bean.UserCompany">

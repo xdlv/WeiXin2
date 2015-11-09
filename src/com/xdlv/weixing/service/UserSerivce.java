@@ -13,7 +13,7 @@ public interface UserSerivce extends BaseService{
 	
 	int updateUserValidateStatus(String phone,String status);
 
-	int batchSaveUserCompany(List<UserCompany> userCompanyList);
+	int[] batchSaveUserCompany(List<UserCompany> userCompanyList);
 
 	int getUserCompanysCount(UserCompany userCompany);
 
@@ -29,7 +29,7 @@ public interface UserSerivce extends BaseService{
 
     Userdz getUserdzByPhone(String phone);
 
-    int batchSaveDzlists(Collection<Dzlist> values);
+    int[] batchSaveDzlists(Collection<Dzlist> values);
 
 	int getDzListCount(Dzlist dzlist);
 
@@ -49,7 +49,7 @@ public interface UserSerivce extends BaseService{
 
     ImportDzRecord getLastedNotifyImportDzRecord();
 
-    Dzlist getDzlist(String wxid, int year, int month);
+    List<Dzlist> getDzlist(String wxid, int year, int month);
 
     void upateDzlistStatus(Dzlist dzlist);
 

@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class DzlistAction extends BaseAction{
 
-    static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+    static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     List<Dzlist> dzlists;
     UserSerivce userSerivce;
 

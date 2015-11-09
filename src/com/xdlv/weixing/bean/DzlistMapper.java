@@ -22,5 +22,5 @@ public interface DzlistMapper {
 
     void updateDzlistStatus(Dzlist dzlist);
 
-	void deleteDzlistForImport(Dzlist dzlist);
+	int deleteDzlistForImport(Dzlist dzlist);
 }

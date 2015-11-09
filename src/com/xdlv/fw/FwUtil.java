@@ -4,7 +4,9 @@ import org.aspectj.weaver.ast.Call;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 public class FwUtil {
@@ -21,7 +23,10 @@ public class FwUtil {
         return wac.getBean(name);
     }
 
-    public static int getLastDayInMonth(int month){
+    public static int getLastDayInMonth(int year,int month){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date(year,month,1));
+        calendar.add(Calendar.DAY_OF_MONTH,-1);
         return months[month];
     }
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.xdlv.fw.FwException;
+import com.xdlv.fw.I18n;
 import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.User;
 import com.xdlv.weixing.service.FwService;
@@ -13,6 +14,7 @@ public class FwUserAction extends BaseAction {
     User user;
     List<User> users;
     FwService fwService;
+    String version;
 
     public String userLogin() {
         User userRecord = fwService.userLogin(user.getName(), user.getPwd());
@@ -61,5 +63,9 @@ public class FwUserAction extends BaseAction {
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public String getVersion() {
+        return version;
     }
 }

@@ -29,6 +29,8 @@ public class ImportAction extends BaseAction {
 
     UserSerivce userSerivce;
 
+    UserCompany userCompany;
+
     public String importTelephone() throws Exception {
         Workbook wb = parseFile(excel);
         List<UserCompany> userCompanyList = new ArrayList<UserCompany>();
@@ -66,13 +68,13 @@ public class ImportAction extends BaseAction {
                         userCompany.setWxContractName1(value);
                         break;
                     case 6:
-                        userCompany.setWxContractPhone1(getPhoneValue(cell));
+                        userCompany.setWxContractPhone1(getIntValue(cell));
                         break;
                     case 7:
                         userCompany.setWxContractName2(value);
                         break;
                     case 8:
-                        userCompany.setWxContractPhone2(getPhoneValue(cell));
+                        userCompany.setWxContractPhone2(getIntValue(cell));
                         break;
                     case 9:
                         userCompany.setManagerName(value);
@@ -81,14 +83,14 @@ public class ImportAction extends BaseAction {
                         userCompany.setRemarkContent(value);
                         break;
                     case 11:
-                        userCompany.setCreditScope(value);
+                        userCompany.setCreditScope(getIntValue(cell));
                         break;
                 }
             }
         }
-        userSerivce.batchSaveUserCompany(userCompanyList);
+        int[] count = userSerivce.batchSaveUserCompany(userCompanyList);
         setRequestAttribute(
-                "msg", String.format("成功解析%d条数据", userCompanyList.size()));
+                "msg", String.format("新建%d条记录，更新%d条记录.",count[0],count[1]));
         return FINISH;
     }
 
@@ -120,7 +122,7 @@ public class ImportAction extends BaseAction {
             }
             subject = getCellValue(row.getCell(3));
             all = (float) row.getCell(5).getNumericCellValue();
-            dfScope = getCellValue(row.getCell(6));
+            dfScope = getIntValue(row.getCell(6));
 
             dzlist = dzlistMap.get(code + dfScope);
             if (dzlist == null) {
@@ -166,14 +168,14 @@ public class ImportAction extends BaseAction {
             }
         }
         Collection<Dzlist> saveDzLists = dzlistMap.values();
-        userSerivce.batchSaveDzlists(saveDzLists);
+        int[] count = userSerivce.batchSaveDzlists(saveDzLists);
         userSerivce.saveOrUpdateImportDzRecord(new ImportDzRecord(year, month));
         setRequestAttribute(
-                "msg", String.format("成功解析%d条数据", saveDzLists.size()));
+                "msg", String.format("新建%d条记录，更新%d条记录.",count[0],count[1]));
         return FINISH;
     }
 
-    private String getPhoneValue(Cell cell) {
+    private String getIntValue(Cell cell) {
         String value = getCellValue(cell);
         try {
             return String.format("%d",
@@ -264,4 +266,11 @@ public class ImportAction extends BaseAction {
         this.month = month;
     }
 
+    public UserCompany getUserCompany() {
+        return userCompany;
+    }
+
+    public void setUserCompany(UserCompany userCompany) {
+        this.userCompany = userCompany;
+    }
 }

@@ -2,6 +2,7 @@ Ext.define('TrackCar.view.notify.NotificationController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.notify-notification',
 
+
     notifyMessage: function(btn){
         //您当前下发的是2015年10月份对账通知，下发后对账数据将不可以再次更改，是否确定下发
         var currentDate = new Date();

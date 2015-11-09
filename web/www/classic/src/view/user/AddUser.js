@@ -51,6 +51,8 @@ Ext.define("TrackCar.view.user.AddUser", {
                 fieldLabel: '角色',
                 queryMode: 'local',
                 displayField: 'name',
+				value: '1',
+                editable: false,
                 valueField: 'value',
                 store:Ext.create('Ext.data.Store', {
                     fields: ['name', 'value'],

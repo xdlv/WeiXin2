@@ -3,7 +3,8 @@ Ext.define('TrackCar.view.importA.ImportTelphoneController', {
     alias: 'controller.import-importtelphone',
 
     importClick: function (btn) {
-        btn.up('form').getForm().submit({
+        var form = btn.up('form').getForm();
+        form.submit({
             clientValidation: true,
             url: 'importTelephone.cmd',
             waitTitle:"请稍候",

@@ -3,6 +3,7 @@ Ext.define('WX.view.HistoryQuery', {
 	xtype : 'hquery',
 	config : {
 		fullscreen : true,
+		layout: 'vbox',
 		items : [ {
 			docked : 'top',
 			height : 20,
@@ -15,20 +16,29 @@ Ext.define('WX.view.HistoryQuery', {
 				xtype: 'datepickerfield',
                 label: '选择年月',
                 name: 'queryDate',
-                value: new Date(),
+                /*value: new Date(new Date().getUTCFullYear()
+                    ,new Date().getMonth - 1,new Date().getDay),*/
                 dateFormat: 'Y-m',
                 picker: {
                 	cancelButton: '取消',
                 	doneButton: '确认',
                 	slotOrder : ['year','month']
                 }
-			}, {
-				xtype : 'component',
-				name : 'hqContent',
-				padding: '30',
-				height: 350,
-				tpl : '<p>Name: {name}</p><p>Title: {title}</p>'
-			}]
+			}/*, {
+                xtype: 'textfield',
+                disabled: 'false',
+                name: 'dzResult',
+                label: '对账结果',
+                cls: 'dz_status'
+            }*/]
+		},{
+			flex: 1,
+			xtype: 'tabpanel',
+			flex: 1,
+			name: 'hqContent',
+			defaults: {
+				styleHtmlContent: true
+			}
 		}]
 	}
 });

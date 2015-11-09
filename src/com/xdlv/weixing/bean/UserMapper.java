@@ -41,7 +41,7 @@ public interface UserMapper {
 
 	User selecUserByNameAndPwd(@Param("name")String name, @Param("pwd")String pwd);
 
-	List<User> selectUsers(@Param("start")int start, @Param("end")int end);
+	List<User> selectUsers(@Param("start")int start, @Param("limit")int limit);
 
 	int selectUserCount();
 }

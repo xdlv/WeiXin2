@@ -1,6 +1,10 @@
 package com.xdlv.weixing.bean;
 
+import com.xdlv.fw.FwUtil;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Dzlist {
 
@@ -496,7 +500,25 @@ public class Dzlist {
 
     //phone of user company for query
     private String phone;
-    private String isOkQuery;
+
+    public List<String> getIsQueryOk() {
+        if (confirm == null && unconfirm == null && reject == null){
+            return null;
+        }
+        List<String> retList = new ArrayList<String>();
+        if (confirm != null){
+            retList.add(confirm);
+        }
+        if (unconfirm != null){
+            retList.add(unconfirm);
+        }
+        if (reject != null){
+            retList.add(reject);
+        }
+        return retList;
+    }
+
+    private String confirm,unconfirm,reject;
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -505,11 +527,34 @@ public class Dzlist {
         return phone;
     }
 
-    public void setIsOkQuery(String isOkQuery) {
-        this.isOkQuery = isOkQuery;
+    public String getConfirm() {
+        return confirm;
     }
 
-    public String getIsOkQuery() {
-        return isOkQuery;
+    public void setConfirm(String confirm) {
+        this.confirm = confirm;
+    }
+
+    public String getUnconfirm() {
+        return unconfirm;
+    }
+
+    public void setUnconfirm(String unconfirm) {
+        this.unconfirm = unconfirm;
+    }
+
+    public String getReject() {
+        return reject;
+    }
+
+    public void setReject(String reject) {
+        this.reject = reject;
+    }
+
+    public int getDay(){
+        if (year != null && month != null){
+            return FwUtil.getLastDayInMonth(year,month);
+        }
+        return 30;
     }
 }

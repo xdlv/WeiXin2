@@ -26,30 +26,26 @@ Ext.define('TrackCar.view.exportA.DzExportController', {
 
     prepareParams: function(btn){
         var form = btn.up('form');
-        var confirm = form.down('checkbox[name=confirm]').checked;
-        var unconfirm = form.down('checkbox[name=unconfirm]').checked;
         var yearMonth = form.down('datefield').getValue();
-        var parms = form.getValues();
-        delete parms.yearMonth;
-        if (Ext.isEmpty(parms['dzlist.userid'])){
-            delete parms['dzlist.userid'];
+        var params = form.getValues();
+        delete params.yearMonth;
+        if (Ext.isEmpty(params['dzlist.userid'])){
+            delete params['dzlist.userid'];
         }
-        if (Ext.isEmpty(parms['dzlist.username'])){
-            delete parms['dzlist.username'];
+        if (Ext.isEmpty(params['dzlist.username'])){
+            delete params['dzlist.username'];
         } else {
-            parms['dzlist.username'] = encodeURIComponent(parms['dzlist.username']);
+            params['dzlist.username'] = encodeURIComponent(params['dzlist.username']);
         }
-        if (Ext.isEmpty(parms['dzlist.phone'])){
-            delete parms['dzlist.phone'];
+        if (Ext.isEmpty(params['dzlist.phone'])){
+            delete params['dzlist.phone'];
         }
-        if (confirm != unconfirm){
-            parms['dzlist.isOkQuery'] = confirm ? 'Y' : 'N';
-        }
+
         if (yearMonth){
-            parms['dzlist.year'] = yearMonth.getUTCFullYear();
-            parms['dzlist.month'] = yearMonth.getMonth();
+            params['dzlist.year'] = yearMonth.getUTCFullYear();
+            params['dzlist.month'] = yearMonth.getMonth() + 1;
         }
-        return parms;
+        return params;
     }
 
 });

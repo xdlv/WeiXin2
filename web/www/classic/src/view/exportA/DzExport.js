@@ -80,21 +80,25 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     items: [{
                         xtype: 'checkbox',
                         boxLabel: '无异议',
-                        name: 'confirm',
+                        name: 'dzlist.confirm',
                         bind: { hidden: '{!showStatus}'},
-                        inputValue: 'Y'
+                        inputValue: 'Y',
+                        checked   : true
+
                     }, {
                         xtype: 'checkbox',
                         boxLabel: '未回复',
-                        name: 'unconfirm',
+                        name: 'dzlist.unconfirm',
                         bind: { hidden: '{!showStatus}'},
-                        inputValue: 'N'
+                        inputValue: 'N',
+                        checked   : true
                     },, {
                         xtype: 'checkbox',
                         boxLabel: '有异议',
-                        name: 'reject',
+                        name: 'dzlist.reject',
                         bind: { hidden: '{!showStatus}'},
-                        inputValue: 'E'
+                        inputValue: 'E',
+                        checked   : true
                     }]
                 },{
                     xtype: 'container',

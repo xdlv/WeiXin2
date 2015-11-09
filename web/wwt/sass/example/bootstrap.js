@@ -1835,7 +1835,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.Element-static": "../../touch/src/dom/Element.static.js",
   "Ext.Element-style": "../../touch/src/dom/Element.style.js",
   "Ext.Element-traversal": "../../touch/src/dom/Element.traversal.js",
-  "Ext.cmd": "../../../../../../../../Users/exiglvv/bin/Sencha/Cmd/6.0.1.76/plugins/src",
+  "Ext.cmd": "../../../../../../../../bin/Sencha/Cmd/6.0.2.14/plugins/src",
   "Ext.core.DomQuery": "../../touch/src/dom/Query.js",
   "Ext.device.Purchases.Product": "../../touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "../../touch/src/device/filesystem/Sencha.js",
@@ -2576,10 +2576,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "WX.controller.CurrentDz": [],
+  "WX.controller.HistoryQuery": [],
+  "WX.controller.License": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
   "WX.view.CurrentDz": [],
+  "WX.view.DzView": [],
   "WX.view.HistoryQuery": [],
+  "WX.view.License": [],
   "WX.view.Main": []
 });
 
@@ -3522,14 +3527,21 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "WX.controller.CurrentDz": [],
+  "WX.controller.HistoryQuery": [],
+  "WX.controller.License": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
   "WX.view.CurrentDz": [
     "widget.currentQuery"
   ],
+  "WX.view.DzView": [
+    "widget.dzview"
+  ],
   "WX.view.HistoryQuery": [
     "widget.hquery"
   ],
+  "WX.view.License": [],
   "WX.view.Main": [
     "widget.main"
   ]

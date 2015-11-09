@@ -45,6 +45,9 @@
 		<action name="currentDzIndex" class="UserAction" method="currentDzIndex">
 			<result name="success">index.jsp</result>
 		</action>
+        <action name="refresh" class="UserAction" method="refresh">
+            <result name="success">index.jsp</result>
+        </action>
 
 
 		<action name="loadDzRecord" class="UserAction" method="loadDzRecord"/>
@@ -54,6 +57,7 @@
 		<action name="userLogin" class="FwUserAction" method="userLogin" />
 		<action name="obtainUsers" class="FwUserAction" method="obtainUsers" />
 		<action name="saveUser" class="FwUserAction" method="saveUser" />
+
 
 		<action name="deleteUser" class="FwUserAction" method="deleteUser" />
 

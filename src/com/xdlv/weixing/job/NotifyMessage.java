@@ -44,7 +44,7 @@ public class NotifyMessage {
         jsonObject.put("url","");//placeHold
         jsonObject.put("data",JSONObject.fromObject(String.format("{\"year\" : {\"value\":\"%d\", \"color\":\"#173177\"}, \"month\": {\"value\":\"%d\"" +
                 ", \"color\":\"#173177\"},\"day\": {\"value\":\"%d\", \"color\":\"#173177\"}}"
-                ,importDzRecord.getYear(),importDzRecord.getMonth(),FwUtil.getLastDayInMonth(
+                ,importDzRecord.getYear(),importDzRecord.getMonth(),FwUtil.getLastDayInMonth(importDzRecord.getYear(),
                 importDzRecord.getMonth()))));
 
         for (Userdz userdz : userdzs){

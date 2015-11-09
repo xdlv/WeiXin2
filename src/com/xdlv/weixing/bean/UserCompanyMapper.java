@@ -18,5 +18,5 @@ public interface UserCompanyMapper {
 
     List<UserCompany> selectUserCompanys(@Param("userCompany")UserCompany userCompany, @Param("start") int start, @Param("limit") int limit);
 
-	void deleteForImport(UserCompany userCompany);
+	int deleteForImport(UserCompany userCompany);
 }

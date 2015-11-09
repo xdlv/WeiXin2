@@ -15,16 +15,16 @@ Ext.application({
 
     requires: [
         'Ext.MessageBox',
-        'WX.view.Main',
-        'WX.view.HistoryQuery',
-        'WX.view.CurrentDz',
+        'WX.view.*',
+        'WX.controller.*',
         'Ext.TitleBar',
         'Ext.form.FieldSet',
-        'Ext.field.DatePicker'
+        'Ext.field.DatePicker',
+        'Ext.Toast'
     ],
-    controllers: ['Main'],
+    controllers: ['Main','License','CurrentDz','HistoryQuery'],
     views: [
-        'Main'
+        'Main','License','HistoryQuery','CurrentDz'
     ],
 
     icon: {
@@ -53,13 +53,17 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
+
+        if (WX_PP.version != '201511090800') {
+            window.localStorage.clear();
+            window.location.reload();
+        }
         
         Ext.Viewport.add(Ext.create('WX.view.' + WX_PP.viewId));
     },
 
     onUpdated: function() {
         window.localStorage.clear();
-        window.applicationCache.update();
         window.location.reload();
     }
 });

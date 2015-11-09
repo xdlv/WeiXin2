@@ -8,10 +8,12 @@ import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.*;
 import com.xdlv.weixing.service.UserSerivce;
 import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 public class UserAction extends BaseAction {
 
@@ -26,6 +28,7 @@ public class UserAction extends BaseAction {
     String state;
 
     Dzlist dzlist;
+    List<Dzlist> dzlists;
 
     UserSerivce userSerivce;
     final static String appID = I18n.getI18n("appID");
@@ -33,11 +36,14 @@ public class UserAction extends BaseAction {
 
     public String userBindIndex() throws Exception {
         Userdz userdz = getUserDzFromWeixing();
-        setRetAttribute("openId", userdz.getWxid());
+        setRetAttribute("openId",openid);
+        //check if is used already bind.
         if (userdz != null) {
             setRetAttribute("phone", userdz.getPhone());
+            setRetAttribute("viewId", "Main");
+        } else {
+            setRetAttribute("viewId", "License");
         }
-        setRetAttribute("viewId", "Main");
         return SUCCESS;
     }
     public String currentDzIndex()throws Exception{
@@ -47,40 +53,34 @@ public class UserAction extends BaseAction {
     public String historyQueryIndex()throws Exception{
         return checkBindAndView("HistoryQuery");
     }
+    public String refresh(){
+        setRetAttribute("refresh", "true");
+        return SUCCESS;
+    }
     private String checkBindAndView(String viewId) throws Exception{
         Userdz userdz = getUserDzFromWeixing();
-        setRetAttribute("openId",userdz.getWxid());
+        setRetAttribute("openId",openid);
         if (userdz == null){
-            setRetAttribute("viewId", "Main");
+            setRetAttribute("viewId", "License");
         } else {
             setRetAttribute("viewId", viewId);
         }
         return SUCCESS;
     }
     private Userdz getUserDzFromWeixing()throws Exception{
-        Userdz userdz;
-        String openId = openid;
-        if (openId != null){
-            //this is test for ui
-            userdz = userSerivce.getUserdzByOpenid(openId);
-        } else {
+        if (openid == null){
             // wei xing
             String url = String.format("https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s" +
                     "&secret=%s&code=%s&grant_type=authorization_code", appID,appsecret,code);
             String retJson = HttpClientTpl.get(url);
             logger.info("ret openid :" + retJson);
             JSONObject json = JSONObject.fromObject(retJson);
-            openId = (String) json.get("openid");
-            if (openId == null) {
+            openid = (String) json.get("openid");
+            if (openid == null) {
                 throw new FwException("无法获取用户信息:openid");
             }
-            userdz = userSerivce.getUserdzByOpenid(openId);
         }
-        if (userdz == null) {
-            userdz = new Userdz();
-            userdz.setWxid(openId);
-        }
-        return userdz;
+        return userSerivce.getUserdzByOpenid(openid);
     }
     private void setRetAttribute(String key, String value){
         HttpServletRequest request = ServletActionContext.getRequest();
@@ -88,6 +88,7 @@ public class UserAction extends BaseAction {
         if (jsonObject == null){
             jsonObject = new JSONObject();
             request.setAttribute(RET_KEY, jsonObject);
+            jsonObject.put("version",I18n.getI18n("version"));
         }
         jsonObject.put(key, value);
     }
@@ -120,7 +121,7 @@ public class UserAction extends BaseAction {
         if (dzlist == null || dzlist.getYear() == 0 || dzlist.getMonth() == 0) {
             //get obtain dz record
             ImportDzRecord importDzRecord = userSerivce.getLastedNotifyImportDzRecord();
-            if (importDzRecord == null) {
+            if (importDzRecord == null || "N".equals(importDzRecord.getNotification())) {
                 throw new FwException("当前没有账单可供查询");
             }
             year = importDzRecord.getYear();
@@ -132,7 +133,7 @@ public class UserAction extends BaseAction {
             month = dzlist.getMonth();
             logger.info("load dzlist from history:" + year + "-" + month);
         }
-        dzlist = userSerivce.getDzlist(openid, year, month);
+        dzlists = userSerivce.getDzlist(openid, year, month);
         return SUCCESS;
     }
 
@@ -191,5 +192,13 @@ public class UserAction extends BaseAction {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public void setDzlists(List<Dzlist> dzlists) {
+        this.dzlists = dzlists;
+    }
+
+    public List<Dzlist> getDzlists() {
+        return dzlists;
     }
 }

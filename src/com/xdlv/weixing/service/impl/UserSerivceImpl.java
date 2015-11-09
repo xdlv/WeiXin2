@@ -7,6 +7,7 @@ import java.util.List;
 import com.xdlv.fw.FwUtil;
 import com.xdlv.weixing.bean.*;
 import com.xdlv.weixing.service.UserSerivce;
+import org.apache.log4j.Logger;
 
 public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 
@@ -15,6 +16,7 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
 	UserdzMapper userdzMapper;
     DzlistMapper dzlistMapper;
     ImportDzRecordMapper importDzRecordMapper;
+    Logger logger = Logger.getLogger(UserSerivceImpl.class);
 	@Override
 	public UserCompany[] getUserCompanyByPhone(String phone) {
 		return userCompanyMapper.getUserCompanyByPhone(phone);
@@ -51,12 +53,19 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     }
 
 	@Override
-	public int batchSaveUserCompany(List<UserCompany> userCompanyList) {
-		for (UserCompany userCompany : userCompanyList){
-            userCompanyMapper.deleteForImport(userCompany);
+	public int[] batchSaveUserCompany(List<UserCompany> userCompanyList) {
+		int insertCount = 0, deleteCount = 0, updateCount = 0;
+        for (UserCompany userCompany : userCompanyList){
+            deleteCount = userCompanyMapper.deleteForImport(userCompany);
+            if (deleteCount > 0){
+                logger.info("replace one more user company record:" + deleteCount);
+                updateCount ++;
+            } else {
+                insertCount ++;
+            }
 			userCompanyMapper.insert(userCompany);
 		}
-		return userCompanyList.size();
+		return new int[]{insertCount,updateCount};
 	}
 
     @Override
@@ -95,14 +104,20 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     }
 
     @Override
-    public int batchSaveDzlists(Collection<Dzlist> values) {
+    public int[] batchSaveDzlists(Collection<Dzlist> values) {
         Date date = new Date();
+        int insertCount = 0, deleteCount, updateCount = 0;
         for (Dzlist value : values){
             value.setImpdate(date);
-            dzlistMapper.deleteDzlistForImport(value);
+            deleteCount = dzlistMapper.deleteDzlistForImport(value);
+            if (deleteCount > 0){
+                updateCount ++;
+            } else {
+                insertCount ++;
+            }
             dzlistMapper.insert(value);
         }
-        return values.size();
+        return new int[]{insertCount, updateCount};
     }
 
 	@Override
@@ -155,12 +170,8 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     }
 
     @Override
-    public Dzlist getDzlist(String wxid, int year, int month) {
-        List<Dzlist> dzlists = dzlistMapper.selectDzlistsByYearAndMonth(wxid, year, month);
-        if (dzlists != null && dzlists.size() > 0){
-            return dzlists.get(0);
-        }
-        return null;
+    public List<Dzlist> getDzlist(String wxid, int year, int month) {
+        return dzlistMapper.selectDzlistsByYearAndMonth(wxid, year, month);
     }
 
     @Override

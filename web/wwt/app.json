@@ -74,6 +74,10 @@
         {
             "path": "resources/css/app.css",
             "update": "delta"
+        },
+        {
+            "path": "resources/css/app2.css",
+            "update": "delta"
         }
     ],
 
@@ -85,7 +89,7 @@
          * List of items in the CACHE MANIFEST section
          */
         "cache": [
-           
+           "index.html"
         ],
         /**
          * List of items in the NETWORK section
