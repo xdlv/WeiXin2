@@ -501,6 +501,9 @@ public class Dzlist {
     //phone of user company for query
     private String phone;
 
+    private Userdz userdz;
+    private UserCompany userCompany;
+
     public List<String> getIsQueryOk() {
         if (confirm == null && unconfirm == null && reject == null){
             return null;
@@ -556,5 +559,21 @@ public class Dzlist {
             return FwUtil.getLastDayInMonth(year,month);
         }
         return 30;
+    }
+
+    public Userdz getUserdz() {
+        return userdz;
+    }
+
+    public void setUserdz(Userdz userdz) {
+        this.userdz = userdz;
+    }
+
+    public UserCompany getUserCompany() {
+        return userCompany;
+    }
+
+    public void setUserCompany(UserCompany userCompany) {
+        this.userCompany = userCompany;
     }
 }

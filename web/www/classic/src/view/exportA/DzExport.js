@@ -68,35 +68,37 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     type: 'vbox',
                     align: 'stretch'
                 },
-                margin: '0 10 0 20',
-                flex: 1,
+                margin: '0 10 0 10',
+
                 items:[{
                     xtype: 'container',
-                    bind : {hidden: '{hiddenStatus}'},
                     layout: {
                         type: 'hbox',
                         align: 'stretch'
                     },
                     items: [{
                         xtype: 'checkbox',
+                        margin: '0 10 0 10',
                         boxLabel: '无异议',
                         name: 'dzlist.confirm',
-                        bind: { hidden: '{!showStatus}'},
+                        bind: { hidden: '{hiddenStatus}'},
                         inputValue: 'Y',
                         checked   : true
 
                     }, {
+                        margin: '0 10 0 10',
                         xtype: 'checkbox',
                         boxLabel: '未回复',
                         name: 'dzlist.unconfirm',
-                        bind: { hidden: '{!showStatus}'},
+                        bind: { hidden: '{hiddenStatus}'},
                         inputValue: 'N',
                         checked   : true
-                    },, {
+                    },{
+                        margin: '0 10 0 10',
                         xtype: 'checkbox',
                         boxLabel: '有异议',
                         name: 'dzlist.reject',
-                        bind: { hidden: '{!showStatus}'},
+                        bind: { hidden: '{hiddenStatus}'},
                         inputValue: 'E',
                         checked   : true
                     }]
@@ -110,8 +112,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     items: [{
                         xtype: 'button',
                         text: '查询',
-                        handler: 'queryDzlist',
-                        flex: 1
+                        handler: 'queryDzlist'
                     }, {
                         margin: '0 0 0 5',
                         xtype: 'button',

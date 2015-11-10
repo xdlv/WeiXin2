@@ -2,8 +2,17 @@ Ext.define('TrackCar.view.notify.NotificationController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.notify-notification',
 
-
     notifyMessage: function(btn){
+        var canNotify = false;
+        this.getStore('store').getData().each(function(v,i,l){
+            if (v.get('notification') == 'N'){
+                canNotify = true;
+            }
+        },this);
+        if (!canNotify){
+            Ext.MessageBox.alert("下发通知","对账通知己下发，无须再次下发。");
+            return;
+        }
         //您当前下发的是2015年10月份对账通知，下发后对账数据将不可以再次更改，是否确定下发
         var currentDate = new Date();
         var year = currentDate.getFullYear();

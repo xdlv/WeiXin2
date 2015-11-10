@@ -36,5 +36,8 @@ Ext.define('TrackCar.view.importA.ImportTelphoneController', {
         this.getStore('store').reload({
             params: params
         });
+    },
+    exportUnBind: function(btn){
+        window.open('exportUnBind.cmd','_self');
     }
 });

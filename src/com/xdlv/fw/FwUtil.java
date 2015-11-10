@@ -4,15 +4,18 @@ import org.aspectj.weaver.ast.Call;
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
 
 public class FwUtil {
 
 	public static String UTF8 = "UTF-8";
     static int[] months = new int[]{0,31,29,31,30,31,30,31,31,30,31,30,31};
+    static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	public static String getValidateCode(){
         return String.format("%04d",Math.abs(new Random().nextInt(9999)));
@@ -25,7 +28,11 @@ public class FwUtil {
 
     public static int getLastDayInMonth(int year,int month){
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date(year,month,1));
+        try {
+            calendar.setTime(sdf.parse(String.format("%d-%d-%d 00:00:00",year,month,1)));
+        } catch (ParseException e) {
+            throw new IllegalArgumentException("can not parse data", e);
+        }
         calendar.add(Calendar.DAY_OF_MONTH,-1);
         return months[month];
     }

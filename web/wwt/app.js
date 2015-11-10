@@ -54,7 +54,7 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
-        if (WX_PP.version != '201511092010') {
+        if (WX_PP.version != '201511101520') {
             window.localStorage.clear();
             window.location.reload();
         }

@@ -1,6 +1,5 @@
 package com.xdlv.weixing.action;
 
-import com.xdlv.fw.FwException;
 import com.xdlv.fw.FwUtil;
 import com.xdlv.fw.I18n;
 import com.xdlv.fw.action.BaseAction;
@@ -40,49 +39,83 @@ public class DzlistAction extends BaseAction{
     public String downLoadDzlists() throws Exception{
         obtainDzlists();
         HSSFWorkbook wb = new HSSFWorkbook();
-        HSSFSheet sheet = wb.createSheet("sheet1");
-        HSSFRow row = sheet.createRow(0);
-        HSSFCellStyle style = wb.createCellStyle();
-        style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
-
-        String[] titles = I18n.getI18n("export_dz_titles").split(" ");
-        HSSFCell cell;
-        int COUNT = 17;
-        for (int i=0;i<COUNT;i++){
-            cell = row.createCell(i);
-            cell.setCellValue(titles[i]);
-        }
-        Dzlist tmp;
+        HSSFSheet sheet = createDzlistSheet(wb, "sheet1");
+        HSSFRow row;
         for (int i=0;dzlists != null && i<dzlists.size(); i++){
-            tmp = dzlists.get(i);
             row = sheet.createRow(i+1);
-            row.createCell(0).setCellValue(tmp.getYear());
-            row.createCell(1).setCellValue(tmp.getMonth());
-            row.createCell(2).setCellValue(sdf.format(tmp.getImpdate()));
-            row.createCell(3).setCellValue(tmp.getUserid());
-            row.createCell(4).setCellValue(tmp.getUsername());
-            row.createCell(5).setCellValue(tmp.getIsok());
-            row.createCell(6).setCellValue(tmp.getQmye());
-            row.createCell(7).setCellValue(tmp.getZdxsk1());
-            row.createCell(8).setCellValue(tmp.getYsdsk1());
-            row.createCell(9).setCellValue(tmp.getZdfwk1());
-            row.createCell(10).setCellValue(tmp.getJb1());
-            row.createCell(11).setCellValue(tmp.getFl1());
-            row.createCell(12).setCellValue(tmp.getZdxsk2());
-            row.createCell(13).setCellValue(tmp.getJb2());
-            row.createCell(14).setCellValue(tmp.getFl2());
-            row.createCell(15).setCellValue(tmp.getZdfwk2());
-            row.createCell(16).setCellValue(tmp.getQtyfdk2());
+            writeRowValue(row,dzlists.get(i));
         }
+        writeExcelFile(wb,"对账结果导出.xls");
+        return EXCEL;
+    }
 
+    public String exportGroupData()throws Exception{
+        HSSFWorkbook wb = new HSSFWorkbook();
+        HSSFSheet noTelephoneSheet = createDzlistSheet(wb, "无对账手机号码");
+        HSSFSheet noBindSheet = createDzlistSheet(wb, "未绑定");
+        HSSFSheet bindSheet = createDzlistSheet(wb, "己绑定");
+        dzlists = userSerivce.getAllDzlisWithUser(dzlist.getYear(), dzlist.getMonth());
+        Dzlist tmp;
+        HSSFRow tmpRow;
+        int noTelephoneCount = 1, noBindCount = 1, bindCount = 1;
+
+        for (int i=0; dzlists != null && i<dzlists.size();i++){
+            tmp = dzlists.get(i);
+            if (tmp.getUserCompany() == null || StringUtils.isBlank(tmp.getUserCompany().getWxPhone())){
+                tmpRow = noTelephoneSheet.createRow(noTelephoneCount++);
+            } else if (tmp.getUserdz() == null || StringUtils.isBlank(tmp.getUserdz().getWxid())){
+                tmpRow = noBindSheet.createRow(noBindCount++);
+            } else {
+                tmpRow = bindSheet.createRow(bindCount++);
+            }
+            writeRowValue(tmpRow, tmp);
+        }
+        writeExcelFile(wb, "对账分类文件.xls");
+        return EXCEL;
+    }
+    private void writeExcelFile(HSSFWorkbook wb, String fileName) throws Exception{
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         wb.write(output);
         excelFile = new ByteArrayInputStream(output.toByteArray());
         output.flush();
         output.close();
         wb.close();
-        this.fileName = new String("对账结果导出.xls".getBytes("UTF-8"),"ISO-8859-1");
-        return SUCCESS;
+        this.fileName = new String(fileName.getBytes("UTF-8"),"ISO-8859-1");
+    }
+    private void writeRowValue(HSSFRow row, Dzlist dzlist){
+        row.createCell(0).setCellValue(dzlist.getYear());
+        row.createCell(1).setCellValue(dzlist.getMonth());
+        row.createCell(2).setCellValue(sdf.format(dzlist.getImpdate()));
+        row.createCell(3).setCellValue(dzlist.getUserid());
+        row.createCell(4).setCellValue(dzlist.getUsername());
+        row.createCell(5).setCellValue(dzlist.getIsok());
+        row.createCell(6).setCellValue(dzlist.getQmye());
+        row.createCell(7).setCellValue(dzlist.getZdxsk1());
+        row.createCell(8).setCellValue(dzlist.getYsdsk1());
+        row.createCell(9).setCellValue(dzlist.getZdfwk1());
+        row.createCell(10).setCellValue(dzlist.getJb1());
+        row.createCell(11).setCellValue(dzlist.getFl1());
+        row.createCell(12).setCellValue(dzlist.getZdxsk2());
+        row.createCell(13).setCellValue(dzlist.getJb2());
+        row.createCell(14).setCellValue(dzlist.getFl2());
+        row.createCell(15).setCellValue(dzlist.getZdfwk2());
+        row.createCell(16).setCellValue(dzlist.getQtyfdk2());
+        row.createCell(17).setCellValue(dzlist.getCreditScope());
+    }
+    private HSSFSheet createDzlistSheet(HSSFWorkbook wb, String name){
+        HSSFCellStyle style = wb.createCellStyle();
+        style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+
+        HSSFSheet sheet = wb.createSheet(name);
+        HSSFRow row = sheet.createRow(0);
+        row.setRowStyle(style);
+        HSSFCell cell;
+        String[] titles = I18n.getI18n("export_dz_titles").split(" ");
+        for (int i=0;i<titles.length;i++){
+            cell = row.createCell(i);
+            cell.setCellValue(titles[i]);
+        }
+        return sheet;
     }
 
     public InputStream getExcelFile() {

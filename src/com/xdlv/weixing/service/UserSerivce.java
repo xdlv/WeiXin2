@@ -56,4 +56,10 @@ public interface UserSerivce extends BaseService{
     Userdz getUserdzByOpenid(String openId);
 
     void deleteUserdzByOpenId(String fromUserName);
+
+    List<UserCompany> getUnBindUserCompany();
+
+    List<Dzlist> getAllDzlisWithUser(Integer year, Integer month);
+
+    int updateDzListAutomatic();
 }

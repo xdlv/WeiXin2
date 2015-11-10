@@ -19,4 +19,7 @@ public interface UserCompanyMapper {
     List<UserCompany> selectUserCompanys(@Param("userCompany")UserCompany userCompany, @Param("start") int start, @Param("limit") int limit);
 
 	int deleteForImport(UserCompany userCompany);
+
+	List<UserCompany> selectUnBindUserCompany();
+
 }

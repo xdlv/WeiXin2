@@ -20,9 +20,10 @@
             <result name="login">www/index.html</result>
 			<result name="xml">xml.jsp</result>
 
-            <result name="stream" type="stream">
-				<param name="contentType">image/jpeg</param>
-				<param name="inputName">imageStream</param>
+			<result name="excel" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">excelFile</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
 				<param name="bufferSize">1024</param>
 			</result>
 		</global-results>
@@ -62,15 +63,12 @@
 		<action name="deleteUser" class="FwUserAction" method="deleteUser" />
 
         <action name="obtainUserCompanys" class="UserCompanyAction" method="obtainUserCompanys" />
+		<action name="exportUnBind" class="UserCompanyAction" method="exportUnBind">
+		</action>
         <action name="obtainDzlists" class="DzListAction" method="obtainDzlists" />
 		<action name="downLoadDzlists" class="DzListAction" method="downLoadDzlists">
-			<result name="success" type="stream">
-				<param name="contentType">application/octet-stream</param>
-				<param name="inputName">excelFile</param>
-				<param name="contentDisposition">attachment;filename="${fileName}"</param>
-				<param name="bufferSize">1024</param>
-			</result>
 		</action>
+		<action name="exportGroupData" class="DzListAction" method="exportGroupData"/>
 
 		<action name="importTelephone" class="ImportAction" method="importTelephone">
 

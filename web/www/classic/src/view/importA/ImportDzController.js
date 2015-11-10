@@ -13,15 +13,13 @@ Ext.define('TrackCar.view.importA.ImportDzController', {
             return;
         }
         var me = this;
-        var currentDate = new Date();
-        var year = currentDate.getFullYear();
-        var month = currentDate.getMonth();
-        var message = Ext.util.Format.format('您正导入{0}年{1}月的对账信息，是否继续?',year,month);
+        var lastMonth = this.getLastMonth();
+        var message = Ext.util.Format.format('您正导入{0}年{1}月的对账信息，是否继续?',lastMonth[0],lastMonth[1]);
         Ext.MessageBox.confirm("提示",message ,function(v){
                 if (v == 'no'){
                     return;
                 }
-                this.uploadFile(btn,year,month);
+                this.uploadFile(btn,lastMonth[0],lastMonth[1]);
         },this);
     },
 
@@ -43,5 +41,16 @@ Ext.define('TrackCar.view.importA.ImportDzController', {
                 Ext.MessageBox.alert('成功',action.result.msg);
             }
         });
+    },
+    exportGroupDataClick: function(btn){
+        var lastMonth = this.getLastMonth();
+        var url = 'exportGroupData.cmd?dzlist.year=' + lastMonth[0] + '&dzlist.month=' + lastMonth[1];
+        window.open(url,'_self');
+    },
+    getLastMonth: function(){
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth();
+        return [year, month];
     }
 });

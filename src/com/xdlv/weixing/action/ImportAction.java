@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.*;
 
+import com.xdlv.fw.I18n;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -48,7 +49,7 @@ public class ImportAction extends BaseAction {
             }
             UserCompany userCompany = new UserCompany();
             userCompanyList.add(userCompany);
-            for (int j = 1; j < 12; j++) {
+            for (int j = 1; j < 11; j++) {
                 cell = row.getCell(j);
                 value = getCellValue(cell);
                 if (StringUtils.isEmpty(value)) {
@@ -56,13 +57,14 @@ public class ImportAction extends BaseAction {
                 }
                 switch (j) {
                     case 1:
-                        userCompany.setCode(value);
+                        userCompany.setCode(getIntValue(cell));
                         break;
                     case 2:
                         userCompany.setCompanyName(value);
                         break;
                     case 3:
                         userCompany.setArea(value);
+                        userCompany.setCreditScope(I18n.getI18n(value));
                         break;
                     case 4:
                         userCompany.setBusiness("是".equals(value) ? "Y" : "N");
@@ -84,9 +86,6 @@ public class ImportAction extends BaseAction {
                         break;
                     case 10:
                         userCompany.setRemarkContent(value);
-                        break;
-                    case 11:
-                        userCompany.setCreditScope(getIntValue(cell));
                         break;
                 }
             }
@@ -115,7 +114,7 @@ public class ImportAction extends BaseAction {
                 break;
             }
 
-            code = getCellValue(row.getCell(1));
+            code = getIntValue(row.getCell(1));
             if (StringUtils.isBlank(code)) {
                 continue;
             }
@@ -177,7 +176,7 @@ public class ImportAction extends BaseAction {
             userSerivce.saveOrUpdateImportDzRecord(new ImportDzRecord(year, month));
         }
         setRequestAttribute(
-                "msg", String.format("新建%d条记录。",0));
+                "msg", String.format("新建%d条记录。",count));
         return FINISH;
     }
 

@@ -64,7 +64,7 @@ Ext.define('WX.controller.CurrentDz', {
             var msg = Ext.JSON.decode(response.responseText, true);
             var dzlists = msg.dzlists;
             if (!dzlists || dzlists.length < 1) {
-                Ext.Msg.alert('当前对账', '账单没有生成，请耐心等待。', Ext.emptyFn);
+                Ext.Msg.alert('当前对账', '对账没有生成，请耐心等待。', Ext.emptyFn);
                 return;
             }
             var containsUnConfirmDz = false;

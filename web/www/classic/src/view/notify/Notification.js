@@ -40,7 +40,8 @@ Ext.define("TrackCar.view.notify.Notification",{
                 xtype: 'button',
                 text: '下发通知',
                 handler: 'notifyMessage',
-                reference: 'notifyButton'
+                reference: 'notifyButton',
+                disabled: false
             }]
         }
     }]

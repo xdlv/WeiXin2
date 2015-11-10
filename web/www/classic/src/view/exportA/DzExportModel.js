@@ -20,6 +20,9 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
                 if (value == 'Y'){
                     return '无异议';
                 }
+                if (value == 'A'){
+                    return '系统默认无异议';
+                }
                 return '有异议';
             }
         },{

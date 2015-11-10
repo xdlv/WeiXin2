@@ -58,12 +58,17 @@ Ext.define('WX.controller.HistoryQuery', {
             Ext.each(dzlists,function(v,i){
                 if (v.isok == 'N'){
                     containsUnConfirmDz = true;
+                } else if (v.isok == 'Y'){
+                    v['dzStatus']='无异议';
+                } else if (v.isok == 'A'){
+                    v['dzStatus']='系统默认无异议';
+                } else {
+                    v['dzStatus']='有异议';
                 }
-                v['dzStatus'] = v.isok == 'Y' ? '有异议': '无异议';
             });
             if (containsUnConfirmDz){
-                //当前有账单没有确认，历史中不给查看
-                Ext.Msg.alert('历史对账', '当前账单没有确认，无法查看', Ext.emptyFn);
+                //当前有对账没有确认，历史中不给查看
+                Ext.Msg.alert('历史对账', '当前对账没有确认，无法查看当月对账', Ext.emptyFn);
                 return;
             }
             var tabpanel = this.getHqContent();

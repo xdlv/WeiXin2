@@ -18,7 +18,7 @@ public abstract class BaseAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 
 	public final static String FINISH = "finish"
-			, LOGIN = "login", XML = "xml";
+			, LOGIN = "login", XML = "xml",EXCEL = "excel";
 	private static Pattern SPLITE_PATTERN = Pattern.compile(",");
 
 	public final static String USER_NAME = "";

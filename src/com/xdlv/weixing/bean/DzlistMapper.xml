@@ -103,16 +103,25 @@
     </select>
 
     <select id="selectDzlistsByYearAndMonth" parameterType="java.lang.String" resultMap="DzlistResultMap">
-    select c.* from t_userdz a JOIN t_user_company b
+    select c.*,a.wxid,b.wx_contract_phone1,b.wx_contract_phone2 from t_userdz a JOIN t_user_company b
     on (a.phone = b.wx_contract_phone1 or a.phone = b.wx_contract_phone2)
-  JOIN t_dzlist c on (b.code = c.userid and b.credit_scope=c.credit_scope) where a.wxid=#{wxid, jdbcType=VARCHAR}
-   and c.year=#{year,jdbcType=INTEGER} and c.month=#{month,jdbcType=INTEGER}
+  JOIN t_dzlist c on (b.code = c.userid and b.credit_scope=c.credit_scope) where
+   c.year=#{year,jdbcType=INTEGER} and c.month=#{month,jdbcType=INTEGER} <if test="wxid != null">and a.wxid=#{wxid, jdbcType=VARCHAR}</if>
   </select>
 
     <update id="updateDzlistStatus" parameterType="com.xdlv.weixing.bean.Dzlist">
         update t_dzlist set isok=#{isok,jdbcType=CHAR} where year=#{year,jdbcType=INTEGER}
         and month=#{month,jdbcType=INTEGER} and userid=#{userid,jdbcType=VARCHAR}
         and credit_scope=#{creditScope,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateDzListAutomatic" parameterType="java.lang.Integer">
+        <!-- 5 day = 43200 seconds-->
+        update t_dzList set isok='A' where impdate + 43200 &lt; now()
+    </update>
+    <update id="updateDzListAutomatic" parameterType="java.lang.Integer" databaseId="oracle">
+        <!-- 5 day-->
+        update t_dzList set isok='A' where impdate &lt; (sysdate - interval '5' DAY)
     </update>
 
     <delete id="deleteDzlistForImport" parameterType="com.xdlv.weixing.bean.Dzlist">
@@ -124,5 +133,21 @@
     <delete id="deleteDzlitByYearAndMonth" parameterType="java.lang.Integer">
          delete from t_dzlist where year=#{year,jdbcType=INTEGER} and month=#{month,jdbcType=INTEGER}
     </delete>
+
+
+    <select id="selectAllDzlisWithUser" parameterType="java.lang.Integer" resultMap="DzlistResultWithUserdzMap">
+        SELECT a.*,b.wx_contract_phone1,b.wx_contract_phone2,c.wxid FROM t_dzlist a LEFT JOIN t_user_company b ON a.userid=b.code LEFT JOIN t_userdz c
+   ON (b.wx_contract_phone1=c.phone OR b.wx_contract_phone2=c.phone ) where  a.year=#{year,jdbcType=INTEGER} and a.month=#{month,jdbcType=INTEGER}
+    </select>
+
+    <resultMap id="DzlistResultWithUserdzMap" type="com.xdlv.weixing.bean.Dzlist" extends="DzlistResultMap">
+        <association property="userdz" javaType="com.xdlv.weixing.bean.Userdz">
+        <result property="wxid" column="wxid"/>
+    </association>
+        <association property="userCompany" javaType="com.xdlv.weixing.bean.UserCompany">
+            <result property="wxContractPhone1" column="wx_contract_phone1"/>
+            <result property="wxContractPhone2" column="wx_contract_phone2"/>
+        </association>
+    </resultMap>
 
 </mapper>

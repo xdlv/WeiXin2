@@ -183,4 +183,19 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     public void deleteUserdzByOpenId(String fromUserName) {
         userdzMapper.deleteUserdzByOpenid(fromUserName);
     }
+
+    @Override
+    public List<UserCompany> getUnBindUserCompany() {
+        return userCompanyMapper.selectUnBindUserCompany();
+    }
+
+    @Override
+    public List<Dzlist> getAllDzlisWithUser(Integer year, Integer month) {
+        return dzlistMapper.selectAllDzlisWithUser(year,month);
+    }
+
+    @Override
+    public int updateDzListAutomatic() {
+        return dzlistMapper.updateDzListAutomatic();
+    }
 }
