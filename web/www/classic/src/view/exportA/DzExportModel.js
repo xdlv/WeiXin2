@@ -55,6 +55,9 @@ Ext.define('TrackCar.view.exportA.DzExportModel', {
         },{
             text: '预收-其它应付抵款',
             dataIndex : 'qtyfdk2'
+        },{
+            text: '贷方范围',
+            dataIndex: 'creditScope'
         }]
     },
 

@@ -70,6 +70,12 @@ Ext.define('TrackCar.controller.Root', {
                         text: '导入导出',
                         iconCls: 'x-fa fa-wrench',
                         children: [{
+                            text: '手机号码导入',
+                            iconCls: 'x-fa fa-share-alt',
+                            leaf: true,
+                            view : 'importA.ImportTelphone',
+                            routeId: 'importA-ImportTelphone'
+                        },{
                             text: '对账结果导出',
                             view: 'exportA.DzExport',
                             routeId: 'exportA-DzExport',

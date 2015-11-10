@@ -2,6 +2,7 @@ package com.xdlv.weixing.action;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
@@ -28,8 +29,10 @@ public class ImportAction extends BaseAction {
     int month;
 
     UserSerivce userSerivce;
-
     UserCompany userCompany;
+
+    private InputStream exportDzFile;
+    private String exportDzFileName;
 
     public String importTelephone() throws Exception {
         Workbook wb = parseFile(excel);
@@ -168,10 +171,13 @@ public class ImportAction extends BaseAction {
             }
         }
         Collection<Dzlist> saveDzLists = dzlistMap.values();
-        int[] count = userSerivce.batchSaveDzlists(saveDzLists);
-        userSerivce.saveOrUpdateImportDzRecord(new ImportDzRecord(year, month));
+        int count = 0;
+        if (saveDzLists.size() > 1){
+            count = userSerivce.batchSaveDzlists(saveDzLists,year ,month );
+            userSerivce.saveOrUpdateImportDzRecord(new ImportDzRecord(year, month));
+        }
         setRequestAttribute(
-                "msg", String.format("新建%d条记录，更新%d条记录.",count[0],count[1]));
+                "msg", String.format("新建%d条记录。",0));
         return FINISH;
     }
 

@@ -23,4 +23,6 @@ public interface DzlistMapper {
     void updateDzlistStatus(Dzlist dzlist);
 
 	int deleteDzlistForImport(Dzlist dzlist);
+
+	int deleteDzlitByYearAndMonth(@Param("year")int year, @Param("month")int month);
 }

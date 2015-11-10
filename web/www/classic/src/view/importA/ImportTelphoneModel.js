@@ -44,6 +44,12 @@ Ext.define('TrackCar.view.importA.ImportTelphoneModel', {
         }]
     },
 
+    formulas: {
+        isNormalUser : function(get){
+            return get('currentUser.userRole') == 1;
+        }
+    },
+
     stores: {
         store:{
             model: 'UserCompany',

@@ -29,7 +29,7 @@ public interface UserSerivce extends BaseService{
 
     Userdz getUserdzByPhone(String phone);
 
-    int[] batchSaveDzlists(Collection<Dzlist> values);
+    int batchSaveDzlists(Collection<Dzlist> values, int year, int month);
 
 	int getDzListCount(Dzlist dzlist);
 

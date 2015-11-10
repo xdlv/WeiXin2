@@ -104,20 +104,15 @@ public class UserSerivceImpl extends BaseServiceImpl implements UserSerivce{
     }
 
     @Override
-    public int[] batchSaveDzlists(Collection<Dzlist> values) {
+    public int batchSaveDzlists(Collection<Dzlist> values, int year, int month) {
+        int deleteCount = dzlistMapper.deleteDzlitByYearAndMonth(year, month);
+        logger.info(String.format("delete dzlist for %d-%d cout:%d",year,month,deleteCount));
         Date date = new Date();
-        int insertCount = 0, deleteCount, updateCount = 0;
         for (Dzlist value : values){
             value.setImpdate(date);
-            deleteCount = dzlistMapper.deleteDzlistForImport(value);
-            if (deleteCount > 0){
-                updateCount ++;
-            } else {
-                insertCount ++;
-            }
             dzlistMapper.insert(value);
         }
-        return new int[]{insertCount, updateCount};
+        return values.size();
     }
 
 	@Override

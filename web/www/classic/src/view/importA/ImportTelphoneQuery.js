@@ -33,6 +33,12 @@ Ext.define('TrackCar.view.importA.ImportTelphoneQuery', {
             name: 'queryButton',
             text: '查询',
             handler: 'queryCompany'
+        },{
+            margin: '0 0 0 5',
+            xtype: 'button',
+            name: 'exportUnBindButton',
+            text: '未绑定导出',
+            handler: 'exportUnBind'
         }]
     }]
 });

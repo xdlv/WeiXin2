@@ -767,6 +767,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "WX.controller.License": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
+  "WX.view.BindInfo": [],
   "WX.view.CurrentDz": [],
   "WX.view.DzView": [],
   "WX.view.HistoryQuery": [],
@@ -1718,6 +1719,7 @@ Ext.ClassManager.addNameAliasMappings({
   "WX.controller.License": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
+  "WX.view.BindInfo": [],
   "WX.view.CurrentDz": [
     "widget.currentQuery"
   ],

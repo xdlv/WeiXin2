@@ -21,10 +21,12 @@ Ext.define("TrackCar.view.importA.ImportTelphone",{
         xtype: 'form',
         items: [{
             xtype: 'fieldset',
+
             layout: {
                 type: 'hbox',
                 align: 'stretch'
             },
+            bind: {hidden: '{isNormalUser}'},
             items: [{
                 xtype: 'filefield',
                 name: 'excel',

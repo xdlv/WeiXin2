@@ -121,4 +121,8 @@
     and credit_scope = #{creditScope,jdbcType=VARCHAR}
   </delete>
 
+    <delete id="deleteDzlitByYearAndMonth" parameterType="java.lang.Integer">
+         delete from t_dzlist where year=#{year,jdbcType=INTEGER} and month=#{month,jdbcType=INTEGER}
+    </delete>
+
 </mapper>

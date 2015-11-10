@@ -34,6 +34,11 @@ Ext.define("TrackCar.view.importA.ImportDz", {
                 xtype: 'button',
                 text: '导入',
                 handler: 'importClick'
+            }, {
+                margin: '0 0 0 10',
+                xtype: 'button',
+                text: '导出分类数据',
+                handler: 'exportGroupDataClick'
             }]
         }]
     }, {
