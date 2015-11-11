@@ -77,7 +77,7 @@ public class UserAction extends BaseAction {
             JSONObject json = JSONObject.fromObject(retJson);
             openid = (String) json.get("openid");
             if (openid == null) {
-                throw new FwException("无法获取用户信息:openid");
+                throw new FwException("抱歉，网络出现问题，无法获取用户信息:openid，请重试。");
             }
         }
         return userSerivce.getUserdzByOpenid(openid);
