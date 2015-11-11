@@ -80,7 +80,7 @@ public class DzlistAction extends BaseAction{
         output.flush();
         output.close();
         wb.close();
-        this.fileName = new String(fileName.getBytes("UTF-8"),"ISO-8859-1");
+        this.fileName = writeDownloadFile(fileName);
     }
     private void writeRowValue(HSSFRow row, Dzlist dzlist){
         row.createCell(0).setCellValue(dzlist.getYear());

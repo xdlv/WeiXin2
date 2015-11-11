@@ -1,9 +1,12 @@
 package com.xdlv.fw.action;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.regex.Pattern;
 
+import freemarker.template.utility.StringUtil;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.jdom.Document;
@@ -84,6 +87,7 @@ public abstract class BaseAction extends ActionSupport {
 		return ret;
 	}
 
+	//WeiXin
 	protected ReceiveXmlEntity getMsgEntity() {
 		ReceiveXmlEntity msg = new ReceiveXmlEntity();
 		try {
@@ -110,6 +114,30 @@ public abstract class BaseAction extends ActionSupport {
 
 	protected void setRequestAttribute(String key, String value){
         ServletActionContext.getRequest().setAttribute(key,value);
+    }
+    enum BROWSER{IE,FIREFOX,CHROME};
+    protected BROWSER getBrowser(){
+        String userAgent = ServletActionContext.getRequest().getHeader("USER-AGENT");
+        if (StringUtils.isBlank(userAgent)){
+            return BROWSER.IE;
+        }
+        if (userAgent.contains("Chrome")){
+            return BROWSER.CHROME;
+        }
+        if (userAgent.contains("Firefox")){
+            return BROWSER.FIREFOX;
+        }
+        return BROWSER.IE;
+    }
+
+    protected String writeDownloadFile(String fileName) throws UnsupportedEncodingException {
+        if (getBrowser() == BROWSER.IE){
+            fileName = java.net.URLEncoder.encode(fileName, "UTF-8");
+            fileName = StringUtils.replace(fileName, "+", "%20");
+        } else {
+            fileName = new String(fileName.getBytes("UTF-8"),"ISO-8859-1");
+        }
+        return fileName;
     }
 	
 	public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {

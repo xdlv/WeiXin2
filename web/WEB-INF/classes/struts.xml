@@ -68,11 +68,9 @@
 		</action>
 		<action name="exportGroupData" class="DzListAction" method="exportGroupData"/>
 
-		<action name="importTelephone" class="ImportAction" method="importTelephone">
+		<action name="importTelephone" class="ImportAction" method="importTelephone"/>
 
-        </action>
-        <action name="importDzlist" class="ImportAction" method="importDzlist" >
-        </action>
+        <action name="importDzlist" class="ImportAction" method="importDzlist" />
 		<action name="obtainImportDzRecord" class="ImportDzRecordAction" method="obtainImportDzRecord" />
         <action name="notifyMessage" class="ImportDzRecordAction" method="notifyMessage" />
 

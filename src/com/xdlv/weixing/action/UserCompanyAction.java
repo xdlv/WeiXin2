@@ -70,7 +70,7 @@ public class UserCompanyAction extends BaseAction{
         output.flush();
         output.close();
         wb.close();
-        this.fileName = new String("未绑定用户.xls".getBytes("UTF-8"),"ISO-8859-1");
+        this.fileName = writeDownloadFile("未绑定用户.xls");
         return EXCEL;
     }
 
