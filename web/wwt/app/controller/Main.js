@@ -17,17 +17,7 @@ Ext.define('WX.controller.Main', {
     },
 
     launch: function (view) {
-        //check the version
-        Ext.Ajax.request({
-            url : 'version.cmd',
-            success: function(response){
-                var msg = Ext.JSON.decode(response.responseText, true);
-                if (msg.version != '201511101845'){
-                    window.localStorage.clear();
-                    window.location.reload();
-                }
-            }
-        });
+
         if (WX_PP.viewId != 'Main'){
             return;
         }

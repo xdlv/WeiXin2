@@ -14,7 +14,7 @@ import java.util.Random;
 public class FwUtil {
 
 	public static String UTF8 = "UTF-8";
-    static int[] months = new int[]{0,31,29,31,30,31,30,31,31,30,31,30,31};
+    //static int[] months = new int[]{0,31,29,31,30,31,30,31,31,30,31,30,31};
     static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	public static String getValidateCode(){
@@ -26,15 +26,16 @@ public class FwUtil {
         return wac.getBean(name);
     }
 
-    public static int getLastDayInMonth(int year,int month){
+    // sdf is not thread safe so we need add synchronized
+    public synchronized static int getLastDayInMonth(int year,int month){
         Calendar calendar = Calendar.getInstance();
         try {
-            calendar.setTime(sdf.parse(String.format("%d-%d-%d 00:00:00",year,month,1)));
-        } catch (ParseException e) {
+            calendar.setTime(sdf.parse(String.format("%d-%02d-%02d 00:00:00",year,month,1)));
+        } catch (Exception e) {
             throw new IllegalArgumentException("can not parse data", e);
         }
         calendar.add(Calendar.DAY_OF_MONTH,-1);
-        return months[month];
+        return calendar.get(Calendar.DAY_OF_MONTH);
     }
 
     public static int[] getLastMonth(){
@@ -43,7 +44,7 @@ public class FwUtil {
         return new int[]{calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH) + 1};
     }
     public static void main(String[] args){
-        for (int i=0;i<100;i++)
-            System.out.println(getValidateCode());
+        for (int i=1; i< 13;i++)
+        System.out.println(i + " = " + getLastDayInMonth(2015,i));
     }
 }

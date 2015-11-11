@@ -68,7 +68,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     type: 'vbox',
                     align: 'stretch'
                 },
-                margin: '0 10 0 10',
+                margin: '0 0 0 10',
 
                 items:[{
                     xtype: 'container',
@@ -78,7 +78,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                     },
                     items: [{
                         xtype: 'checkbox',
-                        margin: '0 10 0 10',
+                        margin: '0 5 0 0',
                         boxLabel: '无异议',
                         name: 'dzlist.confirm',
                         bind: { hidden: '{hiddenStatus}'},
@@ -86,7 +86,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                         checked   : true
 
                     }, {
-                        margin: '0 10 0 10',
+                        margin: '0 5 0 0',
                         xtype: 'checkbox',
                         boxLabel: '未回复',
                         name: 'dzlist.unconfirm',
@@ -94,12 +94,20 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                         inputValue: 'N',
                         checked   : true
                     },{
-                        margin: '0 10 0 10',
+                        margin: '0 5 0 0',
                         xtype: 'checkbox',
                         boxLabel: '有异议',
                         name: 'dzlist.reject',
                         bind: { hidden: '{hiddenStatus}'},
                         inputValue: 'E',
+                        checked   : true
+                    },{
+                        margin: '0 5 0 0',
+                        xtype: 'checkbox',
+                        boxLabel: '系统默认无异议',
+                        name: 'dzlist.system',
+                        bind: { hidden: '{hiddenStatus}'},
+                        inputValue: 'A',
                         checked   : true
                     }]
                 },{
@@ -118,8 +126,7 @@ Ext.define("TrackCar.view.exportA.DzExport", {
                         xtype: 'button',
                         text: '导出',
                         bind : {hidden: '{hiddenStatus}'},
-                        handler: 'exportDzlist',
-                        flex: 1
+                        handler: 'exportDzlist'
                     }]
                 }]
             }]

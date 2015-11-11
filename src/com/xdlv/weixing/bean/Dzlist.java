@@ -518,10 +518,13 @@ public class Dzlist {
         if (reject != null){
             retList.add(reject);
         }
+        if (system != null){
+            retList.add(system);
+        }
         return retList;
     }
 
-    private String confirm,unconfirm,reject;
+    private String confirm,unconfirm,reject,system;
     public void setPhone(String phone) {
         this.phone = phone;
     }
@@ -575,5 +578,13 @@ public class Dzlist {
 
     public void setUserCompany(UserCompany userCompany) {
         this.userCompany = userCompany;
+    }
+
+    public String getSystem() {
+        return system;
+    }
+
+    public void setSystem(String system) {
+        this.system = system;
     }
 }

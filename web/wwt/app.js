@@ -44,13 +44,22 @@ Ext.application({
         '1536x2008': 'resources/startup/1536x2008.png',
         '1496x2048': 'resources/startup/1496x2048.png'
     },
-    
     onReady: function() {
     	Ext.Date.monthNames = ['一月','二月','三月','四月','五月'
     	    	                ,'六月','七月','八月','九月','十月','十一月','十二月'];
     },
 
     launch: function() {
+        Ext.Ajax.request({
+            url : 'version.cmd',
+            success: function(response){
+                var msg = Ext.JSON.decode(response.responseText, true);
+                if (msg.version != '201511101845'){
+                    window.localStorage.clear();
+                    window.location.reload();
+                }
+            }
+        });
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
         Ext.Viewport.add(Ext.create('WX.view.' + WX_PP.viewId));
