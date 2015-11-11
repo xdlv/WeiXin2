@@ -45,6 +45,11 @@ public class FwUserAction extends BaseAction {
         return FINISH;
     }
 
+    public String version(){
+        version = I18n.getI18n("version");
+        return SUCCESS;
+    }
+
     public void setFwService(FwService fwService) {
         this.fwService = fwService;
     }

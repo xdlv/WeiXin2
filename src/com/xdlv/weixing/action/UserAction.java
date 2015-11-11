@@ -53,10 +53,7 @@ public class UserAction extends BaseAction {
     public String historyQueryIndex()throws Exception{
         return checkBindAndView("HistoryQuery");
     }
-    public String refresh(){
-        setRetAttribute("refresh", "true");
-        return SUCCESS;
-    }
+
     private String checkBindAndView(String viewId) throws Exception{
         Userdz userdz = getUserDzFromWeixing();
         setRetAttribute("openId",openid);
@@ -88,7 +85,6 @@ public class UserAction extends BaseAction {
         if (jsonObject == null){
             jsonObject = new JSONObject();
             request.setAttribute(RET_KEY, jsonObject);
-            jsonObject.put("version",I18n.getI18n("version"));
         }
         jsonObject.put(key, value);
     }

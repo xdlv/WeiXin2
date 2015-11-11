@@ -12,7 +12,7 @@ Ext.define('WX.view.Main', {
 			xtype : 'fieldset',
             margin: '10 2 20 2',
 			title : '',
-			instructions : '(*请妥善保存你的帐号信息，一个手机号只能绑定一次，若需解除绑定，取消关注即可。)',
+			instructions : '(*请妥善保存你的帐号，一个手机号只能绑定一次，若需解除绑定，取消关注即可。)',
 			items : [ {
 				xtype: 'container',
 				layout: 'hbox',

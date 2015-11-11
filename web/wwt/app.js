@@ -53,12 +53,6 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-
-        if (WX_PP.version != '201511101520') {
-            window.localStorage.clear();
-            window.location.reload();
-        }
-        
         Ext.Viewport.add(Ext.create('WX.view.' + WX_PP.viewId));
     },
 

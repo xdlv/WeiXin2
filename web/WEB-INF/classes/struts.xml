@@ -46,14 +46,12 @@
 		<action name="currentDzIndex" class="UserAction" method="currentDzIndex">
 			<result name="success">index.jsp</result>
 		</action>
-        <action name="refresh" class="UserAction" method="refresh">
-            <result name="success">index.jsp</result>
-        </action>
 
 
 		<action name="loadDzRecord" class="UserAction" method="loadDzRecord"/>
         <action name="confirmDz" class="UserAction" method="confirmDz"/>
 
+		<action name="version" class="FwUserAction" method="version"/>
 		
 		<action name="userLogin" class="FwUserAction" method="userLogin" />
 		<action name="obtainUsers" class="FwUserAction" method="obtainUsers" />
