@@ -54,9 +54,15 @@ Ext.application({
             url : 'version.cmd',
             success: function(response){
                 var msg = Ext.JSON.decode(response.responseText, true);
-                if (msg.version != '1.0'){
+                if (msg.version != '2.0'){
                     window.localStorage.clear();
-                    window.location.reload();
+                    var href = window.location.href;
+
+                    if (href.indexOf('openid=') > -1){
+                        window.location.reload();
+                    } else {
+                        window.location.href += '&openid=' + WX_PP.openId;
+                    }
                 } else {
                     WX_PP.version = msg.version;
                     Ext.fly('appLoadingIndicator').destroy();
