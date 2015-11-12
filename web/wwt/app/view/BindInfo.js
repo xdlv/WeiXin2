@@ -1,5 +1,6 @@
 Ext.define('WX.view.BindInfo', {
     extend: 'Ext.form.Panel',
+    xtype: 'bindInfo',
     config: {
         fullscreen: true,
         layout: 'vbox',

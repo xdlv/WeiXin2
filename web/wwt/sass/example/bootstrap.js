@@ -1835,7 +1835,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.Element-static": "../../touch/src/dom/Element.static.js",
   "Ext.Element-style": "../../touch/src/dom/Element.style.js",
   "Ext.Element-traversal": "../../touch/src/dom/Element.traversal.js",
-  "Ext.cmd": "../../../../../../../../bin/Sencha/Cmd/6.0.2.14/plugins/src",
+  "Ext.cmd": "../../../../../../../../Users/exiglvv/bin/Sencha/Cmd/6.0.1.76/plugins/src",
   "Ext.core.DomQuery": "../../touch/src/dom/Query.js",
   "Ext.device.Purchases.Product": "../../touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "../../touch/src/device/filesystem/Sencha.js",
@@ -3533,7 +3533,9 @@ Ext.ClassManager.addNameAliasMappings({
   "WX.controller.License": [],
   "WX.controller.Main": [],
   "WX.override.date.Date": [],
-  "WX.view.BindInfo": [],
+  "WX.view.BindInfo": [
+    "widget.bindInfo"
+  ],
   "WX.view.CurrentDz": [
     "widget.currentQuery"
   ],

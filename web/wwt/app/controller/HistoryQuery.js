@@ -9,15 +9,15 @@ Ext.define('WX.controller.HistoryQuery', {
             datePicker: 'datepickerfield[name=queryDate]'
         },
         control: {
+            'hquery' : {
+                show: 'onShow'
+            },
             'datepickerfield[name=queryDate]': {
                 change: 'chooseDateForHistory'
             }
         }
     },
-    launch: function(view){
-        if (WX_PP.viewId != 'HistoryQuery'){
-            return;
-        }
+    onShow: function(view){
         var dt = Ext.Date.add(new Date(), Ext.Date.MONTH, -1);
         this.getDatePicker().setValue(dt);
     },

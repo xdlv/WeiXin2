@@ -9,6 +9,9 @@ Ext.define('WX.controller.CurrentDz', {
             rejectButton: 'button[name=reject]'
         },
         control: {
+            'currentQuery':{
+                show: 'onShow'
+            },
             'button[name=confirmDz]': {
                 tap: 'confirmDz'
             },
@@ -55,10 +58,7 @@ Ext.define('WX.controller.CurrentDz', {
         });
     },
 
-    launch: function () {
-        if (WX_PP.viewId != 'CurrentDz') {
-            return;
-        }
+    onShow: function(view){
         var me = this;
         this.loadDzRecord(function (response) {
             var msg = Ext.JSON.decode(response.responseText, true);
@@ -91,6 +91,10 @@ Ext.define('WX.controller.CurrentDz', {
 
             me.checkButtonStatus(dzlists[0]);
         });
+    },
+
+    launch: function () {
+
     },
     confirmDz: function (btn) {
         var dzList = this.getHqContent().getActiveItem().getData();

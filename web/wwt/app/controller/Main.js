@@ -4,9 +4,13 @@ Ext.define('WX.controller.Main', {
     config: {
         refs: {
             validateButton: 'button[text=验证码]',
-            bindButton: 'button[text=绑定]'
+            bindButton: 'button[text=绑定]',
+            versionComponent: 'component[name=version]'
         },
         control: {
+            'main': {
+                show: 'onShow'
+            },
             'button[text=验证码]': {
                 tap: 'getValidateCode'
             },
@@ -16,15 +20,12 @@ Ext.define('WX.controller.Main', {
         }
     },
 
-    launch: function (view) {
-
-        if (WX_PP.viewId != 'Main'){
-            return;
-        }
+    onShow: function (view) {
         if (WX_PP.phone) {
             Ext.Msg.alert('用户绑定', '该帐号当前己绑定,无法再次绑定');
-            this.getValidateButton().up('formpanel').destroy();
             this.showBindInfo(WX_PP.phone);
+        } else {
+            this.getVersionComponent().setData(WX_PP);
         }
     },
     getValidateCode: function (btn) {

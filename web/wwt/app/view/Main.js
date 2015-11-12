@@ -9,6 +9,13 @@ Ext.define('WX.view.Main', {
 			xtype : 'titlebar',
 			title : '用户绑定'
 		}, {
+			docked : 'bottom',
+			xtype : 'component',
+            name: 'version',
+			tpl: '<p align="center">version: {version}</p>',
+            padding: '0 0 5 0',
+            style: 'color:#888;font-size:9px;'
+		},{
 			xtype : 'fieldset',
             margin: '10 2 20 2',
 			title : '',
