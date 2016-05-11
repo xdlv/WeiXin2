@@ -5,7 +5,7 @@ import com.xdlv.fw.I18n;
 import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.UserCompany;
 import com.xdlv.weixing.service.UserSerivce;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
 

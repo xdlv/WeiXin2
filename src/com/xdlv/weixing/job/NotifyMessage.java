@@ -22,16 +22,17 @@ public class NotifyMessage {
     UserSerivce userSerivce;
 
     Logger logger = Logger.getLogger(NotifyMessage.class);
-    public void execute() throws Exception{
+
+    public void execute() throws Exception {
         List<ImportDzRecord> importDzRecordList = userSerivce.getImportDzRecordForSend();
-        if (importDzRecordList == null || importDzRecordList.size() < 1){
+        if (importDzRecordList == null || importDzRecordList.size() < 1) {
             logger.info("there is no notify message to send");
             return;
         }
         // every time we only process a record
         ImportDzRecord importDzRecord = importDzRecordList.get(0);
         List<Userdz> userdzs = userSerivce.getAllUserdzs(0, 5000000);
-        if (userdzs == null){
+        if (userdzs == null) {
             logger.info("there is no company to send");
             return;
         }
@@ -39,22 +40,37 @@ public class NotifyMessage {
         String retString;
         //construct message body:
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("touser","");//placeHold
+        jsonObject.put("touser", "");//placeHold
         jsonObject.put("template_id", I18n.getI18n("notify_msg_tpl"));
-        jsonObject.put("url","");//placeHold
-        jsonObject.put("data",JSONObject.fromObject(String.format("{\"year\" : {\"value\":\"%d\", \"color\":\"#173177\"}, \"month\": {\"value\":\"%d\"" +
-                ", \"color\":\"#173177\"},\"day\": {\"value\":\"%d\", \"color\":\"#173177\"}}"
-                ,importDzRecord.getYear(),importDzRecord.getMonth(),FwUtil.getLastDayInMonth(importDzRecord.getYear(),
-                importDzRecord.getMonth()))));
+        jsonObject.put("url", "");//placeHold
 
-        for (Userdz userdz : userdzs){
-            if (StringUtils.isBlank(userdz.getWxid())){
+        int year = importDzRecord.getYear();
+        int month = importDzRecord.getMonth();
+        int day = FwUtil.getLastDayInMonth(importDzRecord.getYear(),
+                importDzRecord.getMonth());
+
+        String first = String.format(I18n.getI18n("template_first"), year,month,day);
+        String keyword1 = "*";
+        String keyword2 = String.format(I18n.getI18n("template_keyword2"),year,month,day);
+        String remark = I18n.getI18n("template_remark");
+
+        JSONObject dataJson = new JSONObject();
+        String format = "{\"value\":\"%s\",\"color\": \"%s\"}";
+        dataJson.put("first",JSONObject.fromObject(String.format(format,first,"#bebebe")));
+        dataJson.put("keyword1",JSONObject.fromObject(String.format(format,keyword1,"#bebebe")));
+        dataJson.put("keyword2",JSONObject.fromObject(String.format(format,keyword2,"#bebebe")));
+        dataJson.put("remark",JSONObject.fromObject(String.format(format,remark,"#173177")));
+
+        jsonObject.put("data", dataJson);
+
+        for (Userdz userdz : userdzs) {
+            if (StringUtils.isBlank(userdz.getWxid())) {
                 logger.error("no wxid in userdz record:" + userdz.getPhone());
                 continue;
             }
             logger.debug("start to notify:" + userdz.getPhone());
-            jsonObject.put("touser",userdz.getWxid());
-            jsonObject.put("url",url + "?openid=" + userdz.getWxid());
+            jsonObject.put("touser", userdz.getWxid());
+            jsonObject.put("url", url + "?openid=" + userdz.getWxid());
             retString = HttpClientTpl.postJson(String.format("https://api.weixin.qq.com/cgi-bin/message/template/send" +
                     "?access_token=%s", getAccessToken()), jsonObject.toString());
             logger.debug("end with ret:" + retString);
@@ -63,12 +79,13 @@ public class NotifyMessage {
         importDzRecord.setNotification("E");
         userSerivce.updateImportDzRecordStatus(importDzRecord);
     }
+
     public void setUserSerivce(UserSerivce userSerivce) {
         this.userSerivce = userSerivce;
     }
 
     private String getAccessToken() throws Exception {
-        return ((RefreshAccessToken)FwUtil.getBean("refreshAccessToken")).getAccessToken();
+        return ((RefreshAccessToken) FwUtil.getBean("refreshAccessToken")).getAccessToken();
     }
 
 

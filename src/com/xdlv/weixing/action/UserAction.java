@@ -8,7 +8,7 @@ import com.xdlv.fw.action.BaseAction;
 import com.xdlv.weixing.bean.*;
 import com.xdlv.weixing.service.UserSerivce;
 import net.sf.json.JSONObject;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
