@@ -50,7 +50,7 @@ public class NotifyMessage {
                 importDzRecord.getMonth());
 
         String first = String.format(I18n.getI18n("template_first"), year,month,day);
-        String keyword1 = "*";
+        String keyword1 = I18n.getI18n("template_keyword1");
         String keyword2 = String.format(I18n.getI18n("template_keyword2"),year,month,day);
         String remark = I18n.getI18n("template_remark");
 
