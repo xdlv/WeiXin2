@@ -56,9 +56,10 @@ public class NotifyMessage {
 
         JSONObject dataJson = new JSONObject();
         String format = "{\"value\":\"%s\",\"color\": \"%s\"}";
-        dataJson.put("first",JSONObject.fromObject(String.format(format,first,"#bebebe")));
-        dataJson.put("keyword1",JSONObject.fromObject(String.format(format,keyword1,"#bebebe")));
-        dataJson.put("keyword2",JSONObject.fromObject(String.format(format,keyword2,"#bebebe")));
+        String color = "#272727";
+        dataJson.put("first",JSONObject.fromObject(String.format(format,first, color)));
+        dataJson.put("keyword1",JSONObject.fromObject(String.format(format,keyword1, color)));
+        dataJson.put("keyword2",JSONObject.fromObject(String.format(format,keyword2, color)));
         dataJson.put("remark",JSONObject.fromObject(String.format(format,remark,"#173177")));
 
         jsonObject.put("data", dataJson);
