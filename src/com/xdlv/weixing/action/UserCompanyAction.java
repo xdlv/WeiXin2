@@ -55,7 +55,7 @@ public class UserCompanyAction extends BaseAction{
             row.createCell(0).setCellValue(tmp.getCode());
             row.createCell(1).setCellValue(tmp.getCompanyName());
             row.createCell(2).setCellValue(tmp.getArea());
-            row.createCell(3).setCellValue(tmp.getBusiness() == "Y" ? "是": "否");
+            row.createCell(3).setCellValue("Y".equals(tmp.getBusiness()) ? "是": "否");
             row.createCell(4).setCellValue(tmp.getWxContractName1());
             row.createCell(5).setCellValue(tmp.getWxContractPhone1());
             row.createCell(6).setCellValue(tmp.getWxContractName2());
