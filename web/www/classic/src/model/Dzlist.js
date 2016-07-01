@@ -14,8 +14,7 @@ Ext.define('TrackCar.model.Dzlist',{
 		{name: 'jb2', type: 'float'},
 		{name: 'fl2', type: 'float'},
 		{name: 'zdfwk2', type: 'float'},
-		{name: 'qtyfdk2', type: 'float'},
-		'creditScope'
+		{name: 'qtyfdk2', type: 'float'}//, 'creditScope'
 	],
 
 	proxy: {

@@ -53,8 +53,7 @@ create table t_dzlist
 	jb2 float,
 	fl2 float,
 	zdfwk2 float,
-	qtyfdk2 float,
-	credit_scope varchar(10)
+	qtyfdk2 float -- credit_scope varchar(10)
 );
 
 drop table if exists t_user_company;
@@ -69,8 +68,8 @@ create table t_user_company
 	wx_contract_name2 varchar(20),
 	wx_contract_phone2 varchar(15),
 	manager_name varchar(20),
-	remark_content varchar(100),
-	credit_scope varchar(10)
+	remark_content varchar(100)
+	-- --credit_scope varchar(10)
 );
 
 drop table if exists t_import_dz_record;

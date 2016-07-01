@@ -62,7 +62,7 @@ public class UserCompanyAction extends BaseAction{
             row.createCell(7).setCellValue(tmp.getWxContractPhone2());
             row.createCell(8).setCellValue(tmp.getManagerName());
             row.createCell(9).setCellValue(tmp.getRemarkContent());
-            row.createCell(10).setCellValue(tmp.getCreditScope());
+            //row.createCell(10).setCellValue(tmp.getCreditScope());
         }
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         wb.write(output);

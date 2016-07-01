@@ -4,7 +4,7 @@ Ext.define('TrackCar.model.UserCompany', {
     fields: ['code', 'companyName', 'area'
         , 'business', 'wxContractName1', 'wxContractPhone1'
         , 'wxContractName2', 'wxContractPhone2'
-        , 'managerName', 'remarkContent','wxPhone','wxName','creditScope'],
+        , 'managerName', 'remarkContent','wxPhone','wxName'/*,'creditScope'*/],
 
     proxy: {
         url: '../obtainUserCompanys.cmd',
