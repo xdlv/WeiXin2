@@ -136,7 +136,7 @@ public class ImportAction extends BaseAction {
                 dzlist.setCreditScope(dfScope);
                 dzlistMap.put(code + dfScope, dzlist);
             }
-            switch (Integer.parseInt(subject)) {
+            switch (Double.valueOf(subject).intValue()) {
                 case 1131020100:
                     dzlist.setZdxsk1(all);
                     break;

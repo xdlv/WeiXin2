@@ -51,6 +51,10 @@ Ext.define('TrackCar.view.importA.ImportDzController', {
         var currentDate = new Date();
         var year = currentDate.getFullYear();
         var month = currentDate.getMonth();
+        if (month === 0){
+            month = 12;
+            year = year -1;
+        }
         return [year, month];
     }
 });
