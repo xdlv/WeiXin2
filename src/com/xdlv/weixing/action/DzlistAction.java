@@ -100,7 +100,7 @@ public class DzlistAction extends BaseAction{
         row.createCell(14).setCellValue(dzlist.getFl2());
         row.createCell(15).setCellValue(dzlist.getZdfwk2());
         row.createCell(16).setCellValue(dzlist.getQtyfdk2());
-        row.createCell(17).setCellValue(dzlist.getCreditScope());
+        //row.createCell(17).setCellValue(dzlist.getCreditScope());
     }
     private HSSFSheet createDzlistSheet(HSSFWorkbook wb, String name){
         HSSFCellStyle style = wb.createCellStyle();

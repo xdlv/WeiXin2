@@ -6,12 +6,13 @@ Ext.define('WX.view.CurrentDz', {
         fullscreen: true,
         layout: 'vbox',
         items: [{
-            xtype: 'tabpanel',
+            xtype: 'fieldset',
             flex: 1,
             name: 'hqContentCurrent',
             defaults: {
                 styleHtmlContent: true
-            }
+            },
+            padding: 20
         }, {
             xtype: 'container',
             layout: 'hbox',

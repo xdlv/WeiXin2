@@ -37,11 +37,11 @@ Ext.define('TrackCar.view.importA.ImportTelphoneModel', {
             text: '业务经理（信息负责人）',
             dataIndex : 'managerName',
             flex: 1
-        },{
+        }/*,{
             text: '贷方范围',
             dataIndex:'creditScope',
             flex: 1
-        }]
+        }*/]
     },
 
     formulas: {

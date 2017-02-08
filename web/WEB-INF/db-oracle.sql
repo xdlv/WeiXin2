@@ -51,8 +51,7 @@ create table t_dzlist
 	jb2 Number(12,3),
 	fl2 Number(12,3),
 	zdfwk2 Number(12,3),
-	qtyfdk2 Number(12,3),
-	credit_scope varchar(10)
+	qtyfdk2 Number(12,3)-- , credit_scope varchar(10)
 );
 
 drop table t_user_company;
@@ -67,8 +66,7 @@ create table t_user_company
 	wx_contract_name2 varchar2(20),
 	wx_contract_phone2 varchar2(15),
 	manager_name varchar2(20),
-	remark_content varchar2(100),
-	credit_scope varchar2(10)
+	remark_content varchar2(100)-- ,credit_scope varchar2(10)
 );
 
 drop table t_import_dz_record;
