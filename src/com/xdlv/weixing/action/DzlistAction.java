@@ -82,13 +82,23 @@ public class DzlistAction extends BaseAction{
         wb.close();
         this.fileName = writeDownloadFile(fileName);
     }
+    private String ok2Str(String isOk){
+        if ("Y".equals(isOk)){
+            return "无异议";
+        } else if ("N".equals(isOk)){
+            return "未确认";
+        } else if ("E".equals(isOk)){
+            return "有异议";
+        }
+        return isOk;
+    }
     private void writeRowValue(HSSFRow row, Dzlist dzlist){
         row.createCell(0).setCellValue(dzlist.getYear());
         row.createCell(1).setCellValue(dzlist.getMonth());
         row.createCell(2).setCellValue(sdf.format(dzlist.getImpdate()));
         row.createCell(3).setCellValue(dzlist.getUserid());
         row.createCell(4).setCellValue(dzlist.getUsername());
-        row.createCell(5).setCellValue(dzlist.getIsok());
+        row.createCell(5).setCellValue(ok2Str(dzlist.getIsok()));
         row.createCell(6).setCellValue(dzlist.getQmye());
         row.createCell(7).setCellValue(dzlist.getZdxsk1());
         row.createCell(8).setCellValue(dzlist.getYsdsk1());

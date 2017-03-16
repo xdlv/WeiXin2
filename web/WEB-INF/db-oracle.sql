@@ -77,3 +77,5 @@ create table t_import_dz_record
 	notification char(1),
 	import_date date
 );
+
+alter table t_userdz add column update_date date default sysdate;

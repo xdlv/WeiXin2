@@ -94,13 +94,15 @@ Ext.define('WX.controller.CurrentDz', {
         if (!dzList) {
             return;
         }
-        var isOk = btn.name == 'confirmDz' ? 'Y' : 'E';
+        console.log(btn.initialConfig.name);
+        var isOk = btn.initialConfig.name == 'confirmDz' ? 'Y' : 'E';
         Ext.Ajax.request({
             url: 'confirmDz.cmd',
             params: {
                 'dzlist.year': dzList.year,
                 'dzlist.month': dzList.month,
                 'dzlist.userid': dzList.userid,
+                'dzlist.creditScope': dzList.creditScope,
                 'dzlist.isok': isOk
             },
             scope: this,

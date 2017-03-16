@@ -54,7 +54,7 @@ Ext.application({
             url : 'version.cmd',
             success: function(response){
                 var msg = Ext.JSON.decode(response.responseText, true);
-                if (msg.version != '2.0'){
+                if (msg.version != '3.1'){
                     window.localStorage.clear();
                     var href = window.location.href;
 
