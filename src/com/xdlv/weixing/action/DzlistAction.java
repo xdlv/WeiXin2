@@ -89,6 +89,8 @@ public class DzlistAction extends BaseAction{
             return "未确认";
         } else if ("E".equals(isOk)){
             return "有异议";
+        } else if ("A".equals(isOk)){
+            return "系统默认无异议";
         }
         return isOk;
     }
