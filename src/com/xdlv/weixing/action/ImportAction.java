@@ -123,6 +123,9 @@ public class ImportAction extends BaseAction {
                 continue;
             }
             subject = getCellValue(row.getCell(3));
+            if (StringUtils.isBlank(subject)){
+                continue;
+            }
             all = (float) row.getCell(5).getNumericCellValue();
             dfScope = getIntValue(row.getCell(6));
 
@@ -194,12 +197,12 @@ public class ImportAction extends BaseAction {
         if (cell == null) {
             return null;
         }
-        String value = null;
+        String value;
         try{
-            value = String.valueOf(cell.getStringCellValue());
+            value = String.valueOf(cell.getNumericCellValue());
         } catch(IllegalStateException e){
             try{
-                value = String.valueOf(cell.getNumericCellValue());
+                value = String.valueOf(cell.getStringCellValue());
             } catch(IllegalStateException e1){
                 try{
                     value = String.valueOf(cell.getBooleanCellValue());
