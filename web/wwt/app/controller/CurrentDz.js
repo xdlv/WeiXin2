@@ -4,7 +4,7 @@ Ext.define('WX.controller.CurrentDz', {
     config: {
         dzTpl: "<p>&nbsp&nbsp&nbsp&nbsp尊敬的{username}（{userid}）客户，我公司与贵公司截止到{year}年{month}月{day}日期末余额       {qmye}元，其中应收终端销售款{zdxsk1}元，应收代收款{ysdsk1}元，应收终端服务款{zdfwk1}元，应收价保{jb1}     元，应收返利{fl1}元，预收终端销售款{zdxsk2}元，预收价保{jb2}元，预收返利{f2}元，预收终端服务款{zdfwk2}    元，预收其他应付预收抵款{qtyfdk2}        元。</p><p>说明：期末余额为正数，表示我司应收贵司余额，余额为负数，表示我司预收贵司余额。",
         refs: {
-            hqContent: 'fieldset[name=hqContentCurrent]',
+            hqContent: 'tabpanel[name=hqContentCurrent]',
             confirmButton: 'button[name=confirmDz]',
             rejectButton: 'button[name=reject]'
         },
@@ -77,10 +77,17 @@ Ext.define('WX.controller.CurrentDz', {
                 Ext.Msg.alert('当前对账', '当前对账己完成。详情信息，请到历史查询中查看。', Ext.emptyFn);
                 return;
             }
-            var fieldSet = this.getHqContent();
+            var tabpanel = this.getHqContent();
             var tpl = this.getDzTpl();
-            fieldSet.setTpl(tpl);
-            fieldSet.setData(dzlists[0]);
+            Ext.each(dzlists, function (v, i) {
+                var item = Ext.create('Ext.form.FieldSet',{
+                    title: '贷方范围: ' + v.creditScope,
+                    tpl: tpl,
+                    data: v
+                });
+                tabpanel.add(item);
+                item.setTitle(null);
+            });
 
             me.checkButtonStatus(dzlists[0]);
         });
@@ -90,7 +97,7 @@ Ext.define('WX.controller.CurrentDz', {
 
     },
     confirmDz: function (btn) {
-        var dzList = this.getHqContent().getData();
+        var dzList = this.getHqContent().getActiveItem().getData();
         if (!dzList) {
             return;
         }

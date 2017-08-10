@@ -33,13 +33,12 @@ Ext.define('WX.view.HistoryQuery', {
             }*/]
 		},{
 			flex: 1,
-			xtype: 'fieldset',
+			xtype: 'tabpanel',
 			flex: 1,
 			name: 'hqContent',
 			defaults: {
 				styleHtmlContent: true
-			},
-			padding: 20
+			}
 		}]
 	}
 });

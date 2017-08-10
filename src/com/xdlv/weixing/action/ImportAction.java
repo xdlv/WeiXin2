@@ -64,7 +64,7 @@ public class ImportAction extends BaseAction {
                         break;
                     case 3:
                         userCompany.setArea(value);
-                        //userCompany.setCreditScope(I18n.getI18n(value));
+                        userCompany.setCreditScope(I18n.getI18n(value));
                         break;
                     case 4:
                         userCompany.setBusiness("是".equals(value) ? "Y" : "N");
@@ -136,7 +136,7 @@ public class ImportAction extends BaseAction {
                 dzlist.setMonth(month);
                 dzlist.setUserid(code);
                 dzlist.setUsername(userName);
-                //dzlist.setCreditScope(dfScope);
+                dzlist.setCreditScope(dfScope);
                 dzlistMap.put(code + dfScope, dzlist);
             }
             switch (Double.valueOf(subject).intValue()) {
