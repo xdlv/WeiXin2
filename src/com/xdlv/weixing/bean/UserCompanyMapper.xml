@@ -68,7 +68,7 @@
     </select>
 
     <delete id="deleteForImport" parameterType="com.xdlv.weixing.bean.UserCompany">
-    delete from t_user_company where code=#{code,jdbcType=VARCHAR} and credit_scope = #{creditScope,jdbcType=VARCHAR}
+    delete from t_user_company where code=#{code,jdbcType=VARCHAR} and (credit_scope is null or credit_scope = #{creditScope,jdbcType=VARCHAR})
   </delete>
 
     <select id="selectUnBindUserCompany" parameterType="java.lang.String" resultMap="UserCompanyResultMap">
