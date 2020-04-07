@@ -60,11 +60,11 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   
-  <select id="selecUserByNameAndPwd" parameterType="java.lang.String" resultMap="UserResultMap">
+  <select id="selectUserByName" parameterType="java.lang.String" resultMap="UserResultMap">
     select 
     <include refid="UserColumn" />
     from t_user
-    where name = #{name,jdbcType=VARCHAR} and pwd = #{pwd,jdbcType=VARCHAR}
+    where name = #{name,jdbcType=VARCHAR}
   </select>
   
   <select id="selectUsers" parameterType="java.lang.Integer" resultMap="UserResultMap">

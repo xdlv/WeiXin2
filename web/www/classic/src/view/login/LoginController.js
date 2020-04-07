@@ -3,11 +3,12 @@ Ext.define('TrackCar.view.login.LoginController', {
 	alias : 'controller.login-login',
 
 	loginClick : function(button) {
-		var form = button.up('form');
+		var value = button.up('form').getValues();
+		value['user.pwd'] = md5(value['user.pwd']);
 		Ext.Ajax.request({
 			url : 'userLogin.cmd',
 			method : 'POST',
-			params : form.getValues(),
+			params : value,
 			scope : this,
 			success : this.loginSuccess
 		});

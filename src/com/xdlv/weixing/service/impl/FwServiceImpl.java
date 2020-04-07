@@ -1,5 +1,7 @@
 package com.xdlv.weixing.service.impl;
 
+import com.xdlv.fw.FwException;
+import com.xdlv.fw.I18n;
 import com.xdlv.weixing.bean.User;
 import com.xdlv.weixing.bean.UserMapper;
 import com.xdlv.weixing.service.FwService;
@@ -13,7 +15,12 @@ public class FwServiceImpl extends BaseServiceImpl implements FwService {
     UserMapper userMapper;
     @Override
     public User userLogin(String name, String pwd) {
-        return userMapper.selecUserByNameAndPwd(name, pwd);
+        User user = userMapper.selectUserByName(name);
+        if (user != null && pwd.equals(I18n.MD5(user.getPwd()))) {
+            return user;
+        } else {
+            throw new FwException("user don't exist");
+        }
     }
 
     @Override

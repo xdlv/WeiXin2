@@ -18,12 +18,8 @@ public class FwUserAction extends BaseAction {
 
     public String userLogin() {
         User userRecord = fwService.userLogin(user.getName(), user.getPwd());
-        if (userRecord != null) {
-            users = new ArrayList<User>();
-            users.add(userRecord);
-        } else {
-            throw new FwException("用户名或密码不正确");
-        }
+        users = new ArrayList<User>();
+        users.add(userRecord);
         return SUCCESS;
     }
 

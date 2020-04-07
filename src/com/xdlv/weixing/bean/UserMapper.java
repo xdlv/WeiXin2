@@ -39,7 +39,7 @@ public interface UserMapper {
      */
     int updateByPrimaryKey(User record);
 
-	User selecUserByNameAndPwd(@Param("name")String name, @Param("pwd")String pwd);
+	User selectUserByName(@Param("name")String name);
 
 	List<User> selectUsers(@Param("start")int start, @Param("limit")int limit);
 
